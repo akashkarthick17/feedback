@@ -363,12 +363,12 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <p style=" font-size: 15px;"><code  style="font-weight: bold; font-size:17px; font-family:  Consolas, monospace">Subject Code</code>  : IT6501 &ensp;&ensp;&ensp;
+                        <p  > <code style="font-weight: 500; font-size:17px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">Subject Code</code> : IT6501 &ensp;&ensp;&ensp;
 
-                            <code style="font-weight: bold; font-size:17px; font-family:  Consolas, monospace">Subject Name</code> : Digital Signal and Processing &ensp;&ensp;&ensp;
+                            <code style="font-weight: 500; font-size:17px; font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif">Subject Name</code> : Digital Signal and Processing &ensp;&ensp;&ensp;
 
 
-                            <code style="font-weight: bold; font-size:17px; font-family:  Consolas, monospace">Staff Name</code>  : Yet to be added.</p>
+                            <code style="font-weight: 500; font-size:17px; font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif">Staff Name</code>  : Yet to be added.</p>
 
 
                     </div>

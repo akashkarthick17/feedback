@@ -142,10 +142,10 @@
           <div class="box-body">
             <ol  class="first">
               <li>The Student&rsquo;s identification is not stored.</li>
-              <li>Once you click <span style="color: #0000ff;">PROCEED</span> button, you will be prompted to a window where you need to select the department, semester and section and then click<span style="color: #0000ff;"> NEXT</span>,</li>
-              <li>A window will appear which contains the staff name and their respective subject (based on the department, semester and section you have selected), you need to verify the detail and click <span style="color: #0000ff;">READY</span>, which take you to the <span style="color: #0000ff;">FEEDBACK FORM</span>.</li>
+              <li>Once you click <code>PROCEED</code> button, you will be prompted to a window where you need to select the department, semester and section and then click<code > NEXT</code>. </li>
+              <li>A window will appear which contains the staff name and their respective subject (based on the department, semester and section you have selected), you need to verify the detail and click <code >READY</code>, which take you to the <code>FEEDBACK FORM</code>.</li>
               <li>The form contains 10 questions, student need to select their opinion (as <span style="color: #008000;">Strongly Agree</span>, <span style="color: #008000;">Agree</span>, <span style="color: #008000;">Neutral</span>, <span style="color: #008000;">Disagree</span>, <span style="color: #008000;">Strongly Disagree</span>) about each staff for all the 10 questions.</li>
-              <li>Click <span style="color: #0000ff;">CONFIRM</span> to submit you feedback.</li>
+              <li>Click <code>CONFIRM</code> to submit you feedback.</li>
             </ol>
           </div>
           <!-- /.box-body -->
