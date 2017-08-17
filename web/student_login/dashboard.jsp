@@ -24,6 +24,11 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <style type="text/css">
+    .first{
+      font-size: 20px;
+    }
+  </style>
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -126,11 +131,34 @@
 
     <!-- Main content -->
     <section class="content">
+      <div class="col-md-12">
+        <div class="box box-default">
+          <div class="box-header with-border">
+            <i class="fa fa-sticky-note"></i>
+
+            <h3 class="box-title text-red">To be Noted</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <ol  class="first">
+              <li>The Student&rsquo;s identification is not stored.</li>
+              <li>Once you click <span style="color: #0000ff;">PROCEED</span> button, you will be prompted to a window where you need to select the department, semester and section and then click<span style="color: #0000ff;"> NEXT</span>,</li>
+              <li>A window will appear which contains the staff name and their respective subject (based on the department, semester and section you have selected), you need to verify the detail and click <span style="color: #0000ff;">READY</span>, which take you to the <span style="color: #0000ff;">FEEDBACK FORM</span>.</li>
+              <li>The form contains 10 questions, student need to select their opinion (as <span style="color: #008000;">Strongly Agree</span>, <span style="color: #008000;">Agree</span>, <span style="color: #008000;">Neutral</span>, <span style="color: #008000;">Disagree</span>, <span style="color: #008000;">Strongly Disagree</span>) about each staff for all the 10 questions.</li>
+              <li>Click <span style="color: #0000ff;">CONFIRM</span> to submit you feedback.</li>
+            </ol>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+
 
 
      <form action="rating_1.jsp" method="post">
 
-       <input type="submit">
+       <input type="submit" class="btn btn-info btn-primary center-block">
      </form>
 
 
