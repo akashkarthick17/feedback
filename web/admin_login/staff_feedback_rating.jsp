@@ -657,29 +657,29 @@
 
                 {
                     "extend": "copy",
-                    "text": "<i class='fa fa-copy bigger-110 ' style='color: deeppink; font-size: 20px;'></i> <span class='hidden'>Copy to clipboard</span>",
+                    "text": "<i class='fa fa-copy bigger-110 ' style='color: deeppink; font-size: 15px;'></i> <span class='hidden'>Copy to clipboard</span>",
                     "className": "btn btn-white btn-primary btn-bold"
                 },
 
                 {
                     "extend": "csv",
-                    "text": "<i class='fa fa-database bigger-110 ' style='color: orange; background-color: white; font-size: 20px;'></i> <span class='hidden'>Export to CSV</span>",
+                    "text": "<i class='fa fa-database bigger-110 ' style='color: orange; background-color: white; font-size: 15px;'></i> <span class='hidden'>Export to CSV</span>",
                     "className": "btn btn-white btn-primary btn-bold",
                     "button" :"<i class='btn btn-white btn-primary btn-bold'></i>"
                 },
                 {
                     "extend": "excel",
-                    "text": "<i class='fa fa-file-excel-o bigger-110 ' style='color: darkgreen; font-size: 20px;'></i> <span class='hidden'>Export to Excel</span>",
+                    "text": "<i class='fa fa-file-excel-o bigger-110 ' style='color: darkgreen; font-size: 15px;'></i> <span class='hidden'>Export to Excel</span>",
                     "className": "btn btn-white btn-primary btn-bold"
                 },
                 {
                     "extend": "pdf",
-                    "text": "<i class='fa fa-file-pdf-o bigger-110 ' style='color: red; font-size: 20px;'></i> <span class='hidden'>Export to PDF</span>",
+                    "text": "<i class='fa fa-file-pdf-o bigger-110 ' style='color: red; font-size: 15px;'></i> <span class='hidden'>Export to PDF</span>",
                     "className": "btn btn-white btn-primary btn-bold"
                 },
                 {
                     "extend": "print",
-                    "text": "<i class='fa fa-print bigger-110 ' style='color: grey; font-size: 20px;'></i> <span class='hidden'>Print</span>",
+                    "text": "<i class='fa fa-print bigger-110 ' style='color: grey; font-size: 15px;'></i> <span class='hidden'>Print</span>",
                     "className": "btn btn-white btn-primary btn-bold",
                     message:'hello'
 
