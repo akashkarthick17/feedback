@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="../images/rmd.ico">
     <title>Feedback</title>
     <!-- Tell the browser to be responsive to screen width -->
     <!-- Tell the browser to be responsive to screen width -->
@@ -47,7 +48,7 @@
 
 
         .bggrey {
-            background-color : #E7E7DE;
+            background-color : #eff1f3;
             list-style-type: none;
             text-decoration: none;
             text-transform: none;
@@ -355,9 +356,28 @@
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1>
-                Feedback
-            </h1>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box box-solid">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Subject Details</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <p  > <code style="font-weight: 500; font-size:17px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">Subject Code</code> : IT6501 &ensp;&ensp;&ensp;
+
+                                <code style="font-weight: 500; font-size:17px; font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif">Subject Name</code> : Digital Signal and Processing &ensp;&ensp;&ensp;
+
+
+                                <code style="font-weight: 500; font-size:17px; font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif">Staff Name</code>  : Yet to be added.</p>
+
+
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+            </div>
 
         </section>
 
@@ -387,8 +407,100 @@
 
 
                                     <h4><i class="icon fa fa-question-circle"></i> Question <%= j %></h4>
-                                    Danger alert preview. This alert is dismissable. A wonderful serenity has taken possession of my entire
-                                    soul, like these sweet mornings of spring which I enjoy with my whole heart.
+
+                                    <%
+
+                                        switch (j){
+                                            case 1:
+                                            {
+                                    %>
+                                    1.	The teacher is skilled and knowledge in the subject.
+
+                                    <%
+                                            break;
+                                        }
+                                        case 2:
+                                        {
+                                    %>
+                                    2.	The teacher is well prepared to handle the classes
+
+                                    <%
+                                            break;
+                                        }
+                                        case 3:
+                                        {
+                                    %>
+                                    3.	The teacher teaches the fundamental concepts in the subject clearly.
+
+                                    <%
+                                            break;
+                                        }
+                                        case 4:
+                                        {
+                                    %>
+                                    4.	The written materials (E.g. Handouts, lecture notes etc.), black-board writing and other teaching aids (E.g. PPT, ohp, models etc.) are effective.
+
+                                    <%
+                                            break;
+                                        }
+                                        case 5:
+                                        {
+                                    %>
+                                    5.	The teachers voice is clear and audible.
+
+                                    <%
+                                            break;
+                                        }
+                                        case 6:
+                                        {
+                                    %>
+                                    6.	The teacher encourages class participation and interaction.
+
+                                    <%
+                                            break;
+                                        }case 7:
+                                    {
+                                    %>
+                                    7.	The teacher uses practical examples to explain the subject and teaches topics beyons syllabus.
+
+                                    <%
+                                            break;
+                                        }
+                                        case 8:
+                                        {
+                                    %>
+                                    The teacher is punctual and uses the class time effectively.
+
+                                    <%
+                                            break;
+                                        }
+                                        case 9:
+                                        {
+                                    %>
+                                    9.	The test/exam evaluation by the teacher is fair and helps self-improvement.
+
+                                    <%
+                                            break;
+                                        }
+                                        case 10:
+                                        {
+
+                                    %>
+
+                                    10.	The teacher inspires the students to attain academic excellence.
+
+                                    <%
+                                                break;
+                                            }
+
+
+
+                                        }
+
+
+                                    %>
+
+
                                 </div>
                             </a>
 
@@ -404,7 +516,7 @@
                 <!-- /.col -->
 
                 <div class="col-md-6">
-                    <form action="rating_4.jsp" method="get" >
+                    <form action="rating_2.jsp" method="get" >
 
                         <div class="box box-default" >
 

@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="../images/rmd.ico">
     <title>Feedback</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -64,7 +65,7 @@
                                 <img src="../images/rmd.jpg" class="img-circle" alt="User Image">
 
                                 <p>
-                                    Student
+                                    Admin
                                     <small>RMD Engineering College</small>
                                 </p>
                             </li>
@@ -94,7 +95,7 @@
                     <img src="../images/rmd.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Welcome Student</p>
+                    <p>Welcome Admin</p>
 
                 </div>
             </div>
@@ -102,9 +103,24 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class="header">MAIN NAVIGATION</li>
-                <li class="active">
+                <li class="">
                     <a href="dashboard.jsp"><i class="fa fa-dashboard"></i>
                         <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="feedback_reports.jsp"><i class="fa fa-line-chart"></i>
+                        <span>Feedback Reports</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="survey_reports.jsp"><i class="fa fa-pie-chart"></i>
+                        <span>Survey Reports</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="question_post.jsp"><i class="fa fa-question-circle-o"></i>
+                        <span>Questions</span>
                     </a>
                 </li>
 
@@ -118,17 +134,95 @@
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1>
-                Feedback
-            </h1>
 
+            <ol class="breadcrumb">
+                <li><a href="dashboard.jsp"><i class="fa fa-dashboard"></i> Home</a></li>
+
+            </ol>
         </section>
+
+        <br><br><br><br>
 
         <!-- Main content -->
         <section class="content">
 
-
-
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Staff Rating</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body no-padding">
+                    <table class="table table-striped">
+                        <tr>
+                            <th style="width: 10px">#</th>
+                            <th>Staff Name</th>
+                            <th>Overall Rating in Percentage</th>
+                            <th style="width: 40px">Label</th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><a href="staff_survey_rating.jsp" >Staff 1</a></td>
+                            <td>
+                                <div class="progress progress-xs progress-striped active">
+                                    <div class="progress-bar progress-bar-danger" style="width: 90%"></div>
+                                </div>
+                            </td>
+                            <td><span class="badge bg-green">90%</span></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><a href="#" >Staff 2</a></td>
+                            <td>
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
+                                </div>
+                            </td>
+                            <td><span class="badge bg-yellow">70%</span></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td><a href="#" >Staff 3</a></td>
+                            <td>
+                                <div class="progress progress-xs progress-striped active">
+                                    <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
+                                </div>
+                            </td>
+                            <td><span class="badge bg-light-blue">30%</span></td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td><a href="#" >Staff 4</a></td>
+                            <td>
+                                <div class="progress progress-xs progress-striped active">
+                                    <div class="progress-bar progress-bar-success" style="width: 90%"></div>
+                                </div>
+                            </td>
+                            <td><span class="badge bg-green">90%</span></td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td><a href="#" >Staff 5</a></td>
+                            <td>
+                                <div class="progress progress-xs progress-striped active">
+                                    <div class="progress-bar progress-bar-success" style="width: 90%"></div>
+                                </div>
+                            </td>
+                            <td><span class="badge bg-green">90%</span></td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td><a href="#" >Staff 6</a></td>
+                            <td>
+                                <div class="progress progress-xs progress-striped active">
+                                    <div class="progress-bar progress-bar-success" style="width: 90%"></div>
+                                </div>
+                            </td>
+                            <td><span class="badge bg-green">90%</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
 
 
 
@@ -141,13 +235,11 @@
         <div class="pull-right hidden-xs">
             <b>Version</b> 1.0
         </div>
-        <strong>Copyright &copy; 2017 <a href="https://www.flixys.com">Flixys Pvt Ltd.</a>.</strong> All rights
+        <strong>Copyright &copy; 2017 <a href="https:/www.flixys.com">Flixys Pvt Ltd</a>.</strong> All rights
         reserved.
     </footer>
 
-    <!-- Add the sidebar's background. This div must be placed
-         immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
+
 </div>
 <!-- ./wrapper -->
 

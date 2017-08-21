@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="../images/rmd.ico">
   <title>Feedback</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -145,7 +146,7 @@
               <li>Once you click <code>PROCEED</code> button, you will be prompted to a window where you need to select the department, semester and section and then click<code > NEXT</code>. </li>
               <li>A window will appear which contains the staff name and their respective subject (based on the department, semester and section you have selected), you need to verify the detail and click <code >READY</code>, which take you to the <code>FEEDBACK FORM</code>.</li>
               <li>The form contains 10 questions, student need to select their opinion (as <span style="color: #008000;">Strongly Agree</span>, <span style="color: #008000;">Agree</span>, <span style="color: #008000;">Neutral</span>, <span style="color: #008000;">Disagree</span>, <span style="color: #008000;">Strongly Disagree</span>) about each staff for all the 10 questions.</li>
-              <li>Click <code>CONFIRM</code> to submit you feedback.</li>
+              <li>Click <code>CONFIRM</code> to submit your feedback.</li>
             </ol>
           </div>
           <!-- /.box-body -->

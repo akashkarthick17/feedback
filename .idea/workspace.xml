@@ -7,9 +7,149 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1700e065-a70d-45cc-881e-d4e7755f7fee" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/swf/flashExport.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/License.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/buttons.bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/buttons.bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/buttons.bootstrap4.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/buttons.bootstrap4.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/buttons.dataTables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/buttons.dataTables.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/buttons.foundation.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/buttons.foundation.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/buttons.jqueryui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/buttons.jqueryui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/buttons.semanticui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/buttons.semanticui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/common.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/css/mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/api/addRemove.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/api/enable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/api/group.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/api/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/api/text.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/column_visibility/columnGroups.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/column_visibility/columnText.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/column_visibility/columns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/column_visibility/columnsToggle.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/column_visibility/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/column_visibility/layout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/column_visibility/restore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/column_visibility/simple.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/column_visibility/stateSave.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/column_visibility/text.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/flash/copyi18n.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/flash/filename.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/flash/hidden.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/flash/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/flash/pdfMessage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/flash/pdfPage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/flash/simple.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/flash/swfPath.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/flash/tsv.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/columns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/copyi18n.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/customFile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/excelBorder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/excelCellShading.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/excelTextBold.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/filename.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/outputFormat-function.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/outputFormat-orthogonal.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/pdfImage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/pdfMessage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/pdfOpen.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/pdfPage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/simple.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/titleMessage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/html5/tsv.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/className.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/collections-autoClose.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/collections-sub.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/collections.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/custom.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/export.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/keys.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/multiple.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/new.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/pageLength.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/plugins.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/initialisation/simple.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/print/autoPrint.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/print/columns.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/print/customisation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/print/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/print/message.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/print/select.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/print/simple.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/styling/bootstrap.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/styling/bootstrap4.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/styling/foundation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/styling/icons.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/styling/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/styling/jqueryui.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/examples/styling/semanticui.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.bootstrap4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.bootstrap4.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.colVis.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.colVis.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.flash.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.flash.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.foundation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.foundation.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.html5.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.html5.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.jqueryui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.jqueryui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.print.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.print.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.semanticui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.semanticui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/dataTables.buttons.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/dataTables.buttons.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/blnk.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/chart_and_pdf.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/css/buttons.dataTables.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/css/jquery.dataTables.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/feedback_reports.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/html2canvas.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/js/buttons.html5.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/js/dataTables.buttons.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/js/jquery-1.12.4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/js/jquery.dataTables.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/js/jszip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/js/pdfmake.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/js/vfs_fonts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/question_post.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/staff_feedback_rating.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/staff_name_feedback.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/staff_name_survey.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/staff_survey_rating.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/admin_login/survey_reports.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/student_login/end.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/student_login/survey_1.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/student_login/survey_2.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/student_login/survey_3.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/student_login/survey_4.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/student_login/survey_5.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/student_login/survey_6.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin_login/dashboard.jsp" afterPath="$PROJECT_DIR$/web/admin_login/dashboard.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/dashboard.jsp" afterPath="$PROJECT_DIR$/web/student_login/dashboard.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/rating_1.jsp" afterPath="$PROJECT_DIR$/web/student_login/rating_1.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/rating_2.jsp" afterPath="$PROJECT_DIR$/web/student_login/rating_2.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/rating_3.jsp" afterPath="$PROJECT_DIR$/web/student_login/rating_3.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/rating_4.jsp" afterPath="$PROJECT_DIR$/web/student_login/rating_4.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/rating_5.jsp" afterPath="$PROJECT_DIR$/web/student_login/rating_5.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/rating_6.jsp" afterPath="$PROJECT_DIR$/web/student_login/rating_6.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/student_login/blank.jsp" afterPath="$PROJECT_DIR$/web/student_login/survey.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,118 +162,100 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <file leaf-file-name="chart_and_pdf.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/admin_login/chart_and_pdf.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1653">
-              <caret line="57" column="36" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+            <state relative-caret-position="6293">
+              <caret line="217" column="0" lean-forward="false" selection-start-line="217" selection-start-column="0" selection-end-line="243" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rating_1.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/student_login/rating_1.jsp">
+      <file leaf-file-name="feedback_reports.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/admin_login/feedback_reports.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="370" column="57" lean-forward="false" selection-start-line="370" selection-start-column="57" selection-end-line="370" selection-end-column="57" />
+            <state relative-caret-position="4524">
+              <caret line="156" column="17" lean-forward="false" selection-start-line="156" selection-start-column="17" selection-end-line="156" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="staff_name_feedback.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/admin_login/staff_name_feedback.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6612">
+              <caret line="228" column="18" lean-forward="false" selection-start-line="143" selection-start-column="7" selection-end-line="228" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="staff_feedback_rating.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/admin_login/staff_feedback_rating.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="565">
+              <caret line="667" column="80" lean-forward="false" selection-start-line="667" selection-start-column="80" selection-end-line="667" selection-end-column="80" />
               <folding>
-                <element signature="n#style#0;n#code#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#11914#11920#0#HTML" expanded="true" />
-                <element signature="e#11920#11926#0#HTML" expanded="true" />
-                <element signature="e#11926#11932#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#code#1;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#12123#12129#0#HTML" expanded="true" />
-                <element signature="e#12129#12135#0#HTML" expanded="true" />
-                <element signature="e#12135#12141#0#HTML" expanded="true" />
+                <marker date="1503327671795" expanded="true" signature="25879:25908" ph="..." />
+                <marker date="1503327671795" expanded="true" signature="25879:25912" ph="..." />
+                <marker date="1503327671795" expanded="true" signature="26186:26242" ph="..." />
+                <marker date="1503327671795" expanded="true" signature="26601:26635" ph="..." />
+                <marker date="1503327671795" expanded="true" signature="26908:26936" ph="..." />
+                <marker date="1503327671795" expanded="true" signature="27204:27233" ph="..." />
+                <marker date="1503327671795" expanded="true" signature="27230:27233" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rating_2.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/student_login/rating_2.jsp">
+      <file leaf-file-name="pdfmake.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/admin_login/js/pdfmake.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11774">
-              <caret line="406" column="42" lean-forward="false" selection-start-line="406" selection-start-column="42" selection-end-line="406" selection-end-column="42" />
+            <state relative-caret-position="870">
+              <caret line="30" column="39" lean-forward="false" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rating_3.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/student_login/rating_3.jsp">
+      <file leaf-file-name="jquery-1.12.4.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/admin_login/js/jquery-1.12.4.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11774">
-              <caret line="406" column="42" lean-forward="false" selection-start-line="406" selection-start-column="42" selection-end-line="406" selection-end-column="42" />
+            <state relative-caret-position="318855">
+              <caret line="11007" column="4" lean-forward="false" selection-start-line="11007" selection-start-column="4" selection-end-line="11007" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rating_4.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/student_login/rating_4.jsp">
+      <file leaf-file-name="buttons.dataTables.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/admin_login/css/buttons.dataTables.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11774">
-              <caret line="406" column="42" lean-forward="false" selection-start-line="406" selection-start-column="42" selection-end-line="406" selection-end-column="42" />
+            <state relative-caret-position="0">
+              <caret line="0" column="9159" lean-forward="false" selection-start-line="0" selection-start-column="9159" selection-end-line="0" selection-end-column="9159" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rating_5.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/student_login/rating_5.jsp">
+      <file leaf-file-name="staff_survey_rating.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/admin_login/staff_survey_rating.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11774">
-              <caret line="406" column="42" lean-forward="false" selection-start-line="406" selection-start-column="42" selection-end-line="406" selection-end-column="42" />
+            <state relative-caret-position="3277">
+              <caret line="113" column="10" lean-forward="false" selection-start-line="113" selection-start-column="10" selection-end-line="113" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rating_6.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/student_login/rating_6.jsp">
+      <file leaf-file-name="staff_name_survey.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/admin_login/staff_name_survey.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="585" column="46" lean-forward="false" selection-start-line="585" selection-start-column="46" selection-end-line="585" selection-end-column="46" />
+            <state relative-caret-position="4669">
+              <caret line="161" column="22" lean-forward="false" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blank.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/student_login/blank.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4843">
-              <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/student_login/dashboard.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="144" column="192" lean-forward="false" selection-start-line="144" selection-start-column="192" selection-end-line="144" selection-end-column="192" />
-              <folding>
-                <element signature="e#4964#4971#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#2;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#3;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#4;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -149,31 +271,47 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>widget</find>
-      <find>alex</find>
-      <find>adminlte</find>
-      <find>home</find>
-      <find>admin</find>
-      <find>Admin</find>
-      <find>wid</find>
-      <find>sign</find>
-      <find>../../</find>
-      <find>alert</find>
-      <find>feed</find>
-      <find>hidde</find>
-      <find>action</find>
-      <find>DISAGREE</find>
-      <find>question</find>
       <find>span</find>
       <find>feedback</find>
-      <find>feedback</find>
+      <find>10</find>
+      <find>wid</find>
+      <find>Widgets</find>
+      <find>admin</find>
+      <find>feed</find>
+      <find>title</find>
+      <find>J</find>
+      <find>JS chart</find>
+      <find>JS chart b</find>
+      <find>JS chart by</find>
+      <find>JS chart by a</find>
+      <find>JS chart by am</find>
+      <find>JS chart by amC</find>
+      <find>JS chart by amCh</find>
+      <find>JS chart by amCha</find>
+      <find>JS chart by amChart</find>
+      <find>JS chart by amCharts</find>
+      <find>JS char</find>
+      <find>JS cha</find>
+      <find>JS ch</find>
+      <find>JS c</find>
+      <find>JS</find>
+      <find>a</find>
+      <find>amChart</find>
+      <find>amCharts</find>
+      <find>size: 25</find>
     </findStrings>
     <replaceStrings>
       <replace>../</replace>
       <replace>hidden</replace>
       <replace>Disagree</replace>
       <replace>code</replace>
+      <replace>15</replace>
+      <replace />
+      <replace>size: 20</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>F:\Projects\apache\webapps\feedback\web\amcharts</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -189,17 +327,44 @@
         <option value="$PROJECT_DIR$/src/untitled3/Ffgf.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/logout.jsp" />
-        <option value="$PROJECT_DIR$/web/admin_login/dashboard.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
         <option value="$PROJECT_DIR$/web/student_login/blank.jsp" />
+        <option value="$PROJECT_DIR$/web/student_login/end.jsp" />
+        <option value="$PROJECT_DIR$/web/student_login/rating_1.jsp" />
         <option value="$PROJECT_DIR$/web/student_login/rating_2.jsp" />
         <option value="$PROJECT_DIR$/web/student_login/rating_3.jsp" />
         <option value="$PROJECT_DIR$/web/student_login/rating_4.jsp" />
         <option value="$PROJECT_DIR$/web/student_login/rating_5.jsp" />
         <option value="$PROJECT_DIR$/web/student_login/rating_6.jsp" />
+        <option value="$PROJECT_DIR$/web/student_login/survey.jsp" />
+        <option value="$PROJECT_DIR$/web/student_login/survey_1.jsp" />
+        <option value="$PROJECT_DIR$/web/student_login/survey_2.jsp" />
+        <option value="$PROJECT_DIR$/web/student_login/survey_3.jsp" />
+        <option value="$PROJECT_DIR$/web/student_login/survey_4.jsp" />
+        <option value="$PROJECT_DIR$/web/student_login/survey_5.jsp" />
+        <option value="$PROJECT_DIR$/web/student_login/survey_6.jsp" />
         <option value="$PROJECT_DIR$/web/student_login/dashboard.jsp" />
-        <option value="$PROJECT_DIR$/web/student_login/rating_1.jsp" />
+        <option value="$PROJECT_DIR$/web/admin_login/dashboard.jsp" />
+        <option value="$PROJECT_DIR$/web/admin_login/question_post.jsp" />
+        <option value="$PROJECT_DIR$/web/amcharts/amcharts.js" />
+        <option value="$PROJECT_DIR$/web/admin_login/chart_and_pdf.jsp" />
+        <option value="$PROJECT_DIR$/web/admin_login/staff_name.jsp" />
+        <option value="$PROJECT_DIR$/web/admin_login/staff_survey_rating.jsp" />
+        <option value="$PROJECT_DIR$/web/admin_login/staff_name_feedback.jsp" />
+        <option value="$PROJECT_DIR$/web/admin_login/survey_reports.jsp" />
+        <option value="$PROJECT_DIR$/web/admin_login/feedback_reports.jsp" />
+        <option value="$PROJECT_DIR$/web/admin_login/staff_name_survey.jsp" />
+        <option value="$PROJECT_DIR$/web/admin_login/js/buttons.html5.min.js" />
+        <option value="$PROJECT_DIR$/web/admin_login/js/vfs_fonts.js" />
+        <option value="$PROJECT_DIR$/web/admin_login/css/buttons.dataTables.min.css" />
+        <option value="$PROJECT_DIR$/web/admin_login/css/jquery.dataTables.min.css" />
+        <option value="$PROJECT_DIR$/web/admin_login/js/jquery.dataTables.min.js" />
+        <option value="$PROJECT_DIR$/web/admin_login/js/dataTables.buttons.min.js" />
+        <option value="$PROJECT_DIR$/web/admin_login/js/pdfmake.min.js" />
+        <option value="$PROJECT_DIR$/web/admin_login/js/jquery-1.12.4.js" />
+        <option value="$PROJECT_DIR$/web/admin_login/js/jszip.min.js" />
+        <option value="$PROJECT_DIR$/web/admin_login/staff_feedback_rating.jsp" />
       </list>
     </option>
   </component>
@@ -280,7 +445,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="student_login" />
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feedback" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feedback" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amcharts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -302,11 +485,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feedback" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feedback" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin_login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,8 +528,8 @@
       <recent name="F:\Projects\apache\webapps\feedback\web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Projects\apache\webapps\feedback\web\student_login" />
       <recent name="F:\Projects\apache\webapps\feedback\web\admin_login" />
+      <recent name="F:\Projects\apache\webapps\feedback\web\student_login" />
       <recent name="F:\Projects\apache\webapps\feedback\web" />
     </key>
   </component>
@@ -796,11 +1001,15 @@
       <workItem from="1502683290072" duration="33744000" />
       <workItem from="1502763737003" duration="1587000" />
       <workItem from="1502978133066" duration="9094000" />
+      <workItem from="1503162908594" duration="794000" />
+      <workItem from="1503197059943" duration="22782000" />
+      <workItem from="1503273780536" duration="2428000" />
+      <workItem from="1503324879821" duration="2785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51763000" />
+    <option name="totallyTimeSpent" value="80552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -859,182 +1068,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1653">
-          <caret line="57" column="36" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/rating_1.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14761">
-          <caret line="509" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="601" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#code#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#11914#11920#0#HTML" expanded="true" />
-            <element signature="e#11920#11926#0#HTML" expanded="true" />
-            <element signature="e#11926#11932#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#code#1;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#12123#12129#0#HTML" expanded="true" />
-            <element signature="e#12129#12135#0#HTML" expanded="true" />
-            <element signature="e#12135#12141#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/rating_2.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11774">
-          <caret line="406" column="42" lean-forward="false" selection-start-line="406" selection-start-column="42" selection-end-line="406" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/rating_3.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11774">
-          <caret line="406" column="42" lean-forward="false" selection-start-line="406" selection-start-column="42" selection-end-line="406" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/rating_4.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11774">
-          <caret line="406" column="42" lean-forward="false" selection-start-line="406" selection-start-column="42" selection-end-line="406" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/rating_5.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11774">
-          <caret line="406" column="42" lean-forward="false" selection-start-line="406" selection-start-column="42" selection-end-line="406" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/blank.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4843">
-          <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/dashboard.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3712">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding>
-            <element signature="e#4964#4971#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#3;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#4;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/rating_6.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16965">
-          <caret line="585" column="46" lean-forward="true" selection-start-line="585" selection-start-column="46" selection-end-line="585" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1653">
-          <caret line="57" column="36" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/rating_2.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/blank.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4843">
-          <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/dashboard.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3712">
-          <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding>
-            <element signature="e#4964#4971#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#3;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#4;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/logout.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin_login/dashboard.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1827">
-          <caret line="63" column="43" lean-forward="false" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/rating_1.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14268">
-          <caret line="492" column="21" lean-forward="false" selection-start-line="492" selection-start-column="21" selection-end-line="492" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#code#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#11914#11920#0#HTML" expanded="true" />
-            <element signature="e#11920#11926#0#HTML" expanded="true" />
-            <element signature="e#11926#11932#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#code#1;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#12123#12129#0#HTML" expanded="true" />
-            <element signature="e#12129#12135#0#HTML" expanded="true" />
-            <element signature="e#12135#12141#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/untitled3/Ffgf.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -1110,15 +1143,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin_login/dashboard.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1827">
-          <caret line="63" column="43" lean-forward="false" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,90 +1154,320 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/web/dist/css/AdminLTE.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1653">
-          <caret line="57" column="36" lean-forward="false" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/blank.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4843">
-          <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/rating_2.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11774">
-          <caret line="406" column="42" lean-forward="false" selection-start-line="406" selection-start-column="42" selection-end-line="406" selection-end-column="42" />
+        <state relative-caret-position="293">
+          <caret line="6" column="4855" lean-forward="false" selection-start-line="6" selection-start-column="4855" selection-end-line="6" selection-end-column="4855" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/student_login/rating_3.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11774">
-          <caret line="406" column="42" lean-forward="false" selection-start-line="406" selection-start-column="42" selection-end-line="406" selection-end-column="42" />
+        <state relative-caret-position="174">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/student_login/rating_4.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11774">
-          <caret line="406" column="42" lean-forward="false" selection-start-line="406" selection-start-column="42" selection-end-line="406" selection-end-column="42" />
+        <state relative-caret-position="174">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/student_login/rating_5.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11774">
-          <caret line="406" column="42" lean-forward="false" selection-start-line="406" selection-start-column="42" selection-end-line="406" selection-end-column="42" />
+        <state relative-caret-position="174">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/student_login/rating_6.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="585" column="46" lean-forward="false" selection-start-line="585" selection-start-column="46" selection-end-line="585" selection-end-column="46" />
+        <state relative-caret-position="203">
+          <caret line="7" column="55" lean-forward="false" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/dashboard.jsp">
+    <entry file="file://$PROJECT_DIR$/web/student_login/survey_1.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="144" column="192" lean-forward="false" selection-start-line="144" selection-start-column="192" selection-end-line="144" selection-end-column="192" />
-          <folding>
-            <element signature="e#4964#4971#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#2;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#3;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#4;n#li#3;n#ol#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="174">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/survey_2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/survey_3.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/survey_6.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/survey.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="55" lean-forward="false" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/rating_2.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/student_login/rating_1.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="370" column="57" lean-forward="false" selection-start-line="370" selection-start-column="57" selection-end-line="370" selection-end-column="57" />
+        <state relative-caret-position="174">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/end.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/dashboard.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2755">
+          <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/survey_5.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/survey_4.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/dashboard.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="133" column="41" lean-forward="false" selection-start-line="133" selection-start-column="41" selection-end-line="133" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/question_post.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/amcharts/amcharts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="157" column="58" lean-forward="true" selection-start-line="157" selection-start-column="58" selection-end-line="157" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/html2canvas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/blnk.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1827">
+          <caret line="63" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/survey_reports.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4872">
+          <caret line="168" column="41" lean-forward="false" selection-start-line="168" selection-start-column="41" selection-end-line="168" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/feedback_reports.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4524">
+          <caret line="156" column="17" lean-forward="false" selection-start-line="156" selection-start-column="17" selection-end-line="156" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/staff_survey_rating.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3277">
+          <caret line="113" column="10" lean-forward="false" selection-start-line="113" selection-start-column="10" selection-end-line="113" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/staff_name_survey.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4669">
+          <caret line="161" column="22" lean-forward="false" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/staff_name_feedback.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6612">
+          <caret line="228" column="18" lean-forward="false" selection-start-line="143" selection-start-column="7" selection-end-line="228" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/chart_and_pdf.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6293">
+          <caret line="217" column="0" lean-forward="false" selection-start-line="217" selection-start-column="0" selection-end-line="243" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/js/buttons.html5.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="25" column="281" lean-forward="false" selection-start-line="25" selection-start-column="281" selection-end-line="25" selection-end-column="281" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/js/vfs_fonts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/css/buttons.dataTables.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9159" lean-forward="false" selection-start-line="0" selection-start-column="9159" selection-end-line="0" selection-end-column="9159" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/css/jquery.dataTables.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14111" lean-forward="false" selection-start-line="0" selection-start-column="14111" selection-end-line="0" selection-end-column="14111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/js/jquery.dataTables.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4814">
+          <caret line="166" column="393" lean-forward="false" selection-start-line="166" selection-start-column="393" selection-end-line="166" selection-end-column="393" />
           <folding>
-            <element signature="n#style#0;n#code#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#11914#11920#0#HTML" expanded="true" />
-            <element signature="e#11920#11926#0#HTML" expanded="true" />
-            <element signature="e#11926#11932#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#code#1;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#12123#12129#0#HTML" expanded="true" />
-            <element signature="e#12129#12135#0#HTML" expanded="true" />
-            <element signature="e#12135#12141#0#HTML" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/js/dataTables.buttons.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="823">
+          <caret line="36" column="118" lean-forward="false" selection-start-line="36" selection-start-column="118" selection-end-line="36" selection-end-column="118" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/js/jquery-1.12.4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318855">
+          <caret line="11007" column="4" lean-forward="false" selection-start-line="11007" selection-start-column="4" selection-end-line="11007" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/js/pdfmake.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="30" column="39" lean-forward="false" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/js/jszip.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="70" lean-forward="false" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/Buttons-1.4.0/js/buttons.flash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/staff_feedback_rating.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="667" column="80" lean-forward="false" selection-start-line="667" selection-start-column="80" selection-end-line="667" selection-end-column="80" />
+          <folding>
+            <marker date="1503327671795" expanded="true" signature="25879:25908" ph="..." />
+            <marker date="1503327671795" expanded="true" signature="25879:25912" ph="..." />
+            <marker date="1503327671795" expanded="true" signature="26186:26242" ph="..." />
+            <marker date="1503327671795" expanded="true" signature="26601:26635" ph="..." />
+            <marker date="1503327671795" expanded="true" signature="26908:26936" ph="..." />
+            <marker date="1503327671795" expanded="true" signature="27204:27233" ph="..." />
+            <marker date="1503327671795" expanded="true" signature="27230:27233" ph="..." />
           </folding>
         </state>
       </provider>
