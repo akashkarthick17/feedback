@@ -120,7 +120,12 @@
                 </li>
                 <li class="">
                     <a href="question_post.jsp"><i class="fa fa-question-circle-o"></i>
-                        <span>Questions</span>
+                        <span>Feedback Questions</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="question_post_survey.jsp"><i class="fa fa-question-circle-o"></i>
+                        <span>Survey Questions</span>
                     </a>
                 </li>
 

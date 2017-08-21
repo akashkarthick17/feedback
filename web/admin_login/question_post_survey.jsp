@@ -139,12 +139,13 @@
             <span>Survey Reports</span>
           </a>
         </li>
-        <li class="active">
+        <li class="">
           <a href="question_post.jsp"><i class="fa fa-question-circle-o"></i>
             <span>Feedback Questions</span>
           </a>
         </li>
-        <li class="">
+
+        <li class="active">
           <a href="question_post_survey.jsp"><i class="fa fa-question-circle-o"></i>
             <span>Survey Questions</span>
           </a>
@@ -161,7 +162,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-      Feedback Questions
+      Survey Questions
 
       </h1>
       <ol class="breadcrumb">
@@ -187,7 +188,7 @@
 
     <%
 
-      for(int i=1;i<=10;i++){
+      for(int i=1;i<=15;i++){
 
     %>
 
