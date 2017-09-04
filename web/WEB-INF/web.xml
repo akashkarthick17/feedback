@@ -8,10 +8,24 @@
         <servlet-name>index</servlet-name>
         <jsp-file>/index.jsp</jsp-file>
     </servlet>
+
     <servlet>
         <servlet-name>Servlet</servlet-name>
         <servlet-class>com.database.servlet.Servlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>com.database.servlet.DashboardServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>upload</servlet-name>
+        <servlet-class>com.database.servlet.UploadFile</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>import</servlet-name>
+        <servlet-class>com.database.servlet.ImportExcel</servlet-class>
+    </servlet>
+
 
 
 
@@ -20,12 +34,23 @@
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
 
-
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/admin_login/DashboardServlet</url-pattern>
+    </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>Servlet</servlet-name>
-        <url-pattern>/Servlet</url-pattern>
+        <url-pattern>/admin_login/Servlet</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>upload</servlet-name>
+        <url-pattern>/admin_login/upload</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>import</servlet-name>
+        <url-pattern>/admin_login/import</url-pattern>
+    </servlet-mapping>
 
 </web-app>

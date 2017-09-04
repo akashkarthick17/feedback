@@ -36,12 +36,22 @@
 </style>
 <script type="application/javascript">
 
-  function checkAdmin(){
+  function checkStudent(){
 
       var name = document.getElementById("register").value;
 
+      var button = document.getElementById("button");
+
       if(!isNaN(name)){
           location.href="login.jsp?register="+name;
+      }
+
+      else{
+        // data-toggle="modal" data-target="#modal-info"
+
+          button.setAttribute("data-toggle", "modal");
+          button.setAttribute("data-target","#modal-info");
+
       }
 
      // alert("hello "+name);
@@ -107,7 +117,7 @@
         <input type="text" class="form-control" id="register" onkeypress="return key(event)" autocomplete="off" name="register" placeholder="Register Number">
 
         <div class="input-group-btn">
-          <button type="button" id="button" name="submit" onclick="checkAdmin()" class="btn" data-toggle="modal" data-target="#modal-info"><i class="fa fa-arrow-right text-muted"></i></button>
+          <button type="button" id="button" name="submit" onclick="checkStudent()" class="btn" ><i class="fa fa-arrow-right text-muted"></i></button>
         </div>
       </div>
     </form>

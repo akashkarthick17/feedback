@@ -20,9 +20,11 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.11" level="application_server_libraries" />
+    <orderEntry type="library" name="c3p0-0.9.5.2" level="project" />
+    <orderEntry type="library" name="cos-multipart" level="project" />
+    <orderEntry type="library" name="commons-fileupload-1.3.3-javadoc" level="project" />
+    <orderEntry type="library" scope="TEST" name="commons-io-2.5-javadoc" level="project" />
+    <orderEntry type="library" name="commons-io-2.5-javadoc" level="project" />
     <orderEntry type="library" name="poi-3.16" level="project" />
-    <orderEntry type="library" name="commons-codec-1.10" level="project" />
-    <orderEntry type="library" name="curvesapi-1.04" level="project" />
-    <orderEntry type="library" name="servlet-api-3.0" level="project" />
   </component>
 </module>

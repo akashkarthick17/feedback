@@ -1,3 +1,6 @@
+<%@ page import="java.util.List" %>
+<%@ page import="com.database.servlet.Year" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,6 +48,52 @@
     }
 
   </style>
+
+  <script type="application/javascript">
+
+
+    function isExists(year) {
+
+       return false;
+
+    }
+    function create(){
+
+
+
+        var cYear = document.getElementById("createYear").value;
+        //alert(cYear);
+        if(cYear==''){
+            alert("please Enter Current Year");
+        }
+        else if(isNaN(cYear)){
+            alert("please Enter Correct Year");
+        }
+        else if(isExists(cYear)){
+
+            alert("Year already Exists");
+        }
+        else{
+
+
+
+
+            window.location.href="DashboardServlet?crud=create&year="+cYear;
+        }
+
+
+
+    }
+
+   function Tdelete() {
+        var e = document.getElementById("delete");
+        var dYear = e.options[e.selectedIndex].value;
+       window.location.href="DashboardServlet?crud=delete&year="+dYear;
+   }
+
+
+
+  </script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -185,17 +234,17 @@
             <form class="form-horizontal">
 
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Year</label>
+                  <label for="createYear" class="col-sm-2 control-label">Year</label>
 
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Enter the current year">
+                    <input type="text" class="form-control" id="createYear" placeholder="Enter the current year">
                   </div>
                 </div>
 
 
 
               <!-- /.box-body -->
-              <button type="submit" class="btn btn-warning pull-right">Create</button>
+              <button type="button" onclick="create()" class="btn btn-warning pull-right">Create</button>
 
               <!-- /.box-footer -->
             </form>
@@ -220,17 +269,24 @@
               <form class="form-horizontal">
 
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Select Year</label>
+                <label for="update" class="col-sm-2 control-label">Select Year</label>
 
                 <div class="col-sm-10">
-                  <select class="form-control select2" style="">
+                  <select class="form-control select2" style="" id="update">
+                    <%
 
-                    <option>2012</option>
-                    <option>2013</option>
-                    <option>2014</option>
-                    <option>2015</option>
-                    <option>2016</option>
-                    <option>2017</option>
+
+                      List<Year> getYear = CRUDManager.fetch();
+
+                      for(Year y :getYear){
+                    %>
+
+                    <option value="<%= y.getYear()%>"><%= y.getYear() %></option>
+
+
+                    <%
+                      }
+                    %>
                   </select>
 
                 </div>
@@ -270,24 +326,32 @@
               <form class="form-horizontal">
 
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Select Year</label>
+                  <label for="insert" class="col-sm-2 control-label">Select Year</label>
 
                   <div class="col-sm-10">
-                    <select class="form-control select2" style="">
+                    <select class="form-control select2" style="" id="insert">
 
-                      <option>2012</option>
-                      <option>2013</option>
-                      <option>2014</option>
-                      <option>2015</option>
-                      <option>2016</option>
-                      <option>2017</option>
+                      <%
+
+
+
+
+                        for(Year y :getYear){
+                      %>
+
+                      <option value="<%= y.getYear()%>"><%= y.getYear() %></option>
+
+
+                      <%
+                      }
+                      %>
                     </select>
 
                   </div>
                 </div>
 
 
-                <button type="submit" class="btn btn-success pull-right">Insert</button>
+                <button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#modal-info">Insert</button>
 
               </form>
 
@@ -317,24 +381,29 @@
               <form class="form-horizontal">
 
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Select Year</label>
+                  <label for="delete" class="col-sm-2 control-label">Select Year</label>
 
                   <div class="col-sm-10">
-                    <select class="form-control select2" style="">
+                    <select class="form-control select2" style="" id="delete">
+                      <%
 
-                      <option>2012</option>
-                      <option>2013</option>
-                      <option>2014</option>
-                      <option>2015</option>
-                      <option>2016</option>
-                      <option>2017</option>
+
+                        for(Year y :getYear){
+                      %>
+
+                      <option value="<%= y.getYear()%>"><%= y.getYear() %></option>
+
+
+                      <%
+                        }
+                      %>
                     </select>
 
                   </div>
                 </div>
 
 
-                <button type="submit" class="btn btn-danger pull-right">Delete</button>
+                <button type="button" onclick="Tdelete()" class="btn btn-danger pull-right">Delete</button>
 
               </form>
 
@@ -368,6 +437,57 @@
     <strong>Copyright &copy; 2017 <a href="https:/www.flixys.com">Flixys Pvt Ltd</a>.</strong> All rights
     reserved.
   </footer>
+
+
+  <div class="modal modal-info fade" id="modal-info">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Insert</h4>
+        </div>
+        <div class="modal-body">
+          <div class="box box-primary">
+
+
+
+
+            <form class="form-horizontal">
+
+              <div class="form-group">
+                <label for="delete" class="col-sm-2 control-label">Select Year</label>
+
+                <div class="col-xs-6">
+                  <select class="form-control select2" style="" id="selectSem" data-placeholder="Please Select Semester">
+
+                    <option value=""></option>
+                    <option value="odd"></option>
+                    <option value="even"></option>
+
+                  </select>
+
+                </div>
+              </div>
+
+
+              <button type="button" onclick="Tdelete()" class="btn btn-danger pull-right">Delete</button>
+
+            </form>
+
+
+          </div>
+          <!-- /.box-body -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+        <button type="button" onclick="validateAdmin()" id="buttonLogin"  class="btn btn-outline">Login</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+
 
 
 </div>

@@ -1,3 +1,8 @@
+<%@ page import="java.util.List" %>
+<%@ page import="com.database.servlet.Year" %>
+<%@ page import="com.database.servlet.CRUDManager" %>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +39,7 @@
 
   <style type="text/css">
     body{
-      overflow: hidden;
+
     }
 
     .box-padding{
@@ -45,6 +50,96 @@
     }
 
   </style>
+
+  <script type="application/javascript">
+
+
+    function isExists(year) {
+
+       return false;
+
+    }
+    function create(){
+
+
+
+        var cYear = document.getElementById("createYear").value;
+        //alert(cYear);
+        if(cYear==''){
+            alert("please Enter Current Year");
+        }
+        else if(isNaN(cYear)){
+            alert("please Enter Correct Year");
+        }
+        else if(isExists(cYear)){
+
+            alert("Year already Exists");
+        }
+        else{
+
+
+
+
+            window.location.href="DashboardServlet?crud=create&year="+cYear;
+        }
+
+
+
+    }
+
+   function Tdelete() {
+        var e = document.getElementById("delete");
+        var dYear = e.options[e.selectedIndex].value;
+       window.location.href="DashboardServlet?crud=delete&year="+dYear;
+   }
+   function insert(){
+
+       // alert("insert value");
+
+       var e = document.getElementById("insert");
+       var iYear = e.options[e.selectedIndex].value;
+
+      // alert("value : "+iYear);
+       document.getElementById("year").value = iYear;
+
+
+     /* var x = document.createElement("INPUT");
+      x.setAttribute("type","text");
+      x.setAttribute("name","crud");
+      x.setAttribute("value","insert");
+
+     document.getElementById("insertform").appendChild(x);
+
+
+       var y = document.createElement("INPUT");
+       y.setAttribute("type","text");
+       y.setAttribute("name","year");
+       y.setAttribute("value",iYear);
+
+       document.getElementById("insertform").appendChild(y);
+
+       document.getElementById("insertform").submit();
+*/
+
+
+   }
+
+   function publishlink(){
+
+       var y = document.getElementById("publishyear");
+       var s = document.getElementById("publishsem");
+
+       var getYear = y.options[y.selectedIndex].value;
+       var getSem  = s.options[s.selectedIndex].value;
+      // alert(getYear+" - "+getSem);
+
+       window.location.href="DashboardServlet?crud=publish&year="+getYear+"&sem="+getSem;
+
+   }
+
+
+
+  </script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -185,17 +280,17 @@
             <form class="form-horizontal">
 
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Year</label>
+                  <label for="createYear" class="col-sm-2 control-label">Year</label>
 
                   <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Enter the current year">
+                    <input type="text" class="form-control" id="createYear" placeholder="Enter the current year">
                   </div>
                 </div>
 
 
 
               <!-- /.box-body -->
-              <button type="submit" class="btn btn-warning pull-right">Create</button>
+              <button type="button" onclick="create()" class="btn btn-warning pull-right">Create</button>
 
               <!-- /.box-footer -->
             </form>
@@ -220,17 +315,26 @@
               <form class="form-horizontal">
 
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Select Year</label>
+                <label for="update" class="col-sm-2 control-label">Select Year</label>
 
                 <div class="col-sm-10">
-                  <select class="form-control select2" style="">
+                  <select class="form-control select2" style="" id="update" data-placeholder="Select Year" required>
 
-                    <option>2012</option>
-                    <option>2013</option>
-                    <option>2014</option>
-                    <option>2015</option>
-                    <option>2016</option>
-                    <option>2017</option>
+                      <option value=""></option>
+                    <%
+
+
+                      List<Year> getYear = CRUDManager.fetch();
+
+                      for(Year y :getYear){
+                    %>
+
+                    <option value="<%= y.getYear()%>"><%= y.getYear() %></option>
+
+
+                    <%
+                      }
+                    %>
                   </select>
 
                 </div>
@@ -270,24 +374,33 @@
               <form class="form-horizontal">
 
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Select Year</label>
+                  <label for="insert" class="col-sm-2 control-label">Select Year</label>
 
                   <div class="col-sm-10">
-                    <select class="form-control select2" style="">
+                    <select class="form-control select2" style="" id="insert" data-placeholder="Select Year" required>
 
-                      <option>2012</option>
-                      <option>2013</option>
-                      <option>2014</option>
-                      <option>2015</option>
-                      <option>2016</option>
-                      <option>2017</option>
+                        <option value=""></option>
+                      <%
+
+
+
+
+                        for(Year y :getYear){
+                      %>
+
+                      <option value="<%= y.getYear()%>"><%= y.getYear() %></option>
+
+
+                      <%
+                      }
+                      %>
                     </select>
 
                   </div>
                 </div>
 
 
-                <button type="submit" class="btn btn-success pull-right">Insert</button>
+                <button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#modal-success">Insert</button>
 
               </form>
 
@@ -317,24 +430,32 @@
               <form class="form-horizontal">
 
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Select Year</label>
+                  <label for="delete" class="col-sm-2 control-label">Select Year</label>
 
-                  <div class="col-sm-10">
-                    <select class="form-control select2" style="">
+                  <div class="col-sm-10 ">
+                    <select class="form-control select2" style="" id="delete" data-placeholder="Select Year">
 
-                      <option>2012</option>
-                      <option>2013</option>
-                      <option>2014</option>
-                      <option>2015</option>
-                      <option>2016</option>
-                      <option>2017</option>
+
+                        <option value=""></option>
+                      <%
+
+
+                        for(Year y :getYear){
+                      %>
+
+                      <option value="<%= y.getYear()%>"><%= y.getYear() %></option>
+
+
+                      <%
+                        }
+                      %>
                     </select>
 
                   </div>
                 </div>
 
 
-                <button type="submit" class="btn btn-danger pull-right">Delete</button>
+                <button type="button" onclick="Tdelete()" class="btn btn-danger pull-right">Delete</button>
 
               </form>
 
@@ -350,6 +471,97 @@
         <!-- /.box -->
       </div>
     </div>
+
+      <div class="col-md-12">
+          <div class="box box-default">
+              <div class="box-header with-border">
+                  <i class="fa fa-cloud-upload"></i>
+
+                  <h3 class="box-title">Publish Link</h3>
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body ">
+                  <div class="alert " style="background-color:#F0F0F0" >
+
+                      <div style="color: green">
+                      <%
+
+                         if(CRUDManager.checkActiveLink()){
+
+                             %>
+                      Active Link is published for the
+                      <%
+
+                             String[] ar = CRUDManager.getActiveYear();
+                             String active_year = ar[0];
+                             String active_sem = ar[1];
+
+                        %>
+                      <span style="font-weight: 600; font-size: 17px">Year -  <%= active_year %> </span> and
+                          <span style="font-weight: 600; font-size: 17px">Sem -  <%= active_sem %> </span>
+
+                      <%
+
+                          }
+                          else {
+                          %>
+                          No Active Link is published
+                          <%
+
+                          }
+
+                      %>
+                      </div>
+
+                      <br>
+
+                      <div class="row">
+
+
+                      <div class="col-sm-5">
+                          <select class="form-control select2" style="" id="publishyear" data-placeholder="Select Year" required>
+
+
+                              <option value=""></option>
+                              <%
+
+
+                                  for(Year y :getYear){
+                              %>
+
+                              <option value="<%= y.getYear()%>"><%= y.getYear() %></option>
+
+
+                              <%
+                                  }
+                              %>
+                          </select>
+
+                          <br>
+                      </div>
+                          <div class="col-sm-5">
+                              <select class="form-control select2" style="" id="publishsem" data-placeholder="Select Semester" required>
+
+
+                                  <option value=""></option>
+                                  <option value="odd">ODD</option>
+                                  <option value="even">EVEN</option>
+                              </select>
+
+                          </div>
+
+                          <div>
+                              <button type="button" class="btn bg-purple " onclick="publishlink()"><i class="fa fa-cloud-upload"></i> Publish</button>
+
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+      </div>
 
     <!-- Main content -->
     <section class="content">
@@ -368,6 +580,62 @@
     <strong>Copyright &copy; 2017 <a href="https:/www.flixys.com">Flixys Pvt Ltd</a>.</strong> All rights
     reserved.
   </footer>
+
+
+    <div class="modal modal-success fade" id="modal-success">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Success Modal</h4>
+                </div>
+                <form action="DashboardServlet" method="post" enctype="multipart/form-data" id="insertform">
+                <div class="modal-body">
+
+                    <div class="row">
+                    <div class="col-xs-12">
+                    <select class="select2" required style="width:300px;" id="selectsem"  name="sem" data-placeholder="Please Select Semester">
+
+                        <option value=""></option>
+                        <option value="odd">ODD</option>
+                        <option value="even">EVEN</option>
+
+                    </select>
+
+                    </div>
+
+                    </div>
+                        <br>
+                        <br>
+
+                    <div class="row">
+
+                        <div class="col-xs-12">
+                        <input type="file" name="fname" class="btn btn-success" required >
+
+                        </div>
+                    </div>
+
+                  <div>
+                    <input type="hidden" name="crud" id="crud" value="insert">
+                    <input type="hidden" name="year" id="year" value="year">
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                    <button type="submit" onclick="insert()" class="btn btn-outline">Save changes</button>
+                </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+
+
 
 
 </div>
@@ -392,7 +660,7 @@
 <script>
     $(function () {
         //Initialize Select2 Elements
-        $('.select2').select2()
+        $('.select2').select2().val('');
 
         //Datemask dd/mm/yyyy
         $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
