@@ -1,4 +1,33 @@
+<%@ page import="javax.jms.Session" %>
+<%@ page import="com.list.servlet.Staff" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.database.servlet.CRUDManager" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<%
+
+    String department = request.getParameter("department");
+    String semester = request.getParameter("semester");
+    String section = request.getParameter("section");
+
+   // out.print(department+" "+semester+" "+section);
+
+    session.setAttribute("department",department);
+    session.setAttribute("semester",semester);
+    session.setAttribute("section",section);
+
+    List<Staff> staff = CRUDManager.getStaffDetails(department,semester,section);
+
+    request.setAttribute("staffDetails",staff);
+
+    session.setAttribute("staffList",staff);
+
+    session.setAttribute("staffTotalCount",staff.size());
+    session.setAttribute("staffCountTrack",1);
+
+
+
+%>
 
 <!DOCTYPE html>
 <html>
@@ -156,24 +185,27 @@
                 <div class="box-body no-padding">
                     <table class="table table-striped">
                         <tr>
-                            <th style="width: 10px">#</th>
+                            <th style="width: 10px">S.No</th>
                             <th>Staff Name</th>
                             <th>Subject Code</th>
                             <th >Subject Name</th>
                         </tr>
 
 
-                        <c:forEach var="i" begin="1" end="6">
+                        <c:forEach var="staff" items="${staffDetails}">
 
+                            <% int i=1; %>
 
                         <tr>
-                            <td>${i}.</td>
-                            <td>Staff 1</td>
+                            <td><%= i %>.</td>
+                            <td>${staff.staffName}</td>
                             <td>
-                                IT6501
+                                ${staff.subjectCode}
                             </td>
-                            <td>Digital Signal and processing</td>
+                            <td>${staff.subjectName}</td>
                         </tr>
+
+                            <% ++i; %>
 
                         </c:forEach>
 

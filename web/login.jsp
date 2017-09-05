@@ -14,17 +14,13 @@
 <%
     if(request.getParameter("register")!=null) {
         String user = request.getParameter("register");
-        if (user.equals("111514104005")) {
 
-            response.sendRedirect("student_login/dashboard.jsp");
-        }
-        else{
-            response.sendRedirect("index.jsp");
-        }
+        session.setAttribute("studentId",user);
+        response.sendRedirect("student_login/dashboard.jsp");
     }
     else if(request.getParameter("pass")!=null){
         String pass = request.getParameter("pass");
-        if (pass.equals("123")) {
+        if (pass.equals("rmdfeedback")) {
 
             response.sendRedirect("admin_login/dashboard.jsp");
         }

@@ -1,5 +1,9 @@
 package com.database.servlet;
 
+import com.list.servlet.CreateYear;
+import com.list.servlet.Staff;
+import com.list.servlet.Year;
+
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
@@ -214,7 +218,8 @@ public static void insert(List<CreateYear> createYear, String  yr){
 
 }
 
-public static void publish(String pYear, String pSem){
+public static void publish(String pYear, String pSem)
+{
 
     Connection connection =null;
     Statement statement = null;
@@ -377,6 +382,74 @@ public static String[] getActiveYear(){
 
 
     return array;
+
+}
+
+public static List<Staff> getStaffDetails(String dept, String sem, String sec){
+
+
+    Connection connection =null;
+    Statement statement = null;
+    PreparedStatement preparedStatement=null;
+    ResultSet resultSet = null;
+
+
+    List<Staff> staff = new ArrayList<>();
+
+    String activeYear="";
+    dataSource = DBConnection.ConnectDatabase();
+
+    try {
+
+
+        connection =dataSource.getConnection();
+        String sql = "SELECT * FROM active_link";
+        statement = connection.createStatement();
+        resultSet = statement.executeQuery(sql);
+
+
+        while(resultSet.next()){
+
+           activeYear = resultSet.getString("active_year");
+
+        }
+
+        sql = "SELECT * FROM year_"+activeYear+" WHERE branch='"+dept+"' AND semester = '"+sem+"' AND s_section = '"+sec+"' ";
+        statement = connection.createStatement();
+        resultSet = statement.executeQuery(sql);
+
+        while(resultSet.next()){
+
+           String staffname = resultSet.getString("staff_name");
+           String subcode = resultSet.getString("subject_code");
+           String subname = resultSet.getString("subject_name");
+
+           Staff s = new Staff(staffname,subname,subcode);
+           staff.add(s);
+
+        }
+
+
+    } catch (SQLException e) {
+
+
+        e.printStackTrace();
+
+    }  finally {
+        try {
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+    return staff;
+
 
 }
 

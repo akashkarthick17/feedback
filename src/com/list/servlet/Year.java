@@ -1,4 +1,4 @@
-package com.database.servlet;
+package com.list.servlet;
 
 /**
  * Created by Akash on 03-09-2017.

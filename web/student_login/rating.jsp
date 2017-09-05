@@ -1,4 +1,41 @@
 <%@ page import="static java.lang.System.out" %>
+<%@ page import="com.list.servlet.Staff" %>
+<%@ page import="java.util.List" %>
+<%
+
+
+
+
+    if(request.getParameter("ratingsubmit")!=null){
+
+        int totalCount = (int) session.getAttribute("staffTotalCount");
+        int countTrack = (int) session.getAttribute("staffCountTrack");
+
+
+        if(countTrack==totalCount){
+
+            session.setAttribute("staffCountTrack",1);
+
+            response.sendRedirect("surveydashboard.jsp");
+        }
+        else{
+
+            countTrack = countTrack+1;
+            session.setAttribute("staffCountTrack",countTrack);
+        }
+
+    }
+
+
+
+
+
+
+
+%>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -263,6 +300,7 @@
             }
 
         }
+
     </script>
 
 </head>
@@ -363,13 +401,26 @@
                             <h3 class="box-title">Subject Details</h3>
                         </div>
                         <!-- /.box-header -->
+                        <%
+
+                            int sCount = (int) session.getAttribute("staffCountTrack");
+                            List<Staff> list = (List<Staff>) session.getAttribute("staffList");
+                            Staff s = list.get(sCount-1);
+
+
+
+                        %>
+
+
+
+
                         <div class="box-body">
-                            <p  > <code style="font-weight: 500; font-size:17px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">Subject Code</code> : IT6501 &ensp;&ensp;&ensp;
+                            <p  > <code style="font-weight: 500; font-size:17px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">Subject Code</code> : <%= s.getSubjectCode() %> &ensp;&ensp;&ensp;
 
-                                <code style="font-weight: 500; font-size:17px; font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif">Subject Name</code> : Digital Signal and Processing &ensp;&ensp;&ensp;
+                                <code style="font-weight: 500; font-size:17px; font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif">Subject Name</code> : <%= s.getSubjectName() %> &ensp;&ensp;&ensp;
 
 
-                                <code style="font-weight: 500; font-size:17px; font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif">Staff Name</code>  : Yet to be added.</p>
+                                <code style="font-weight: 500; font-size:17px; font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif">Staff Name</code>  : <%= s.getStaffName() %>.</p>
 
 
                         </div>
@@ -516,7 +567,7 @@
                 <!-- /.col -->
 
                 <div class="col-md-6">
-                    <form action="rating_2.jsp" method="get" >
+                    <form action="rating.jsp" method="get" >
 
                         <div class="box box-default" >
 
@@ -581,7 +632,10 @@
 
                             <!-- /.box-body -->
                         </div>
-                        <input type="submit" class="btn btn-info" disabled id="buttonform"></input>
+                        <input type="hidden" name="sCount" value="<% session.getAttribute("staffCountTrack"); %>">
+
+                        <%--disabled--%>
+                        <input type="submit" name="ratingsubmit" class="btn btn-info"  id="buttonform">
                     </form>
 
                     <!-- /.box -->

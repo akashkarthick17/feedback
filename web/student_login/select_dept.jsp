@@ -152,14 +152,14 @@
                         <div class="col-xs-5  col-xs-push-3">
                             <div class="form-group">
                                 <label>Select Department</label>
-                                <select class="form-control select2" style="width: 100%; " data-placeholder="Please Select">
+                                <select class="form-control select2" style="width: 100%; " name="department" data-placeholder="Please Select">
 
                                     <option value=""></option>
-                                    <option value="cse">CSE</option>
-                                    <option value="eee">EEE</option>
-                                    <option value="ece">ECE</option>
-                                    <option value="it">IT</option>
-                                    <option value="eie">EIE</option>
+                                    <option value="CSE">CSE</option>
+                                    <option value="EEE">EEE</option>
+                                    <option value="ECE">ECE</option>
+                                    <option value="IT">IT</option>
+                                    <option value="EIE">EIE</option>
 
                                 </select>
                             </div>
@@ -172,7 +172,7 @@
                         <div class="col-xs-5  center-block col-xs-push-3">
                             <div class="form-group">
                                 <label>Select Semester</label>
-                                <select class="form-control select2 " style="width: 100%;" data-placeholder="Please Select">
+                                <select class="form-control select2 " style="width: 100%;" name="semester" data-placeholder="Please Select">
 
                                     <option value=""></option>
                                     <option value="1">1</option>
@@ -193,13 +193,13 @@
                         <div class="col-xs-5  r col-xs-push-3">
                             <div class="form-group">
                                 <label>Select Section</label>
-                                <select class="form-control select2" style="width: 100%;" data-placeholder="Please Select">
+                                <select class="form-control select2" style="width: 100%;" name="section" data-placeholder="Please Select">
 
                                     <option value=""></option>
-                                    <option value="a">A</option>
-                                    <option value="b">B</option>
-                                    <option value="c">C</option>
-                                    <option value="d">D</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="C">C</option>
+                                    <option value="D">D</option>
                           >
                                 </select>
                             </div>
