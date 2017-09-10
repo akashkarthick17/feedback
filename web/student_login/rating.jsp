@@ -1,12 +1,53 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="static java.lang.System.out" %>
 <%@ page import="com.list.servlet.Staff" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.database.servlet.CRUDManager" %>
+<%@ page import="com.list.servlet.FeedbackQuestion" %>
+<%@ page import="java.util.ArrayList" %>
 <%
 
+    List<FeedbackQuestion> fbList = CRUDManager.getFeedbackQuestion();
+    int count = fbList.size();
+    request.setAttribute("feedbackList",fbList);
+
+    // set feedback question size
+    pageContext.setAttribute("fbSize",count);
 
 
+    List<Integer> rating = new ArrayList<>();
+
+    //get Staff details
+    List<Staff> list_staff = (List<Staff>) session.getAttribute("staffList");
 
     if(request.getParameter("ratingsubmit")!=null){
+
+
+        //storing values........ in database
+
+       // if(request.getParameter("sCount")!=null) {
+
+            int c = Integer.parseInt(request.getParameter("sCount"));
+
+            Staff s = list_staff.get(c - 1);
+
+
+            for (int i = 1; i <= count; i++) {
+                if (request.getParameter("hiddenradio" + i) != null) {
+
+                    int t = Integer.parseInt(request.getParameter("hiddenradio" + i));
+
+                    rating.add(t);
+                }
+            }
+
+
+            CRUDManager.feedbackLog(rating,fbList,s);
+
+       // }
+
+
+
 
         int totalCount = (int) session.getAttribute("staffTotalCount");
         int countTrack = (int) session.getAttribute("staffCountTrack");
@@ -25,6 +66,8 @@
         }
 
     }
+
+
 
 
 
@@ -205,7 +248,7 @@
             x.value= value;
             var flag=0;
 
-            for(var i = 1;i<=10;i++){
+            for(var i = 1;i<=<%=  pageContext.getAttribute("fbSize")  %>;i++){
 
                 var y = document.getElementById("hidden"+i).value;
                 if(y=="null")
@@ -225,7 +268,7 @@
 
             var shadow = document.getElementById("shadow"+ques);
             shadow.classList.add("shadow");
-            for(var i=1;i<=10;i++){
+            for(var i=1;i<=<%=  pageContext.getAttribute("fbSize")  %>;i++){
                 if(i!=ques){
                     var s = document.getElementById("shadow"+i);
 
@@ -277,7 +320,7 @@
             var xx = document.getElementById("head"+ques);
             xx.classList.remove("hidden");
 
-            for(var i=1;i<=10;i++){
+            for(var i=1;i<=<%=  pageContext.getAttribute("fbSize")  %>;i++){
                 if(i!=ques){
                     var y = document.getElementById("rate"+i);
 
@@ -289,7 +332,7 @@
 
 
 
-            for(var i=1;i<=10;i++){
+            for(var i=1;i<=<%=  pageContext.getAttribute("fbSize")  %>;i++){
                 if(i!=ques){
                     var yy = document.getElementById("head"+i);
 
@@ -451,113 +494,24 @@
                         <!-- /.box-header -->
                         <div class="box-body scroll">
                             <%
-                                for(int j=1;j<=10;j++){
+                                int j=1;
                             %>
+                            <c:forEach var="temp" items="${feedbackList}">
                             <a  onclick="question(<%= j %>)">
                                 <div class="alert  alert-dismissible hand bggrey <% if(j==1){out.print("shadow");}%>" id="shadow<%= j %>">
 
 
                                     <h4><i class="icon fa fa-question-circle"></i> Question <%= j %></h4>
 
-                                    <%
-
-                                        switch (j){
-                                            case 1:
-                                            {
-                                    %>
-                                    1.	The teacher is skilled and knowledge in the subject.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 2:
-                                        {
-                                    %>
-                                    2.	The teacher is well prepared to handle the classes
-
-                                    <%
-                                            break;
-                                        }
-                                        case 3:
-                                        {
-                                    %>
-                                    3.	The teacher teaches the fundamental concepts in the subject clearly.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 4:
-                                        {
-                                    %>
-                                    4.	The written materials (E.g. Handouts, lecture notes etc.), black-board writing and other teaching aids (E.g. PPT, ohp, models etc.) are effective.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 5:
-                                        {
-                                    %>
-                                    5.	The teachers voice is clear and audible.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 6:
-                                        {
-                                    %>
-                                    6.	The teacher encourages class participation and interaction.
-
-                                    <%
-                                            break;
-                                        }case 7:
-                                    {
-                                    %>
-                                    7.	The teacher uses practical examples to explain the subject and teaches topics beyons syllabus.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 8:
-                                        {
-                                    %>
-                                    The teacher is punctual and uses the class time effectively.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 9:
-                                        {
-                                    %>
-                                    9.	The test/exam evaluation by the teacher is fair and helps self-improvement.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 10:
-                                        {
-
-                                    %>
-
-                                    10.	The teacher inspires the students to attain academic excellence.
-
-                                    <%
-                                                break;
-                                            }
-
-
-
-                                        }
-
-
-                                    %>
-
+                                   ${temp.qno}. ${temp.question}
 
                                 </div>
                             </a>
+                                <%
+                                    ++j;
+                                %>
 
-                            <%
-                                }
-                            %>
+                            </c:forEach>
 
                         </div>
                         <!-- /.box-body -->
@@ -567,12 +521,13 @@
                 <!-- /.col -->
 
                 <div class="col-md-6">
-                    <form action="rating.jsp" method="get" >
+                    <form action="rating.jsp" method="post" >
 
                         <div class="box box-default" >
 
                             <%
-                                for(int i=1;i<=10;i++){
+                                int c = (int) pageContext.getAttribute("fbSize");
+                                for(int i=1;i<= c;i++){
 
                             %>
                             <div class="box-header with-border <% if(i!=1){ out.print("hidden");} %> " id="head<%= i%>" >
@@ -632,7 +587,7 @@
 
                             <!-- /.box-body -->
                         </div>
-                        <input type="hidden" name="sCount" value="<% session.getAttribute("staffCountTrack"); %>">
+                        <input type="hidden" name="sCount" value="<%= session.getAttribute("staffCountTrack") %>">
 
                         <%--disabled--%>
                         <input type="submit" name="ratingsubmit" class="btn btn-info"  id="buttonform">

@@ -1,12 +1,59 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="static java.lang.System.out" %>
 <%@ page import="com.list.servlet.Staff" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.database.servlet.CRUDManager" %>
+<%@ page import="com.list.servlet.FeedbackQuestion" %>
+<%@ page import="com.list.servlet.SurveyQuestion" %>
+<%@ page import="java.util.ArrayList" %>
 <%
 
 
+    List<SurveyQuestion> surveyList = CRUDManager.getSurveyQuestion();
+    int count = surveyList.size();
+    request.setAttribute("surveyList",surveyList);
+    pageContext.setAttribute("surveySize",count);
 
+
+
+    List<Integer> rating = new ArrayList<>();
+
+    //get Staff details
+    List<Staff> list_staff = (List<Staff>) session.getAttribute("staffList");
 
     if(request.getParameter("surveysubmit")!=null){
+
+
+
+        int c = Integer.parseInt(request.getParameter("sCount"));
+
+        Staff s = list_staff.get(c - 1);
+
+
+        for (int i = 1; i <= count; i++) {
+            if (request.getParameter("hiddenradio" + i) != null) {
+
+                int t = Integer.parseInt(request.getParameter("hiddenradio" + i));
+
+                rating.add(t);
+            }
+        }
+
+
+        CRUDManager.surveyLog(rating,surveyList,s);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         int totalCount = (int) session.getAttribute("staffTotalCount");
         int countTrack = (int) session.getAttribute("staffCountTrack");
@@ -32,7 +79,11 @@
 
 
 
+
+
 %>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -203,7 +254,7 @@
             x.value= value;
             var flag=0;
 
-            for(var i = 1;i<=15;i++){
+            for(var i = 1;i<=<%=  pageContext.getAttribute("surveySize")  %>;i++){
 
                 var y = document.getElementById("hidden"+i).value;
                 if(y=="null")
@@ -223,7 +274,7 @@
 
             var shadow = document.getElementById("shadow"+ques);
             shadow.classList.add("shadow");
-            for(var i=1;i<=15;i++){
+            for(var i=1;i<=<%=  pageContext.getAttribute("surveySize")  %>;i++){
                 if(i!=ques){
                     var s = document.getElementById("shadow"+i);
 
@@ -275,7 +326,7 @@
             var xx = document.getElementById("head"+ques);
             xx.classList.remove("hidden");
 
-            for(var i=1;i<=15;i++){
+            for(var i=1;i<=<%=  pageContext.getAttribute("surveySize")  %>;i++){
                 if(i!=ques){
                     var y = document.getElementById("rate"+i);
 
@@ -287,7 +338,7 @@
 
 
 
-            for(var i=1;i<=15;i++){
+            for(var i=1;i<=<%=  pageContext.getAttribute("surveySize")  %>;i++){
                 if(i!=ques){
                     var yy = document.getElementById("head"+i);
 
@@ -298,6 +349,7 @@
             }
 
         }
+
     </script>
 
 </head>
@@ -398,7 +450,6 @@
                             <h3 class="box-title">Subject Details</h3>
                         </div>
                         <!-- /.box-header -->
-
                         <%
 
                             int sCount = (int) session.getAttribute("staffCountTrack");
@@ -410,10 +461,12 @@
                         %>
 
 
-                        <div class="box-body">
-                            <p  > <code style="font-weight: 500; font-size:17px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">Subject Code</code> :  <%= s.getSubjectCode() %> &ensp;&ensp;&ensp;
 
-                                <code style="font-weight: 500; font-size:17px; font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif">Subject Name</code> :  <%= s.getSubjectName() %> &ensp;&ensp;&ensp;
+
+                        <div class="box-body">
+                            <p  > <code style="font-weight: 500; font-size:17px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">Subject Code</code> : <%= s.getSubjectCode() %> &ensp;&ensp;&ensp;
+
+                                <code style="font-weight: 500; font-size:17px; font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif">Subject Name</code> : <%= s.getSubjectName() %> &ensp;&ensp;&ensp;
 
 
                                 <code style="font-weight: 500; font-size:17px; font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif">Staff Name</code>  : <%= s.getStaffName() %>.</p>
@@ -447,164 +500,24 @@
                         <!-- /.box-header -->
                         <div class="box-body scroll">
                             <%
-                                for(int j=1;j<=15;j++){
+                                int j=1;
                             %>
-                            <a  onclick="question(<%= j %>)">
-                                <div class="alert  alert-dismissible hand bggrey <% if(j==1){out.print("shadow");}%>" id="shadow<%= j %>">
+                            <c:forEach var="temp" items="${surveyList}">
+                                <a  onclick="question(<%= j %>)">
+                                    <div class="alert  alert-dismissible hand bggrey <% if(j==1){out.print("shadow");}%>" id="shadow<%= j %>">
 
 
-                                    <h4><i class="icon fa fa-question-circle"></i> Question <%= j %></h4>
+                                        <h4><i class="icon fa fa-question-circle"></i> Question <%= j %></h4>
 
-                                    <%
+                                            ${temp.qno}. ${temp.question}
 
-                                        switch (j){
-                                            case 1:
-                                            {
-                                    %>
-                                   	1.	Course Objectives were clearly stated.
+                                    </div>
+                                </a>
+                                <%
+                                    ++j;
+                                %>
 
-                                    <%
-                                            break;
-                                        }
-                                        case 2:
-                                        {
-                                    %>
-                                    	2.	The assessment system was clearly explained.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 3:
-                                        {
-                                    %>
-                                    3.	The course was intellectually challenging.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 4:
-                                        {
-                                    %>
-                                    4.	The written materials (E.g. Handouts, lecture notes etc.), black-board writing and other teaching aids (E.g. PPT, ohp, models etc.) are effective.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 5:
-                                        {
-                                    %>
-                                    5.	Class sessions increased my understanding of the subject.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 6:
-                                        {
-                                    %>
-                                    6.	The assignments increased my understanding of the subject.
-
-                                    <%
-                                            break;
-                                        }case 7:
-                                    {
-                                    %>
-                                    7.	Tests, assignments and tutorials were consistent with the course contents and objectives.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 8:
-                                        {
-                                    %>
-                                    8.	Overall, the course was well organized.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 9:
-                                        {
-                                    %>
-                                    	9.	The faculty was knowledgeable about the subject.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 10:
-                                        {
-
-                                    %>
-
-                                    10.	The faculty was enthusiastic about the course.
-
-                                    <%
-                                            break;
-                                        }
-                                        case 11:
-                                        {
-
-                                    %>
-
-                                    11.	The faculty was well prepared for each class session.
-
-                                    <%
-                                                break;
-                                            }
-                                        case 12:
-                                        {
-
-                                    %>
-
-                                    12.	The faculty created an atmosphere conducive to learning.
-
-                                    <%
-                                                break;
-                                            }
-                                        case 13:
-                                        {
-
-                                    %>
-
-                                    13.	The faculty was willing to help students outside of class.
-
-                                    <%
-                                                break;
-                                            }
-                                        case 14:
-                                        {
-
-                                    %>
-
-                                    14.	The faculty did a thorough job in evaluation my work.
-
-                                    <%
-                                                break;
-                                            }
-                                        case 15:
-                                        {
-
-                                    %>
-
-                                    15.	Overall, the faculty was effective.
-
-                                    <%
-                                                break;
-                                            }
-
-
-
-
-                                        }
-
-
-                                    %>
-
-
-                                </div>
-                            </a>
-
-                            <%
-                                }
-                            %>
+                            </c:forEach>
 
                         </div>
                         <!-- /.box-body -->
@@ -614,12 +527,13 @@
                 <!-- /.col -->
 
                 <div class="col-md-6">
-                    <form action="survey.jsp" method="get" >
+                    <form action="survey.jsp" method="post" >
 
                         <div class="box box-default" >
 
                             <%
-                                for(int i=1;i<=15;i++){
+                                int c = (int) pageContext.getAttribute("surveySize");
+                                for(int i=1;i<= c;i++){
 
                             %>
                             <div class="box-header with-border <% if(i!=1){ out.print("hidden");} %> " id="head<%= i%>" >
@@ -679,8 +593,11 @@
 
                             <!-- /.box-body -->
                         </div>
+                        <input type="hidden" name="sCount" value="<% session.getAttribute("staffCountTrack"); %>">
+
                         <%--disabled--%>
-                        <input type="submit" name="surveysubmit" class="btn btn-info"  id="buttonform">
+                        <input type=
+                                       "submit" name="surveysubmit" class="btn btn-info"  id="buttonform">
                     </form>
 
                     <!-- /.box -->

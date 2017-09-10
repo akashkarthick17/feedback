@@ -24,6 +24,7 @@ public  class DBConnection {
         try {
             cpds.setDriverClass("com.mysql.jdbc.Driver");
         } catch (PropertyVetoException e) {
+
             e.printStackTrace();
         }
         cpds.setJdbcUrl("jdbc:mysql://localhost:3306/feedback");

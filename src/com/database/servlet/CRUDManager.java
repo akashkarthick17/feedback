@@ -1,8 +1,6 @@
 package com.database.servlet;
 
-import com.list.servlet.CreateYear;
-import com.list.servlet.Staff;
-import com.list.servlet.Year;
+import com.list.servlet.*;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -232,14 +230,44 @@ public static void publish(String pYear, String pSem)
     try {
 
 
+        String sql="";
         connection =dataSource.getConnection();
-        String sql = "CREATE  TABLE IF NOT EXISTS fr_"+pYear+"_"+pSem+"(subject_code VARCHAR(25), question_no int, sa int,a int, n int,d int, sd int,total int , overall FLOAT)";
-        statement = connection.createStatement();
-        statement.executeUpdate(sql);
+        if(!pYear.isEmpty()  && !pSem.isEmpty()) {
+            sql = "CREATE  TABLE IF NOT EXISTS fr_" + pYear + "_" + pSem + "(staff_name VARCHAR(45), sub_name VARCHAR(45), subject_code VARCHAR(25), question_no int, question LONGTEXT , rating int)";
+            statement = connection.createStatement();
+            statement.executeUpdate(sql);
 
-         sql = "CREATE  TABLE IF NOT EXISTS sr_"+pYear+"_"+pSem+"(subject_code VARCHAR(25), question_no int, sa int,a int, n int,d int, sd int,total int , overall FLOAT)";
-        statement = connection.createStatement();
-        statement.executeUpdate(sql);
+            sql = "CREATE  TABLE IF NOT EXISTS sr_" + pYear + "_" + pSem + "(staff_name VARCHAR(45), sub_name VARCHAR(45),subject_code VARCHAR(25), question_no int, question LONGTEXT ,rating int)";
+            statement = connection.createStatement();
+            statement.executeUpdate(sql);
+
+
+
+
+
+            //create new active link
+            sql = "INSERT  INTO active_link(active_year, active_sem) VALUES (?,?)";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, pYear);
+            preparedStatement.setString(2, pSem);
+
+            preparedStatement.executeUpdate();
+
+
+            List<FeedbackQuestion> fl = getFeedbackQuestion();
+            List<SurveyQuestion> sl = getSurveyQuestion();
+
+            sql = "INSERT  INTO active_link(active_year, active_sem) VALUES (?,?,?,?)";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, Integer.parseInt(pYear));
+            preparedStatement.setString(2, pSem);
+            preparedStatement.setInt(3, fl.size());
+            preparedStatement.setInt(4, sl.size());
+
+
+            preparedStatement.executeUpdate();
+
+        }
 
 
         //truncate existing active link
@@ -247,15 +275,6 @@ public static void publish(String pYear, String pSem)
         statement = connection.createStatement();
         statement.executeUpdate(sql);
 
-
-
-        //create new active link
-        sql = "INSERT  INTO active_link(active_year, active_sem) VALUES (?,?)";
-        preparedStatement = connection.prepareStatement(sql);
-        preparedStatement.setString(1, pYear);
-        preparedStatement.setString(2,pSem);
-
-        preparedStatement.executeUpdate();
 
 
 
@@ -452,6 +471,283 @@ public static List<Staff> getStaffDetails(String dept, String sem, String sec){
 
 
 }
+
+
+public static List<FeedbackQuestion> getFeedbackQuestion(){
+
+
+    Connection connection =null;
+    Statement statement = null;
+    PreparedStatement preparedStatement=null;
+    ResultSet resultSet = null;
+
+
+     int count=0;
+     List<FeedbackQuestion> fbList = new ArrayList<>();
+
+    dataSource = DBConnection.ConnectDatabase();
+
+    try {
+
+
+        connection =dataSource.getConnection();
+        String sql = "SELECT * FROM feedback_questions";
+        statement = connection.createStatement();
+        resultSet = statement.executeQuery(sql);
+
+
+
+
+        while(resultSet.next()){
+
+            int qno = resultSet.getInt("qno");
+            String question = resultSet.getString("question");
+
+            FeedbackQuestion fb = new FeedbackQuestion(qno,question);
+
+            fbList.add(fb);
+
+
+        }
+
+
+
+    } catch (SQLException e) {
+
+
+        e.printStackTrace();
+
+    }  finally {
+        try {
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+
+    return fbList;
+
+}
+    public static List<SurveyQuestion> getSurveyQuestion(){
+
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+
+        int count=0;
+        List<SurveyQuestion> surveyList = new ArrayList<>();
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+            String sql = "SELECT * FROM survey_questions";
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+
+
+
+
+            while(resultSet.next()){
+
+                int qno = resultSet.getInt("qno");
+                String question = resultSet.getString("question");
+
+                SurveyQuestion survey = new SurveyQuestion(qno,question);
+
+                surveyList.add(survey);
+
+
+            }
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+        return surveyList;
+
+    }
+
+    public static  void feedbackLog(List<Integer> rating,List<FeedbackQuestion> feedbackQuestions, Staff s){
+
+
+        System.out.println("feedback log");
+        String staffName = s.getStaffName();
+        String subCode = s.getSubjectCode();
+        String subName = s.getSubjectName();
+
+            Connection connection =null;
+            Statement statement = null;
+            PreparedStatement preparedStatement=null;
+            ResultSet resultSet = null;
+
+            int active_year=0;
+            String active_sem="";
+
+
+              dataSource = DBConnection.ConnectDatabase();
+
+            try {
+
+
+                connection =dataSource.getConnection();
+                String sql = "SELECT * FROM active_link";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                   active_year = resultSet.getInt("active_year");
+                    active_sem = resultSet.getString("active_sem");
+                 }
+
+
+
+                 for(int temp =0;temp<rating.size();temp++)
+                {
+
+                    FeedbackQuestion f= feedbackQuestions.get(temp);
+
+                    sql = "INSERT INTO  fr_" + active_year + "_" + active_sem + "  VALUES(?,?,?,?,?,?) ";
+                    preparedStatement = connection.prepareStatement(sql);
+                    preparedStatement.setString(1,staffName);
+                    preparedStatement.setString(2,subName);
+                    preparedStatement.setString(3,subCode);
+                    preparedStatement.setInt(4,f.getQno());
+                    preparedStatement.setString(5,f.getQuestion());
+                    preparedStatement.setInt(6,rating.get(temp));
+
+                    preparedStatement.executeUpdate();
+
+                }
+
+
+            } catch (SQLException e) {
+
+
+                e.printStackTrace();
+
+            }  finally {
+                try {
+                    if (connection != null) {
+                        connection.close();
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
+
+
+
+
+
+        }
+
+
+    public static  void surveyLog(List<Integer> rating,List<SurveyQuestion> surveyQuestions, Staff s){
+
+
+        System.out.println("survey log");
+        String staffName = s.getStaffName();
+        String subCode = s.getSubjectCode();
+        String subName = s.getSubjectName();
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+        int active_year=0;
+        String active_sem="";
+
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+            String sql = "SELECT * FROM active_link";
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+
+            while(resultSet.next()){
+
+                active_year = resultSet.getInt("active_year");
+                active_sem = resultSet.getString("active_sem");
+            }
+
+
+
+            for(int temp =0;temp<rating.size();temp++)
+            {
+
+                SurveyQuestion f= surveyQuestions.get(temp);
+
+                sql = "INSERT INTO  sr_" + active_year + "_" + active_sem + "  VALUES(?,?,?,?,?,?) ";
+                preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.setString(1,staffName);
+                preparedStatement.setString(2,subName);
+                preparedStatement.setString(3,subCode);
+                preparedStatement.setInt(4,f.getQno());
+                preparedStatement.setString(5,f.getQuestion());
+                preparedStatement.setInt(6,rating.get(temp));
+
+                preparedStatement.executeUpdate();
+
+            }
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+
+
+
+    }
 
 
 }
