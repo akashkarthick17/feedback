@@ -18,29 +18,27 @@ USE `feedback`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `sr_2018_odd`
+-- Table structure for table `feedback_questions`
 --
 
-DROP TABLE IF EXISTS `sr_2018_odd`;
+DROP TABLE IF EXISTS `feedback_questions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sr_2018_odd` (
-  `staff_name` varchar(45) DEFAULT NULL,
-  `sub_name` varchar(45) DEFAULT NULL,
-  `subject_code` varchar(25) DEFAULT NULL,
-  `question_no` int(11) DEFAULT NULL,
+CREATE TABLE `feedback_questions` (
+  `qno` int(11) NOT NULL AUTO_INCREMENT,
   `question` longtext,
-  `rating` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`qno`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `sr_2018_odd`
+-- Dumping data for table `feedback_questions`
 --
 
-LOCK TABLES `sr_2018_odd` WRITE;
-/*!40000 ALTER TABLE `sr_2018_odd` DISABLE KEYS */;
-/*!40000 ALTER TABLE `sr_2018_odd` ENABLE KEYS */;
+LOCK TABLES `feedback_questions` WRITE;
+/*!40000 ALTER TABLE `feedback_questions` DISABLE KEYS */;
+INSERT INTO `feedback_questions` VALUES (1,'The teacher is skilled and knowledge in the subject.'),(2,'The teacher is well prepared to handle the classes.'),(3,'The teacher teaches the fundamental concepts in the subject clearly.'),(4,'The written materials (E.g. Handouts, lecture notes etc.), black-board writing and other teaching aids (E.g. PPT, ohp, models etc.) are effective.'),(5,'The teachers voice is clear and audible.'),(6,'The teacher encourages class participation and interaction. '),(7,'The teacher uses practical examples to explain the subject and teaches topics beyond syllabus.'),(8,' The teacher is punctual and uses the class time effectively.'),(9,'The test/exam evaluation by the teacher is fair and helps self-improvement.'),(10,'The teacher inspires the students to attain academic excellence.');
+/*!40000 ALTER TABLE `feedback_questions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-11  0:35:01
+-- Dump completed on 2017-09-11  0:35:00

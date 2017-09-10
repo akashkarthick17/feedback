@@ -6,16 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1700e065-a70d-45cc-881e-d4e7755f7fee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/list/servlet/FeedbackQuestion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/list/servlet/SurveyQuestion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/feedback/com/database/servlet/CRUDManager.class" afterPath="$PROJECT_DIR$/out/production/feedback/com/database/servlet/CRUDManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java" afterPath="$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/database/servlet/DBConnection.java" afterPath="$PROJECT_DIR$/src/com/database/servlet/DBConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/rating.jsp" afterPath="$PROJECT_DIR$/web/student_login/rating.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/survey.jsp" afterPath="$PROJECT_DIR$/web/student_login/survey.jsp" />
-    </list>
+    <list default="true" id="1700e065-a70d-45cc-881e-d4e7755f7fee" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -1080,12 +1071,12 @@
       <workItem from="1504458712497" duration="4844000" />
       <workItem from="1504487546005" duration="30332000" />
       <workItem from="1504614213303" duration="9763000" />
-      <workItem from="1505027450176" duration="17701000" />
+      <workItem from="1505027450176" duration="17908000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200830000" />
+    <option name="totallyTimeSpent" value="201037000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />

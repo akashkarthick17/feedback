@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `feedback` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `feedback`;
 -- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
 --
 -- Host: localhost    Database: feedback
@@ -23,8 +25,9 @@ DROP TABLE IF EXISTS `hello`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `hello` (
-  `sdsdf` int(11) NOT NULL,
-  PRIMARY KEY (`sdsdf`)
+  `code` varchar(45) NOT NULL,
+  `mark` varchar(25) DEFAULT NULL,
+  `qno` varchar(45) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -34,6 +37,7 @@ CREATE TABLE `hello` (
 
 LOCK TABLES `hello` WRITE;
 /*!40000 ALTER TABLE `hello` DISABLE KEYS */;
+INSERT INTO `hello` VALUES ('601','5','1'),('601','4','1'),('601','5','1'),('601','5','1'),('601','5','1'),('601','4','1'),('601','3','1'),('601','2','1'),('601','3','1'),('601','3','1'),('601','3','1'),('601','3','1'),('601','3','1'),('601','3','1'),('601','3','1'),('601','3','1'),('601','5','1'),('601','5','1'),('601','5','1'),('601','5','1'),('601','5','1'),('601','5','1'),('601','5','1'),('601','4','1'),('601','4','1'),('601','4','1'),('601','4','1');
 /*!40000 ALTER TABLE `hello` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -46,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-04 22:24:28
+-- Dump completed on 2017-09-11  0:35:03

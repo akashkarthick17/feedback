@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `feedback` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `feedback`;
 -- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
 --
 -- Host: localhost    Database: feedback
@@ -23,15 +25,12 @@ DROP TABLE IF EXISTS `fr_2018_odd`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `fr_2018_odd` (
+  `staff_name` varchar(45) DEFAULT NULL,
+  `sub_name` varchar(45) DEFAULT NULL,
   `subject_code` varchar(25) DEFAULT NULL,
   `question_no` int(11) DEFAULT NULL,
-  `sa` int(11) DEFAULT NULL,
-  `a` int(11) DEFAULT NULL,
-  `n` int(11) DEFAULT NULL,
-  `d` int(11) DEFAULT NULL,
-  `sd` int(11) DEFAULT NULL,
-  `total` int(11) DEFAULT NULL,
-  `overall` float DEFAULT NULL
+  `question` longtext,
+  `rating` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -41,6 +40,7 @@ CREATE TABLE `fr_2018_odd` (
 
 LOCK TABLES `fr_2018_odd` WRITE;
 /*!40000 ALTER TABLE `fr_2018_odd` DISABLE KEYS */;
+INSERT INTO `fr_2018_odd` VALUES ('STAFF1','CS6501','SUBJECT1',1,'The teacher is skilled and knowledge in the subject.',5),('STAFF1','CS6501','SUBJECT1',2,'The teacher is well prepared to handle the classes.',4),('STAFF1','CS6501','SUBJECT1',3,'The teacher teaches the fundamental concepts in the subject clearly.',3),('STAFF1','CS6501','SUBJECT1',4,'The written materials (E.g. Handouts, lecture notes etc.), black-board writing and other teaching aids (E.g. PPT, ohp, models etc.) are effective.',2),('STAFF1','CS6501','SUBJECT1',5,'The teachers voice is clear and audible.',1),('STAFF1','CS6501','SUBJECT1',6,'The teacher encourages class participation and interaction. ',5),('STAFF1','CS6501','SUBJECT1',7,'The teacher uses practical examples to explain the subject and teaches topics beyond syllabus.',4),('STAFF1','CS6501','SUBJECT1',8,' The teacher is punctual and uses the class time effectively.',3),('STAFF1','CS6501','SUBJECT1',9,'The test/exam evaluation by the teacher is fair and helps self-improvement.',5),('STAFF1','CS6501','SUBJECT1',10,'The teacher inspires the students to attain academic excellence.',4);
 /*!40000 ALTER TABLE `fr_2018_odd` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-04 22:24:26
+-- Dump completed on 2017-09-11  0:35:02

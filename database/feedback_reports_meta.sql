@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `feedback` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `feedback`;
 -- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
 --
 -- Host: localhost    Database: feedback
@@ -16,32 +18,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `fr_2018_even`
+-- Table structure for table `reports_meta`
 --
 
-DROP TABLE IF EXISTS `fr_2018_even`;
+DROP TABLE IF EXISTS `reports_meta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `fr_2018_even` (
-  `subject_code` varchar(25) DEFAULT NULL,
-  `question_no` int(11) DEFAULT NULL,
-  `sa` int(11) DEFAULT NULL,
-  `a` int(11) DEFAULT NULL,
-  `n` int(11) DEFAULT NULL,
-  `d` int(11) DEFAULT NULL,
-  `sd` int(11) DEFAULT NULL,
-  `total` int(11) DEFAULT NULL,
-  `overall` float DEFAULT NULL
+CREATE TABLE `reports_meta` (
+  `year` int(11) NOT NULL,
+  `sem` varchar(45) DEFAULT NULL,
+  `feedback` int(11) DEFAULT NULL,
+  `reports` int(11) DEFAULT NULL,
+  PRIMARY KEY (`year`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `fr_2018_even`
+-- Dumping data for table `reports_meta`
 --
 
-LOCK TABLES `fr_2018_even` WRITE;
-/*!40000 ALTER TABLE `fr_2018_even` DISABLE KEYS */;
-/*!40000 ALTER TABLE `fr_2018_even` ENABLE KEYS */;
+LOCK TABLES `reports_meta` WRITE;
+/*!40000 ALTER TABLE `reports_meta` DISABLE KEYS */;
+/*!40000 ALTER TABLE `reports_meta` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -53,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-04 22:24:27
+-- Dump completed on 2017-09-11  0:35:04

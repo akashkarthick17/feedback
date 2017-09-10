@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `feedback` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `feedback`;
 -- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
 --
 -- Host: localhost    Database: feedback
@@ -28,6 +30,7 @@ CREATE TABLE `active_link` (
   `reg_no` varchar(25) DEFAULT NULL,
   `branch` varchar(25) DEFAULT NULL,
   `sem` varchar(25) DEFAULT NULL,
+  `sec` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`active_year`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -38,7 +41,7 @@ CREATE TABLE `active_link` (
 
 LOCK TABLES `active_link` WRITE;
 /*!40000 ALTER TABLE `active_link` DISABLE KEYS */;
-INSERT INTO `active_link` VALUES (2018,'even',NULL,NULL,NULL);
+INSERT INTO `active_link` VALUES (2018,'odd',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `active_link` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-04 22:24:26
+-- Dump completed on 2017-09-11  0:35:01

@@ -18,29 +18,27 @@ USE `feedback`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `sr_2018_odd`
+-- Table structure for table `survey_questions`
 --
 
-DROP TABLE IF EXISTS `sr_2018_odd`;
+DROP TABLE IF EXISTS `survey_questions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sr_2018_odd` (
-  `staff_name` varchar(45) DEFAULT NULL,
-  `sub_name` varchar(45) DEFAULT NULL,
-  `subject_code` varchar(25) DEFAULT NULL,
-  `question_no` int(11) DEFAULT NULL,
+CREATE TABLE `survey_questions` (
+  `qno` int(11) NOT NULL AUTO_INCREMENT,
   `question` longtext,
-  `rating` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`qno`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `sr_2018_odd`
+-- Dumping data for table `survey_questions`
 --
 
-LOCK TABLES `sr_2018_odd` WRITE;
-/*!40000 ALTER TABLE `sr_2018_odd` DISABLE KEYS */;
-/*!40000 ALTER TABLE `sr_2018_odd` ENABLE KEYS */;
+LOCK TABLES `survey_questions` WRITE;
+/*!40000 ALTER TABLE `survey_questions` DISABLE KEYS */;
+INSERT INTO `survey_questions` VALUES (1,'Course Objectives were clearly stated'),(2,'The assessment system was clearly explained.'),(3,'The course was intellectually challenging.'),(4,'The written materials (E.g. Handouts, lecture notes etc.), black-board writing and other teaching aids (E.g. PPT, ohp, models etc.) are effective.'),(5,'Class sessions increased my understanding of the subject.'),(6,'The assignments increased my understanding of the subject.'),(7,'Tests, assignments and tutorials were consistent with the course contents and objectives.'),(8,'Overall, the course was well organized.'),(9,'The faculty was knowledgeable about the subject.'),(10,'The faculty was enthusiastic about the course.'),(11,'The faculty was well prepared for each class session.'),(12,'The faculty created an atmosphere conducive to learning.'),(13,'The faculty was willing to help students outside of class.'),(14,'The faculty did a thorough job in evaluation my work.'),(15,'Overall, the faculty was effective.');
+/*!40000 ALTER TABLE `survey_questions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-11  0:35:01
+-- Dump completed on 2017-09-11  0:35:02
