@@ -471,6 +471,65 @@ public static List<Staff> getStaffDetails(String dept, String sem, String sec){
 
 
 }
+    public static List<Staff> getStaffList(int year ,String dept, String sem, String sec){
+
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+
+        List<Staff> staff = new ArrayList<>();
+
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+            String sql;
+
+
+            connection =dataSource.getConnection();
+
+            sql = "SELECT * FROM year_"+year+" WHERE branch='"+dept+"' AND semester = '"+sem+"' AND s_section = '"+sec+"' ";
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+
+            while(resultSet.next()){
+
+                String staffname = resultSet.getString("staff_name");
+                String subcode = resultSet.getString("subject_code");
+                String subname = resultSet.getString("subject_name");
+
+                Staff s = new Staff(staffname,subname,subcode);
+                staff.add(s);
+
+            }
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+        return staff;
+
+
+    }
 
 
 public static List<FeedbackQuestion> getFeedbackQuestion(){
