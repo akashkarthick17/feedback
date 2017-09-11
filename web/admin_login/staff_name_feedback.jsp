@@ -5,7 +5,7 @@
 
 
   int year = Integer.parseInt(request.getParameter("year"));
-    String sem = request.getParameter("sem");
+    int sem = Integer.parseInt(request.getParameter("sem"));
     String dept = request.getParameter("dept");
     String section = request.getParameter("section");
 
@@ -13,6 +13,17 @@
     List<Staff> staff = CRUDManager.getStaffList(year,dept,sem,section);
     request.setAttribute("staffDetails",staff);
     request.setAttribute("sYear",year);
+
+    String semester ="";
+    if(sem%2==0){
+
+        semester="even";
+    }
+    else{
+        semester="odd";
+    }
+
+
 
 
 
@@ -54,12 +65,21 @@
     <script type="application/javascript">
 
 
-        function fRating( staffname, subcode,subname){
+        function fRating(year,sem,staffname, subcode,subname){
 
 
 
-            alert("hello");
-            alert(staffname+" "+subcode+" "+subname);
+            //alert("hello");
+            alert(year+" "+staffname+" "+subcode+" "+subname);
+
+            document.getElementById("year").value=year;
+            document.getElementById("subname").value=subname;
+            document.getElementById("subcode").value=subcode;
+            document.getElementById("staffname").value=staffname;
+            document.getElementById("sem").value=sem;
+
+
+            document.getElementById("form").submit();
 
 
 
@@ -196,6 +216,16 @@
         <!-- Main content -->
         <section class="content">
 
+
+            <form action="staff_feedback_rating.jsp" method="post" id="form">
+                <input type="hidden" name="year" id="year">
+                <input type="hidden" name="subcode" id="subcode">
+                <input type="hidden" name="subname" id="subname">
+                <input type="hidden" name="staffname" id="staffname">
+                <input type="hidden" name="sem" id="sem">
+
+            </form>
+
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">Staff Rating</h3>
@@ -215,7 +245,7 @@
                         <C:forEach var="temp" items="${staffDetails}" >
                         <tr>
                             <td><%= i %>.</td>
-                            <td><a href="#" onclick="fRating('a','b','c')">${temp.staffName}</a></td>
+                            <td><a href="#" onclick="fRating('<%= request.getAttribute("sYear")%>','<%= semester %>','${temp.staffName}','${temp.subjectCode}','${temp.subjectName}')">${temp.staffName}</a></td>
                             <td>${temp.subjectCode}</td>
                             <td>${temp.subjectName}</td>
                             <td>

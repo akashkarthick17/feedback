@@ -233,11 +233,11 @@ public static void publish(String pYear, String pSem)
         String sql="";
         connection =dataSource.getConnection();
         if(!pYear.isEmpty()  && !pSem.isEmpty()) {
-            sql = "CREATE  TABLE IF NOT EXISTS fr_" + pYear + "_" + pSem + "(staff_name VARCHAR(45), sub_name VARCHAR(45), subject_code VARCHAR(25), question_no int, question LONGTEXT , rating int)";
+            sql = "CREATE  TABLE IF NOT EXISTS fr_" + pYear + "_" + pSem + "(staff_name VARCHAR(45), subject_code VARCHAR(45), sub_name VARCHAR(25), question_no int, question LONGTEXT , rating int)";
             statement = connection.createStatement();
             statement.executeUpdate(sql);
 
-            sql = "CREATE  TABLE IF NOT EXISTS sr_" + pYear + "_" + pSem + "(staff_name VARCHAR(45), sub_name VARCHAR(45),subject_code VARCHAR(25), question_no int, question LONGTEXT ,rating int)";
+            sql = "CREATE TABLE IF NOT EXISTS sr_" + pYear + "_" + pSem + "(staff_name VARCHAR(45), subject_code  VARCHAR(45),sub_name VARCHAR(25), question_no int, question LONGTEXT ,rating int)";
             statement = connection.createStatement();
             statement.executeUpdate(sql);
 
@@ -471,7 +471,7 @@ public static List<Staff> getStaffDetails(String dept, String sem, String sec){
 
 
 }
-    public static List<Staff> getStaffList(int year ,String dept, String sem, String sec){
+    public static List<Staff> getStaffList(int year ,String dept, int sem, String sec){
 
 
         Connection connection =null;
@@ -492,7 +492,7 @@ public static List<Staff> getStaffDetails(String dept, String sem, String sec){
 
             connection =dataSource.getConnection();
 
-            sql = "SELECT * FROM year_"+year+" WHERE branch='"+dept+"' AND semester = '"+sem+"' AND s_section = '"+sec+"' ";
+            sql = "SELECT * FROM year_"+year+" WHERE branch='"+dept+"' AND semester = "+sem+" AND s_section = '"+sec+"' ";
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
 
@@ -801,6 +801,66 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         }
 
 
+
+
+
+
+
+    }
+
+    public static List<Rating> getFeedbackRating(int year, String sem, String staffName, String subCode, String subName){
+
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+
+        int count=0;
+        List<Rating> rating = new ArrayList<>();
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+            String sql="";
+
+            for(int i=0;i<10;i++) {
+
+                sql = "SELECT COUNT(*) FROM fr_" + year + "_" + sem + " WHERE staff_name='" + staffName + "' , sub_code='" + subCode + "' , sub_name='" + subName + "' AND question_no = "+i+" ";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+            }
+
+
+
+
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+        return rating;
 
 
 

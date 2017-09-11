@@ -118,12 +118,12 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <li class="active">
+                <li class="">
                     <a href="feedback_reports.jsp"><i class="fa fa-line-chart"></i>
                         <span>Feedback Reports</span>
                     </a>
                 </li>
-                <li class="">
+                <li class="active">
                     <a href="survey_reports.jsp"><i class="fa fa-pie-chart"></i>
                         <span>Survey Reports</span>
                     </a>
@@ -648,10 +648,10 @@
 <script src="js/pdfmake.min.js"></script>
 <script src="js/vfs_fonts.js"></script>
 <script src="js/buttons.html5.min.js">"></script>
-<script src="Buttons-1.4.0/js/dataTables.buttons.min.js"></script>
-<script src="Buttons-1.4.0/js/buttons.flash.js"></script>
-<script src="Buttons-1.4.0/js/buttons.html5.js"></script>
-<script src="Buttons-1.4.0/js/buttons.print.js"></script>
+<script src="../plugins/Buttons-1.4.0/js/dataTables.buttons.min.js"></script>
+<script src="../plugins/Buttons-1.4.0/js/buttons.flash.js"></script>
+<script src="../plugins/Buttons-1.4.0/js/buttons.html5.js"></script>
+<script src="../plugins/Buttons-1.4.0/js/buttons.print.js"></script>
 
 
 
