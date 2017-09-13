@@ -232,7 +232,16 @@ public static void publish(String pYear, String pSem)
 
         String sql="";
         connection =dataSource.getConnection();
+
+        //truncate existing active link
+        sql = "TRUNCATE TABLE active_link";
+        statement = connection.createStatement();
+        statement.executeUpdate(sql);
+
+
+
         if(!pYear.isEmpty()  && !pSem.isEmpty()) {
+
             sql = "CREATE  TABLE IF NOT EXISTS fr_" + pYear + "_" + pSem + "(staff_name VARCHAR(45), subject_code VARCHAR(45), sub_name VARCHAR(25), question_no int, question LONGTEXT , rating int)";
             statement = connection.createStatement();
             statement.executeUpdate(sql);
@@ -257,7 +266,20 @@ public static void publish(String pYear, String pSem)
             List<FeedbackQuestion> fl = getFeedbackQuestion();
             List<SurveyQuestion> sl = getSurveyQuestion();
 
-            sql = "INSERT  INTO active_link(active_year, active_sem) VALUES (?,?,?,?)";
+            sql = "INSERT  INTO active_link(active_year, active_sem) VALUES (?,?)";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, Integer.parseInt(pYear));
+            preparedStatement.setString(2, pSem);
+           // preparedStatement.setInt(3, fl.size());
+            //preparedStatement.setInt(4, sl.size());
+
+
+            preparedStatement.executeUpdate();
+
+
+            // no. of feedback and survey questions
+
+            sql = "INSERT  INTO reports_meta VALUES (?,?,?,?)";
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1, Integer.parseInt(pYear));
             preparedStatement.setString(2, pSem);
@@ -267,13 +289,14 @@ public static void publish(String pYear, String pSem)
 
             preparedStatement.executeUpdate();
 
+
+
+
+
         }
 
 
-        //truncate existing active link
-        sql = "TRUNCATE TABLE active_link";
-        statement = connection.createStatement();
-        statement.executeUpdate(sql);
+
 
 
 
@@ -817,22 +840,110 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         ResultSet resultSet = null;
 
 
-        int count=0;
-        List<Rating> rating = new ArrayList<>();
+        List<Rating> ratingList = new ArrayList<>();
 
         dataSource = DBConnection.ConnectDatabase();
 
+
         try {
+
+
 
 
             connection =dataSource.getConnection();
             String sql="";
 
-            for(int i=0;i<10;i++) {
+            int size = getFeedbackSize(year,sem);
 
-                sql = "SELECT COUNT(*) FROM fr_" + year + "_" + sem + " WHERE staff_name='" + staffName + "' , sub_code='" + subCode + "' , sub_name='" + subName + "' AND question_no = "+i+" ";
+            for(int i=1;i<=size;i++) {
+
+                int a_count=0,sa_count=0,n_count=0,d_count=0,sd_count=0;
+                int total=0;
+                double overallrating =0.0;
+                String question="";
+
+
+                //get Question
+                sql = "SELECT question FROM fr_" + year + "_" + sem + " WHERE staff_name='"+staffName+"' AND  subject_code='" + subCode + "' AND sub_name='" + subName + "' AND question_no = "+i+" LIMIT 1";
                 statement = connection.createStatement();
                 resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                    question=resultSet.getString(1);
+                }
+
+
+
+
+
+
+                //Strongly argee
+                sql = "SELECT COUNT(*) FROM fr_" + year + "_" + sem + " WHERE staff_name='" + staffName + "' AND subject_code='" + subCode + "' AND sub_name='" + subName + "' AND question_no = "+i+" and rating=5";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                    sa_count=resultSet.getInt(1);
+                }
+
+                //agree
+
+                sql = "SELECT COUNT(*) FROM fr_" + year + "_" + sem + " WHERE staff_name='" + staffName + "' AND subject_code='" + subCode + "' AND sub_name='" + subName + "' AND question_no = "+i+" and rating=4";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                    a_count=resultSet.getInt(1);
+                }
+
+
+                //neutral
+
+                sql = "SELECT COUNT(*) FROM fr_" + year + "_" + sem + " WHERE staff_name='" + staffName + "' AND subject_code='" + subCode + "' AND sub_name='" + subName + "' AND question_no = "+i+" and rating=3";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                    n_count=resultSet.getInt(1);
+                }
+
+                //disagree
+
+                sql = "SELECT COUNT(*) FROM fr_" + year + "_" + sem + " WHERE staff_name='" + staffName + "' AND subject_code='" + subCode + "' AND sub_name='" + subName + "' AND question_no = "+i+" and rating=2";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                    d_count=resultSet.getInt(1);
+                }
+
+
+                //strongly disagree
+
+                sql = "SELECT COUNT(*) FROM fr_" + year + "_" + sem + " WHERE staff_name='" + staffName + "' AND subject_code='" + subCode + "' AND sub_name='" + subName + "' AND question_no = "+i+" and rating=1";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                    sd_count=resultSet.getInt(1);
+                }
+
+
+                total = sa_count+a_count+n_count+d_count+sd_count;
+                overallrating = (sa_count*5) + (a_count*4) +(n_count*3) +(d_count*2) +(sd_count*1);
+                overallrating = overallrating / (total*5);
+                overallrating = overallrating *10;
+
+                Rating rating = new Rating(i,question,sa_count,a_count,n_count,d_count,sd_count,total,overallrating);
+
+                ratingList.add(rating);
+
 
             }
 
@@ -860,7 +971,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        return rating;
+        return ratingList;
 
 
 
@@ -868,5 +979,553 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
     }
 
+    public static List<Rating> getSurveyRating(int year, String sem, String staffName, String subCode, String subName){
+
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+
+        List<Rating> ratingList = new ArrayList<>();
+
+        dataSource = DBConnection.ConnectDatabase();
+
+
+        try {
+
+
+
+
+            connection =dataSource.getConnection();
+            String sql="";
+
+            int size = getSurveySize(year,sem);
+            for(int i=1;i<=size;i++) {
+
+                int a_count=0,sa_count=0,n_count=0,d_count=0,sd_count=0;
+                int total=0;
+                double overallrating =0.0;
+                String question="";
+
+
+                //get Question
+                sql = "SELECT question FROM sr_" + year + "_" + sem + " WHERE staff_name='"+staffName+"' AND  subject_code='" + subCode + "' AND sub_name='" + subName + "' AND question_no = "+i+" LIMIT 1";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                    question=resultSet.getString(1);
+                }
+
+
+
+
+
+
+                //Strongly argee
+                sql = "SELECT COUNT(*) FROM sr_" + year + "_" + sem + " WHERE staff_name='" + staffName + "' AND subject_code='" + subCode + "' AND sub_name='" + subName + "' AND question_no = "+i+" and rating=5";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                    sa_count=resultSet.getInt(1);
+                }
+
+                //agree
+
+                sql = "SELECT COUNT(*) FROM sr_" + year + "_" + sem + " WHERE staff_name='" + staffName + "' AND subject_code='" + subCode + "' AND sub_name='" + subName + "' AND question_no = "+i+" and rating=4";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                    a_count=resultSet.getInt(1);
+                }
+
+
+                //neutral
+
+                sql = "SELECT COUNT(*) FROM sr_" + year + "_" + sem + " WHERE staff_name='" + staffName + "' AND subject_code='" + subCode + "' AND sub_name='" + subName + "' AND question_no = "+i+" and rating=3";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                    n_count=resultSet.getInt(1);
+                }
+
+                //disagree
+
+                sql = "SELECT COUNT(*) FROM sr_" + year + "_" + sem + " WHERE staff_name='" + staffName + "' AND subject_code='" + subCode + "' AND sub_name='" + subName + "' AND question_no = "+i+" and rating=2";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                    d_count=resultSet.getInt(1);
+                }
+
+
+                //strongly disagree
+
+                sql = "SELECT COUNT(*) FROM sr_" + year + "_" + sem + " WHERE staff_name='" + staffName + "' AND subject_code='" + subCode + "' AND sub_name='" + subName + "' AND question_no = "+i+" and rating=1";
+                statement = connection.createStatement();
+                resultSet = statement.executeQuery(sql);
+
+                while(resultSet.next()){
+
+                    sd_count=resultSet.getInt(1);
+                }
+
+
+                total = sa_count+a_count+n_count+d_count+sd_count;
+                overallrating = (sa_count*5) + (a_count*4) +(n_count*3) +(d_count*2) +(sd_count*1);
+                overallrating = overallrating / (total*5);
+                overallrating = overallrating *10;
+
+                Rating rating = new Rating(i,question,sa_count,a_count,n_count,d_count,sd_count,total,overallrating);
+
+                ratingList.add(rating);
+
+
+            }
+
+
+
+
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+        return ratingList;
+
+
+
+
+
+    }
+
+
+    public static int getFeedbackSize(int year , String sem){
+
+
+
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+        int count=0;
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+            String sql = "SELECT feedback FROM reports_meta WHERE year="+year+" AND sem='"+sem+"'";
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+
+            while(resultSet.next()){
+
+               count = resultSet.getInt("feedback");
+            }
+
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+        return count;
+
+
+
+    }
+
+    public static int getSurveySize(int year , String sem){
+
+
+
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+        int count=0;
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+            String sql = "SELECT survey FROM reports_meta WHERE year="+year+" AND sem='"+sem+"'";
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+
+            while(resultSet.next()){
+
+                count = resultSet.getInt("survey");
+            }
+
+
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+        return count;
+
+
+
+    }
+
+    public static void  saveSurveyQuesitions(String[] question){
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+
+
+
+            for(int i=1;i<=question.length;i++) {
+
+                String sql = "UPDATE survey_questions SET question='"+question[i-1]+"'  WHERE qno ="+i+" ";
+                statement = connection.createStatement();
+                statement.executeUpdate(sql);
+
+
+            }
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+    }
+
+    public static void createSurveyQuestions(){
+
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+
+
+
+           int size= CRUDManager.getSurveyQuestion().size();
+           ++size;
+
+
+                String sql = "INSERT INTO survey_questions VALUES("+size+",'') ";
+                statement = connection.createStatement();
+                statement.executeUpdate(sql);
+
+
+
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+    }
+    public static void deleteSurveyQuestions(int id){
+
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+
+
+
+            int size= CRUDManager.getSurveyQuestion().size();
+            ++size;
+
+
+            String sql = "DELETE FROM survey_questions WHERE qno="+id+" ";
+            statement = connection.createStatement();
+            statement.executeUpdate(sql);
+
+
+
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+    }
+
+    public static void  saveFeedbackQuesitions(String[] question){
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+
+
+
+            for(int i=1;i<=question.length;i++) {
+
+                String sql = "UPDATE feedback_questions SET question='"+question[i-1]+"'  WHERE qno ="+i+" ";
+                statement = connection.createStatement();
+                statement.executeUpdate(sql);
+
+
+            }
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+    }
+
+    public static void createFeedbackQuestions(){
+
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+
+
+
+            int size= CRUDManager.getFeedbackQuestion().size();
+            ++size;
+
+
+            String sql = "INSERT INTO feedback_questions VALUES("+size+",'') ";
+            statement = connection.createStatement();
+            statement.executeUpdate(sql);
+
+
+
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+    }
+    public static void deleteFeedbackQuestions(int id){
+
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+
+
+
+            int size= CRUDManager.getFeedbackQuestion().size();
+            ++size;
+
+
+            String sql = "DELETE FROM feedback_questions WHERE qno="+id+" ";
+            statement = connection.createStatement();
+            statement.executeUpdate(sql);
+
+
+
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+    }
 
 }

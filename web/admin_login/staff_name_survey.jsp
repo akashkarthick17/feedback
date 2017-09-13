@@ -1,3 +1,36 @@
+<%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.list.servlet.Staff" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.database.servlet.CRUDManager" %><%
+
+
+    int year = Integer.parseInt(request.getParameter("year"));
+    int sem = Integer.parseInt(request.getParameter("sem"));
+    String dept = request.getParameter("dept");
+    String section = request.getParameter("section");
+
+
+    List<Staff> staff = CRUDManager.getStaffList(year,dept,sem,section);
+    request.setAttribute("staffDetails",staff);
+    request.setAttribute("sYear",year);
+
+    String semester ="";
+    if(sem%2==0){
+
+        semester="even";
+    }
+    else{
+        semester="odd";
+    }
+
+
+
+
+
+
+
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,6 +61,38 @@
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <script type="application/javascript">
+
+
+        function fRating(year,sem,staffname, subcode,subname){
+
+
+
+            //alert("hello");
+            //alert(year+" "+staffname+" "+subcode+" "+subname);
+
+            document.getElementById("year").value=year;
+            document.getElementById("subname").value=subname;
+            document.getElementById("subcode").value=subcode;
+            document.getElementById("staffname").value=staffname;
+            document.getElementById("sem").value=sem;
+
+
+            document.getElementById("form").submit();
+
+
+
+
+        }
+
+
+
+    </script>
+
+
+
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -151,6 +216,16 @@
         <!-- Main content -->
         <section class="content">
 
+
+            <form action="staff_survey_rating.jsp" method="post" id="form">
+                <input type="hidden" name="year" id="year">
+                <input type="hidden" name="subcode" id="subcode">
+                <input type="hidden" name="subname" id="subname">
+                <input type="hidden" name="staffname" id="staffname">
+                <input type="hidden" name="sem" id="sem">
+
+            </form>
+
             <div class="box">
                 <div class="box-header">
                     <h3 class="box-title">Staff Rating</h3>
@@ -161,69 +236,31 @@
                         <tr>
                             <th style="width: 10px">#</th>
                             <th>Staff Name</th>
+                            <th>Subject Code</th>
+                            <th>Subject Name</th>
                             <th>Overall Rating in Percentage</th>
                             <th style="width: 40px">Label</th>
                         </tr>
-                        <tr>
-                            <td>1.</td>
-                            <td><a href="staff_survey_rating.jsp" >Staff 1</a></td>
-                            <td>
-                                <div class="progress progress-xs progress-striped active">
-                                    <div class="progress-bar progress-bar-danger" style="width: 90%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-green">90%</span></td>
-                        </tr>
-                        <tr>
-                            <td>2.</td>
-                            <td><a href="#" >Staff 2</a></td>
-                            <td>
-                                <div class="progress progress-xs">
-                                    <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-yellow">70%</span></td>
-                        </tr>
-                        <tr>
-                            <td>3.</td>
-                            <td><a href="#" >Staff 3</a></td>
-                            <td>
-                                <div class="progress progress-xs progress-striped active">
-                                    <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-light-blue">30%</span></td>
-                        </tr>
-                        <tr>
-                            <td>4.</td>
-                            <td><a href="#" >Staff 4</a></td>
-                            <td>
-                                <div class="progress progress-xs progress-striped active">
-                                    <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-green">90%</span></td>
-                        </tr>
-                        <tr>
-                            <td>5.</td>
-                            <td><a href="#" >Staff 5</a></td>
-                            <td>
-                                <div class="progress progress-xs progress-striped active">
-                                    <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-green">90%</span></td>
-                        </tr>
-                        <tr>
-                            <td>6.</td>
-                            <td><a href="#" >Staff 6</a></td>
-                            <td>
-                                <div class="progress progress-xs progress-striped active">
-                                    <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-green">90%</span></td>
-                        </tr>
+                        <% int i=1; %>
+                        <C:forEach var="temp" items="${staffDetails}" >
+                            <tr>
+                                <td><%= i %>.</td>
+                                <td><a href="#" onclick="fRating('<%= request.getAttribute("sYear")%>','<%= semester %>','${temp.staffName}','${temp.subjectCode}','${temp.subjectName}')">${temp.staffName}</a></td>
+                                <td>${temp.subjectCode}</td>
+                                <td>${temp.subjectName}</td>
+                                <td>
+                                    <div class="progress progress-xs progress-striped active">
+                                        <div class="progress-bar progress-bar-success" style="width: 90%"></div>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-green">90%</span></td>
+                            </tr>
+
+                            <%
+                                ++i;
+                            %>
+                        </C:forEach>
+
                     </table>
                 </div>
                 <!-- /.box-body -->

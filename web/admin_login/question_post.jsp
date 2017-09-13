@@ -1,3 +1,45 @@
+<%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.list.servlet.FeedbackQuestion" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.database.servlet.CRUDManager" %><%
+
+
+  if(request.getParameterValues("textarea")!=null){
+
+     String[] question = request.getParameterValues("textarea");
+
+
+     CRUDManager.saveFeedbackQuesitions(question);
+
+  }
+  if(request.getParameter("create")!=null){
+
+      CRUDManager.createFeedbackQuestions();
+
+      response.sendRedirect("question_post.jsp");
+
+  }
+    if(request.getParameter("delete")!=null){
+
+      int id = Integer.parseInt(request.getParameter("id"));
+        CRUDManager.deleteFeedbackQuestions(id);
+
+        response.sendRedirect("question_post.jsp");
+
+    }
+
+
+
+
+  List<FeedbackQuestion> fbList = CRUDManager.getFeedbackQuestion();
+
+  request.setAttribute("fbList",fbList);
+
+
+
+%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,6 +91,25 @@
     }
 
   </style>
+
+  <script type="application/javascript">
+
+    function create(){
+
+        window.location.href="question_post.jsp?create=create";
+
+
+    }
+    function save() {
+        document.getElementById("form").submit();
+
+
+
+    }
+
+
+  </script>
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -176,52 +237,46 @@
 
 
 
-        <a class="btn btn-app" style="background-color:  white;">
+        <a class="btn btn-app" style="background-color:  white;" onclick="create()">
           <i class="fa fa-plus"></i> Create
         </a>
-        <a class="btn btn-app" style="background-color:  white;">
+        <a class="btn btn-app" style="background-color:  white;" onclick="save()">
           <i class="fa fa-save"></i> Save
         </a>
 
 
 
-    <%
-
-      for(int i=1;i<=10;i++){
-
-    %>
+      <form action="question_post.jsp" method="post" id="form">
+    <C:forEach var="temp" items="${fbList}">
 
     <div class="row " style="margin-left:15px; margin-right: 15px;">
     <div class="box">
       <div class="box-header">
-        <h3 class="box-title">Question <%= i %>
-          <small></small>
+        <h3 class="box-title">Question ${temp.qno}
+            <small></small>
         </h3>
 
       </div>
       <!-- /.box-header -->
+
       <div class="box-body pad">
-        <form>
-                <textarea class="textarea" placeholder="Place some text here"
+          <span><a href="question_post.jsp?delete=delete&id=${temp.qno}" class="btn btn-danger pull-right fa fa-trash "></a></span>
+
+                <textarea class="textarea" placeholder="Place some text here" name="textarea"
                           style="width: 100%; height: 100px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
 
 
+                  ${temp.question}
+
                 </textarea>
-        </form>
+
       </div>
     </div>
     </div>
 
+    </C:forEach>
 
-
-    <%
-
-
-      }
-
-    %>
-
-
+      </form>
 
 
 

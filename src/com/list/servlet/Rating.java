@@ -9,9 +9,10 @@ public class Rating {
    private int qno;
     private String question;
     private int sa,a,n,d,sd;
-    private int total,rating;
+    private int total;
+    private double rating;
 
-    public Rating(int qno, String question, int sa, int a, int n, int d, int sd, int total, int rating) {
+    public Rating(int qno, String question, int sa, int a, int n, int d, int sd, int total, double rating) {
         this.qno = qno;
         this.question = question;
         this.sa = sa;
@@ -90,7 +91,7 @@ public class Rating {
         this.total = total;
     }
 
-    public int getRating() {
+    public double getRating() {
         return rating;
     }
 

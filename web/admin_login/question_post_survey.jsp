@@ -1,3 +1,46 @@
+<%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.list.servlet.FeedbackQuestion" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.database.servlet.CRUDManager" %>
+<%@ page import="com.list.servlet.SurveyQuestion" %><%
+
+
+  if(request.getParameterValues("textarea")!=null){
+
+    String[] question = request.getParameterValues("textarea");
+
+
+    CRUDManager.saveSurveyQuesitions(question);
+
+  }
+  if(request.getParameter("create")!=null){
+
+    CRUDManager.createSurveyQuestions();
+
+    response.sendRedirect("question_post_survey.jsp");
+
+  }
+  if(request.getParameter("delete")!=null){
+
+    int id = Integer.parseInt(request.getParameter("id"));
+    CRUDManager.deleteSurveyQuestions(id);
+
+    response.sendRedirect("question_post_survey.jsp");
+
+  }
+
+
+
+
+  List<SurveyQuestion> surveyList = CRUDManager.getSurveyQuestion();
+
+  request.setAttribute("surveyList",surveyList);
+
+
+
+%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,6 +92,25 @@
     }
 
   </style>
+
+  <script type="application/javascript">
+
+      function create(){
+
+          window.location.href="question_post_survey.jsp?create=create";
+
+
+      }
+      function save() {
+          document.getElementById("form").submit();
+
+
+
+      }
+
+
+  </script>
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -144,7 +206,6 @@
             <span>Feedback Questions</span>
           </a>
         </li>
-
         <li class="active">
           <a href="question_post_survey.jsp"><i class="fa fa-question-circle-o"></i>
             <span>Survey Questions</span>
@@ -162,7 +223,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-      Survey Questions
+        Survey Questions
 
       </h1>
       <ol class="breadcrumb">
@@ -177,52 +238,46 @@
 
 
 
-        <a class="btn btn-app" style="background-color:  white;">
-          <i class="fa fa-plus"></i> Create
-        </a>
-        <a class="btn btn-app" style="background-color:  white;">
-          <i class="fa fa-save"></i> Save
-        </a>
+    <a class="btn btn-app" style="background-color:  white;" onclick="create()">
+      <i class="fa fa-plus"></i> Create
+    </a>
+    <a class="btn btn-app" style="background-color:  white;" onclick="save()">
+      <i class="fa fa-save"></i> Save
+    </a>
 
 
 
-    <%
+    <form action="question_post_survey.jsp" method="post" id="form">
+      <C:forEach var="temp" items="${surveyList}">
 
-      for(int i=1;i<=15;i++){
+        <div class="row " style="margin-left:15px; margin-right: 15px;">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Question ${temp.qno}
+                <small></small>
+              </h3>
 
-    %>
+            </div>
+            <!-- /.box-header -->
 
-    <div class="row " style="margin-left:15px; margin-right: 15px;">
-    <div class="box">
-      <div class="box-header">
-        <h3 class="box-title">Question <%= i %>
-          <small></small>
-        </h3>
+            <div class="box-body pad">
+              <span><a href="question_post_survey.jsp?delete=delete&id=${temp.qno}" class="btn btn-danger pull-right fa fa-trash "></a></span>
 
-      </div>
-      <!-- /.box-header -->
-      <div class="box-body pad">
-        <form>
-                <textarea class="textarea" placeholder="Place some text here"
-                          style="width: 100%; height: 100px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
-
-
-                </textarea>
-        </form>
-      </div>
-    </div>
-    </div>
+              <textarea class="textarea" placeholder="Place some text here" name="textarea"
+                        style="width: 100%; height: 100px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
 
 
+                  ${temp.question}
 
-    <%
+              </textarea>
 
+            </div>
+          </div>
+        </div>
 
-      }
+      </C:forEach>
 
-    %>
-
-
+    </form>
 
 
 

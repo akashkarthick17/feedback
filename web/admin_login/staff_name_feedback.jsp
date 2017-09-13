@@ -70,7 +70,7 @@
 
 
             //alert("hello");
-            alert(year+" "+staffname+" "+subcode+" "+subname);
+            //alert(year+" "+staffname+" "+subcode+" "+subname);
 
             document.getElementById("year").value=year;
             document.getElementById("subname").value=subname;

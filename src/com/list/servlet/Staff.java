@@ -5,12 +5,12 @@ package com.list.servlet;
  */
 public class Staff {
 
-    private String staffName, subjectCode, subjectName;
+    private String staffName,  subjectName, subjectCode;
 
-    public Staff(String staffName, String subjectCode, String subjectName) {
+    public Staff(String staffName, String subjectName, String subjectCode) {
         this.staffName = staffName;
-        this.subjectCode = subjectCode;
         this.subjectName = subjectName;
+        this.subjectCode = subjectCode;
     }
 
     public Staff() {
@@ -24,19 +24,19 @@ public class Staff {
         this.staffName = staffName;
     }
 
-    public String getSubjectCode() {
-        return subjectCode;
-    }
-
-    public void setSubjectCode(String subjectCode) {
-        this.subjectCode = subjectCode;
-    }
-
     public String getSubjectName() {
         return subjectName;
     }
 
     public void setSubjectName(String subjectName) {
         this.subjectName = subjectName;
+    }
+
+    public String getSubjectCode() {
+        return subjectCode;
+    }
+
+    public void setSubjectCode(String subjectCode) {
+        this.subjectCode = subjectCode;
     }
 }

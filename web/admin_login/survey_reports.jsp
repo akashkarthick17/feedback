@@ -1,3 +1,6 @@
+<%@ page import="com.list.servlet.Year" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.database.servlet.CRUDManager" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +37,7 @@
 
   <style type="text/css">
     body{
-      overflow: hidden;
+
     }
 
     .box-padding{
@@ -140,6 +143,7 @@
             <span>Feedback Questions</span>
           </a>
         </li>
+
         <li class="">
           <a href="question_post_survey.jsp"><i class="fa fa-question-circle-o"></i>
             <span>Survey Questions</span>
@@ -157,7 +161,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Survey Reports
+        Feedback Reports
 
       </h1>
       <ol class="breadcrumb">
@@ -165,9 +169,6 @@
 
       </ol>
     </section>
-
-
-
     <br><br>
     <div>
 
@@ -176,28 +177,58 @@
         <div class="row" style="margin-left: 30px;">
           <div class="col-xs-5  col-xs-push-3">
             <div class="form-group">
-              <label>Select Department</label>
-              <select class="form-control select2" style="width: 100%; " data-placeholder="Please Select">
+              <label>Select Year</label>
+              <select class="form-control select2" style="width: 100%; " name="year" data-placeholder="Please Select">
 
                 <option value=""></option>
-                <option value="cse">CSE</option>
-                <option value="eee">EEE</option>
-                <option value="ece">ECE</option>
-                <option value="it">IT</option>
-                <option value="eie">EIE</option>
+                <%
+
+
+                  List<Year> getYear = CRUDManager.fetch();
+
+                  for(Year y :getYear){
+                %>
+
+                <option value="<%= y.getYear()%>"><%= y.getYear() %></option>
+
+
+                <%
+                  }
+                %>
 
               </select>
             </div>
           </div>
 
         </div>
+        <br><br>
+
+
+        <div class="row" style="margin-left: 30px;">
+          <div class="col-xs-5  col-xs-push-3">
+            <div class="form-group">
+              <label>Select Department</label>
+              <select class="form-control select2" style="width: 100%; "  name="dept" data-placeholder="Please Select">
+
+                <option value=""></option>
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="ECE">ECE</option>
+                <option value="IT">IT</option>
+                <option value="EIE">EIE</option>
+
+              </select>
+            </div>
+          </div>
+
+          a      </div>
 
         <br><br>
         <div class="row" style="margin-left: 30px;">
           <div class="col-xs-5  center-block col-xs-push-3">
             <div class="form-group">
               <label>Select Semester</label>
-              <select class="form-control select2 " style="width: 100%;" data-placeholder="Please Select">
+              <select class="form-control select2 " style="width: 100%;"  name="sem" data-placeholder="Please Select">
 
                 <option value=""></option>
                 <option value="1">1</option>
@@ -218,7 +249,7 @@
           <div class="col-xs-5  r col-xs-push-3">
             <div class="form-group">
               <label>Select Section</label>
-              <select class="form-control select2" style="width: 100%;" data-placeholder="Please Select">
+              <select class="form-control select2" style="width: 100%;" name="section" data-placeholder="Please Select">
 
                 <option value=""></option>
                 <option value="a">A</option>
@@ -247,10 +278,7 @@
 
 
     </div>
-
-
   </div>
-  <!-- /.content-wrapper -->
 
   <footer class="main-footer">
     <div class="pull-right hidden-xs">

@@ -1,15 +1,23 @@
-<%@ page import="com.database.servlet.CRUDManager" %><%
+<%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.database.servlet.CRUDManager" %>
+<%@ page import="com.list.servlet.Rating" %>
+<%@ page import="java.util.List" %><%
 
-    out.print(request.getParameter("year"));
-    out.print("<br>");
-    out.print(request.getParameter("subcode"));
-    out.print("<br>");
-    out.print(request.getParameter("subname"));
-    out.print("<br>");
+    int year = Integer.parseInt(request.getParameter("year"));
 
-    out.print(request.getParameter("sem"));
+    String subcode = request.getParameter("subcode");
+
+    String subname = request.getParameter("subname");
+    String staffname = request.getParameter("staffname");
 
 
+    String sem = request.getParameter("sem");
+
+
+    List<Rating> ratingList = CRUDManager.getFeedbackRating(year,sem,staffname,subcode,subname);
+
+
+    request.setAttribute("SpecificStaffDetails",ratingList);
 
 
 
@@ -46,7 +54,7 @@
     <link rel="stylesheet" href="css/jquery.dataTables.min.css">
 
     <link rel="stylesheet" href="css/buttons.dataTables.min.css">
-    <link rel="stylesheet" href="Buttons-1.4.0/css/buttons.dataTables.css">
+    <link rel="stylesheet" href="../plugins/Buttons-1.4.0/css/buttons.dataTables.css">
 
 
 
@@ -207,18 +215,55 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>How was the lecture</td>
-                            <td>23</td>
-                            <td>4</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>0</td>
-                            <td>28</td>
-                            <td>9.6</td>
-                        </tr>
 
+
+                        <%
+
+                           double i=0.0;
+
+                        for(Rating r : ratingList){
+
+
+                        %>
+
+                        <tr>
+
+                        <td><%= r.getQno() %>    </td>
+                        <td><%= r.getQuestion() %>    </td>
+                        <td><%= r.getSa() %>    </td>
+                        <td><%= r.getA() %>    </td>
+                        <td><%= r.getN() %>    </td>
+                        <td><%= r.getD() %>    </td>
+                        <td><%= r.getSd() %>    </td>
+                        <td><%= r.getTotal() %>    </td>
+                        <td><%= r.getRating() %>    </td>
+
+                        </tr>
+                        <%
+
+                                i = i + r.getRating();
+
+
+                            }
+
+                        %>
+
+
+                        <tr>
+
+                            <td></td>
+                            <td  style="font-weight: 600;">Overall Rating</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td style="font-weight: 600;"><%= i/ratingList.size()  %> </td>
+
+
+
+                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -313,7 +358,11 @@
 
 
         //'copy','csv' , 'excel', 'pdf', 'print'
-            ]
+            ],
+
+            paginate :false,
+
+            bSort : false
         } );
     } );
 

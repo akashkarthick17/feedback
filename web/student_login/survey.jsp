@@ -509,7 +509,7 @@
 
                                         <h4><i class="icon fa fa-question-circle"></i> Question <%= j %></h4>
 
-                                            ${temp.qno}. ${temp.question}
+                                            ${temp.question}
 
                                     </div>
                                 </a>
