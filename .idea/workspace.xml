@@ -6,25 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1700e065-a70d-45cc-881e-d4e7755f7fee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/feedback/com/database/servlet/CRUDManager.class" afterPath="$PROJECT_DIR$/out/production/feedback/com/database/servlet/CRUDManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/feedback/com/list/servlet/Rating.class" afterPath="$PROJECT_DIR$/out/production/feedback/com/list/servlet/Rating.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/feedback/com/list/servlet/Staff.class" afterPath="$PROJECT_DIR$/out/production/feedback/com/list/servlet/Staff.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java" afterPath="$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/list/servlet/Rating.java" afterPath="$PROJECT_DIR$/src/com/list/servlet/Rating.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/list/servlet/Staff.java" afterPath="$PROJECT_DIR$/src/com/list/servlet/Staff.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin_login/feedback_reports.jsp" afterPath="$PROJECT_DIR$/web/admin_login/feedback_reports.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin_login/question_post.jsp" afterPath="$PROJECT_DIR$/web/admin_login/question_post.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin_login/question_post_survey.jsp" afterPath="$PROJECT_DIR$/web/admin_login/question_post_survey.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin_login/staff_feedback_rating.jsp" afterPath="$PROJECT_DIR$/web/admin_login/staff_feedback_rating.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin_login/staff_name_feedback.jsp" afterPath="$PROJECT_DIR$/web/admin_login/staff_name_feedback.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin_login/staff_name_survey.jsp" afterPath="$PROJECT_DIR$/web/admin_login/staff_name_survey.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin_login/staff_survey_rating.jsp" afterPath="$PROJECT_DIR$/web/admin_login/staff_survey_rating.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin_login/survey_reports.jsp" afterPath="$PROJECT_DIR$/web/admin_login/survey_reports.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/rating.jsp" afterPath="$PROJECT_DIR$/web/student_login/rating.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/survey.jsp" afterPath="$PROJECT_DIR$/web/student_login/survey.jsp" />
-    </list>
+    <list default="true" id="1700e065-a70d-45cc-881e-d4e7755f7fee" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -123,8 +105,8 @@
       <file leaf-file-name="question_post_survey.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/admin_login/question_post_survey.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="272" column="0" lean-forward="true" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+            <state relative-caret-position="-812">
+              <caret line="70" column="62" lean-forward="false" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1129,16 +1111,15 @@
       <workItem from="1505101039923" duration="9631000" />
       <workItem from="1505132848565" duration="9260000" />
       <workItem from="1505230955909" duration="8721000" />
-      <workItem from="1505303378064" duration="12265000" />
+      <workItem from="1505303378064" duration="12828000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240914000" />
+    <option name="totallyTimeSpent" value="241477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1160,7 +1141,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35784853" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35784853" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2015625" sideWeight="0.75386316" order="0" side_tool="false" content_ui="combo" />
@@ -1644,8 +1625,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin_login/question_post_survey.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="272" column="0" lean-forward="true" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+        <state relative-caret-position="-812">
+          <caret line="70" column="62" lean-forward="false" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
           <folding>
             <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
