@@ -1,7 +1,30 @@
 <%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="com.database.servlet.CRUDManager" %>
 <%@ page import="com.list.servlet.Rating" %>
-<%@ page import="java.util.List" %><%
+<%@ page import="java.util.List" %>
+
+<%
+
+    if(session.getAttribute("user")==null){
+
+        response.sendRedirect("../index.jsp");
+
+    }
+
+    else if(!session.getAttribute("user").equals("admin")){
+
+        response.sendRedirect("../index.jsp");
+
+    }
+
+
+%>
+
+
+
+
+
+<%
 
     int year = Integer.parseInt(request.getParameter("year"));
 

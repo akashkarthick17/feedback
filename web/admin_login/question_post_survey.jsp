@@ -2,7 +2,28 @@
 <%@ page import="com.list.servlet.FeedbackQuestion" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.database.servlet.CRUDManager" %>
-<%@ page import="com.list.servlet.SurveyQuestion" %><%
+<%@ page import="com.list.servlet.SurveyQuestion" %>
+
+<%
+
+  if(session.getAttribute("user")==null){
+
+    response.sendRedirect("../index.jsp");
+
+  }
+
+  else if(!session.getAttribute("user").equals("admin")){
+
+    response.sendRedirect("../index.jsp");
+
+  }
+
+
+%>
+
+
+
+<%
 
 
   if(request.getParameterValues("textarea")!=null){

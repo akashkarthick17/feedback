@@ -22,7 +22,15 @@
         String pass = request.getParameter("pass");
         if (pass.equals("rmdfeedback")) {
 
+
+            session.setAttribute("user","admin");
+
             response.sendRedirect("admin_login/dashboard.jsp");
+        }
+        else {
+
+
+            response.sendRedirect("index.jsp");
         }
     }
     else {

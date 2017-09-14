@@ -1,6 +1,23 @@
 <%@ page import="com.list.servlet.Year" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.database.servlet.CRUDManager" %>
+<%
+
+    if(session.getAttribute("user")==null){
+
+        response.sendRedirect("../index.jsp");
+
+    }
+
+    else if(!session.getAttribute("user").equals("admin")){
+
+        response.sendRedirect("../index.jsp");
+
+    }
+
+
+%>
+
 <!DOCTYPE html>
 <html>
 <head>

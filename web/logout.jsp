@@ -13,6 +13,20 @@
 <body>
 
 <%
+
+
+    session.removeAttribute("user");
+    session.removeAttribute("staffCountTrack");
+    session.removeAttribute("staffTotalCount");
+    session.removeAttribute("staffCountTrack");
+    session.removeAttribute("department");
+    session.removeAttribute("semester");
+    session.removeAttribute("section");
+    session.removeAttribute("staffList");
+
+
+    session.invalidate();
+
     response.sendRedirect("index.jsp");
 %>
 
