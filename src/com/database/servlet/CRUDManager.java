@@ -266,16 +266,7 @@ public static void publish(String pYear, String pSem)
             List<FeedbackQuestion> fl = getFeedbackQuestion();
             List<SurveyQuestion> sl = getSurveyQuestion();
 
-            sql = "INSERT  INTO active_link(active_year, active_sem) VALUES (?,?)";
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1, Integer.parseInt(pYear));
-            preparedStatement.setString(2, pSem);
-           // preparedStatement.setInt(3, fl.size());
-            //preparedStatement.setInt(4, sl.size());
-
-
-            preparedStatement.executeUpdate();
-
+           
 
             // no. of feedback and survey questions
 
