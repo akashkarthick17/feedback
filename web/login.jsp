@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.database.servlet.CRUDManager" %><%--
   Created by IntelliJ IDEA.
   User: Akash
   Date: 14-08-2017
@@ -16,6 +16,12 @@
         String user = request.getParameter("register");
 
         session.setAttribute("studentId",user);
+
+
+        CRUDManager.registerStudent(user);
+
+
+
         response.sendRedirect("student_login/dashboard.jsp");
     }
     else if(request.getParameter("pass")!=null){

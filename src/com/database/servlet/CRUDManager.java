@@ -1519,4 +1519,55 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
     }
 
+
+    public static void registerStudent(String user){
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+
+
+
+
+
+            String sql = " INSERT INTO active_link (reg_no) VALUES ('"+user+"')";
+            statement = connection.createStatement();
+            statement.executeUpdate(sql);
+
+
+
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+
+
+    }
+
 }
