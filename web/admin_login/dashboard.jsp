@@ -255,6 +255,11 @@
             <span>Survey Questions</span>
           </a>
         </li>
+          <li class="">
+          <a href="student_list.jsp"><i class="fa fa-user"></i>
+            <span>Students List</span>
+          </a>
+        </li>
 
 
       </ul>

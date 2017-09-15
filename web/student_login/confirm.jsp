@@ -10,6 +10,16 @@
     String semester = request.getParameter("semester");
     String section = request.getParameter("section");
 
+
+
+    String user = String.valueOf(session.getAttribute("studentId"));
+
+
+    CRUDManager.UpdateRegister(user,department,semester,section);
+
+
+
+
    // out.print(department+" "+semester+" "+section);
 
     session.setAttribute("department",department);

@@ -1,6 +1,7 @@
 package com.database.servlet;
 
 import com.list.servlet.*;
+import org.openxmlformats.schemas.drawingml.x2006.main.STAdjCoordinate;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -239,6 +240,10 @@ public static void publish(String pYear, String pSem)
         statement.executeUpdate(sql);
 
 
+        sql = "TRUNCATE TABLE active_students";
+        statement = connection.createStatement();
+        statement.executeUpdate(sql);
+
 
         if(!pYear.isEmpty()  && !pSem.isEmpty()) {
 
@@ -326,7 +331,7 @@ public static boolean checkActiveLink(){
 
 
         connection =dataSource.getConnection();
-        String sql = "SELECT * FROM active_link";
+        String sql = "SELECT * FROM active_link LIMIT 1";
         statement = connection.createStatement();
         resultSet = statement.executeQuery(sql);
 
@@ -381,7 +386,7 @@ public static String[] getActiveYear(){
 
 
         connection =dataSource.getConnection();
-        String sql = "SELECT * FROM active_link";
+        String sql = "SELECT * FROM active_link LIMIT 1";
         statement = connection.createStatement();
         resultSet = statement.executeQuery(sql);
 
@@ -436,7 +441,7 @@ public static List<Staff> getStaffDetails(String dept, String sem, String sec){
 
 
         connection =dataSource.getConnection();
-        String sql = "SELECT * FROM active_link";
+        String sql = "SELECT * FROM active_link LIMIT 1";
         statement = connection.createStatement();
         resultSet = statement.executeQuery(sql);
 
@@ -690,7 +695,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
                 connection =dataSource.getConnection();
-                String sql = "SELECT * FROM active_link";
+                String sql = "SELECT * FROM active_link LIMIT 1";
                 statement = connection.createStatement();
                 resultSet = statement.executeQuery(sql);
 
@@ -768,7 +773,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
             connection =dataSource.getConnection();
-            String sql = "SELECT * FROM active_link";
+            String sql = "SELECT * FROM active_link LIMIT 1";
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
 
@@ -1539,7 +1544,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-            String sql = " INSERT INTO active_link (reg_no) VALUES ('"+user+"')";
+            String sql = " INSERT INTO active_students (reg_no) VALUES ('"+user+"')";
             statement = connection.createStatement();
             statement.executeUpdate(sql);
 
@@ -1569,5 +1574,130 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
     }
+
+
+    public static  void UpdateRegister(String user, String branch, String sem, String sec){
+
+
+        Connection connection =null;
+        Statement statement = null;
+        PreparedStatement preparedStatement=null;
+        ResultSet resultSet = null;
+
+
+        dataSource = DBConnection.ConnectDatabase();
+
+        try {
+
+
+            connection =dataSource.getConnection();
+
+
+
+            int size= CRUDManager.getSurveyQuestion().size();
+            ++size;
+
+
+            String sql = "UPDATE active_students SET branch='"+branch+"' ,sem='"+sem+"',sec='"+sec+"' WHERE reg_no ='"+user+"' ";
+            statement = connection.createStatement();
+            statement.executeUpdate(sql);
+
+
+
+
+
+
+        } catch (SQLException e) {
+
+
+            e.printStackTrace();
+
+        }  finally {
+            try {
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
+
+
+
+    }
+
+
+
+public static List<StudentsList> retrieveStudents(){
+
+
+
+    Connection connection =null;
+    Statement statement = null;
+    PreparedStatement preparedStatement=null;
+    ResultSet resultSet = null;
+
+    List<StudentsList> student = new ArrayList<>();
+
+    dataSource = DBConnection.ConnectDatabase();
+
+    try {
+
+
+        connection =dataSource.getConnection();
+
+
+
+
+
+        String sql = "SELECT * FROM students_list";
+        statement = connection.createStatement();
+        resultSet = statement.executeQuery(sql);
+
+        while (resultSet.next()){
+
+
+            String reg= resultSet.getString("reg_no");
+            String branch= resultSet.getString("branch");
+            String sem= resultSet.getString("sem");
+            String sec= resultSet.getString("sec");
+
+            StudentsList s = new StudentsList(reg,branch,sem,sec);
+
+            student.add(s);
+
+
+        }
+
+
+
+
+
+    } catch (SQLException e) {
+
+
+        e.printStackTrace();
+
+    }  finally {
+        try {
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    return student;
+
+
+
+
+}
+
 
 }

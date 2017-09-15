@@ -2,6 +2,7 @@
 <%@ page import="com.database.servlet.CRUDManager" %>
 <%@ page import="com.list.servlet.Rating" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.list.servlet.StudentsList" %>
 
 <%
 
@@ -20,33 +21,21 @@
 
 %>
 
-
-
-
-
 <%
 
-    int year = Integer.parseInt(request.getParameter("year"));
 
-    String subcode = request.getParameter("subcode");
-
-    String subname = request.getParameter("subname");
-    String staffname = request.getParameter("staffname");
+    List<StudentsList> student = CRUDManager.retrieveStudents();
 
 
-    String sem = request.getParameter("sem");
-
-
-    List<Rating> ratingList = CRUDManager.getFeedbackRating(year,sem,staffname,subcode,subname);
-
-
-    request.setAttribute("SpecificStaffDetails",ratingList);
 
 
 
 
 
 %>
+
+
+
 
 
 
@@ -232,15 +221,12 @@
                         <thead>
 
                         <tr>
-                            <th>Question No.</th>
-                            <th>Question</th>
-                            <th>Strongly Agree</th>
-                            <th>Agree</th>
-                            <th>Neutral</th>
-                            <th>Disagree</th>
-                            <th>Strongly Disagree</th>
-                            <th>Total Students</th>
-                            <th>Rating</th>
+                            <th>Serial No.</th>
+                            <th>Register Number</th>
+                            <th>Branch</th>
+                            <th>Semester</th>
+                            <th>Section</th>
+
                         </tr>
                         </thead>
                         <tbody>
@@ -248,51 +234,31 @@
 
                         <%
 
-                           double i=0.0;
+                            int i=1;
 
-                        for(Rating r : ratingList){
+                            for(StudentsList s : student){
 
 
                         %>
 
                         <tr>
 
-                        <td><%= r.getQno() %>    </td>
-                        <td><%= r.getQuestion() %>    </td>
-                        <td><%= r.getSa() %>    </td>
-                        <td><%= r.getA() %>    </td>
-                        <td><%= r.getN() %>    </td>
-                        <td><%= r.getD() %>    </td>
-                        <td><%= r.getSd() %>    </td>
-                        <td><%= r.getTotal() %>    </td>
-                        <td><%= r.getRating() %>    </td>
+                            <td><%= i %></td>
+                            <td><%= s.getReg() %></td>
+                            <td><%= s.getBranch() %></td>
+                            <td><%= s.getSem() %></td>
+                            <td><%= s.getSec() %></td>
+
 
                         </tr>
                         <%
 
-                                i = i + r.getRating();
-
-
+                                ++i;
                             }
 
                         %>
 
 
-                        <tr>
-
-                            <td></td>
-                            <td  style="font-weight: 600;">Overall Rating</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td style="font-weight: 600;"><%= i/ratingList.size()  %> </td>
-
-
-
-                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -386,7 +352,7 @@
                 }
 
 
-        //'copy','csv' , 'excel', 'pdf', 'print'
+                //'copy','csv' , 'excel', 'pdf', 'print'
             ],
 
             paginate :false,
