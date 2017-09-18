@@ -6,7 +6,23 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1700e065-a70d-45cc-881e-d4e7755f7fee" name="Default" comment="" />
+    <list default="true" id="1700e065-a70d-45cc-881e-d4e7755f7fee" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/student_login/rating_1.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/student_login/rating_2.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/student_login/rating_3.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/student_login/rating_4.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/student_login/rating_5.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/student_login/rating_6.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/student_login/survey_1.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/student_login/survey_2.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/student_login/survey_3.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/student_login/survey_4.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/student_login/survey_5.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/student_login/survey_6.jsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/rating.jsp" afterPath="$PROJECT_DIR$/web/student_login/rating.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/student_login/survey.jsp" afterPath="$PROJECT_DIR$/web/student_login/survey.jsp" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +40,7 @@
       <file leaf-file-name="question_post.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/admin_login/question_post.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
+            <state relative-caret-position="3555">
               <caret line="237" column="13" lean-forward="false" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
               <folding />
             </state>
@@ -34,7 +50,7 @@
       <file leaf-file-name="CRUDManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
+            <state relative-caret-position="25320">
               <caret line="1694" column="19" lean-forward="false" selection-start-line="1694" selection-start-column="19" selection-end-line="1694" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -101,7 +117,7 @@
       <file leaf-file-name="StudentsList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/list/servlet/StudentsList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="240">
               <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
               <folding>
                 <element signature="e#311#312#0" expanded="true" />
@@ -126,11 +142,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="student_list.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="student_list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/admin_login/student_list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="-3902">
+              <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
               <folding>
                 <marker date="1505467761000" expanded="true" signature="10870:10903" ph="..." />
                 <marker date="1505467761000" expanded="true" signature="11177:11233" ph="..." />
@@ -142,10 +158,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="rating.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/student_login/rating.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="592" column="53" lean-forward="false" selection-start-line="592" selection-start-column="53" selection-end-line="592" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="survey.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/student_login/survey.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="442" column="4" lean-forward="false" selection-start-line="442" selection-start-column="4" selection-end-line="442" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="question_post_survey.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/admin_login/question_post_survey.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
+            <state relative-caret-position="3585">
               <caret line="239" column="13" lean-forward="false" selection-start-line="239" selection-start-column="13" selection-end-line="239" selection-end-column="13" />
               <folding />
             </state>
@@ -155,35 +191,9 @@
       <file leaf-file-name="staff_name_feedback.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/admin_login/staff_name_feedback.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-546">
+            <state relative-caret-position="3375">
               <caret line="225" column="21" lean-forward="false" selection-start-line="225" selection-start-column="21" selection-end-line="225" selection-end-column="21" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="staff_name_survey.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin_login/staff_name_survey.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="225" column="21" lean-forward="false" selection-start-line="225" selection-start-column="21" selection-end-line="225" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="staff_survey_rating.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin_login/staff_survey_rating.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="194" column="21" lean-forward="false" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
-              <folding>
-                <marker date="1505466868000" expanded="true" signature="12109:12142" ph="..." />
-                <marker date="1505466868000" expanded="true" signature="12416:12472" ph="..." />
-                <marker date="1505466868000" expanded="true" signature="12831:12865" ph="..." />
-                <marker date="1505466868000" expanded="true" signature="13138:13166" ph="..." />
-                <marker date="1505466868000" expanded="true" signature="13434:13463" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -191,8 +201,8 @@
       <file leaf-file-name="survey_reports.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/admin_login/survey_reports.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="142" column="2" lean-forward="true" selection-start-line="142" selection-start-column="2" selection-end-line="175" selection-end-column="13" />
+            <state relative-caret-position="2130">
+              <caret line="142" column="2" lean-forward="false" selection-start-line="142" selection-start-column="2" selection-end-line="175" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -201,8 +211,8 @@
       <file leaf-file-name="staff_feedback_rating.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/admin_login/staff_feedback_rating.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="393" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="400" selection-end-column="0" />
+            <state relative-caret-position="5895">
+              <caret line="393" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="400" selection-end-column="0" />
               <folding>
                 <marker date="1505466868000" expanded="true" signature="12133:12166" ph="..." />
                 <marker date="1505466868000" expanded="true" signature="12440:12496" ph="..." />
@@ -326,8 +336,6 @@
         <option value="$PROJECT_DIR$/src/com/database/servlet/DBConnection.java" />
         <option value="$PROJECT_DIR$/src/com/list/servlet/Rating.java" />
         <option value="$PROJECT_DIR$/src/com/list/servlet/Staff.java" />
-        <option value="$PROJECT_DIR$/web/student_login/rating.jsp" />
-        <option value="$PROJECT_DIR$/web/student_login/survey.jsp" />
         <option value="$PROJECT_DIR$/web/logout.jsp" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
         <option value="$PROJECT_DIR$/web/student_login/confirm.jsp" />
@@ -343,6 +351,8 @@
         <option value="$PROJECT_DIR$/src/com/list/servlet/StudentsList.java" />
         <option value="$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java" />
         <option value="$PROJECT_DIR$/web/admin_login/student_list.jsp" />
+        <option value="$PROJECT_DIR$/web/student_login/rating.jsp" />
+        <option value="$PROJECT_DIR$/web/student_login/survey.jsp" />
       </list>
     </option>
   </component>
@@ -382,7 +392,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -411,13 +422,6 @@
             <path>
               <item name="feedback" type="b2602c69:ProjectViewProjectNode" />
               <item name="feedback" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="feedback" type="b2602c69:ProjectViewProjectNode" />
-              <item name="feedback" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -426,17 +430,22 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="admin_login" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="feedback" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feedback" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="student_login" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -1092,11 +1101,12 @@
       <workItem from="1505462909772" duration="511000" />
       <workItem from="1505464074897" duration="231000" />
       <workItem from="1505464343870" duration="3460000" />
+      <workItem from="1505724068348" duration="244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250753000" />
+    <option name="totallyTimeSpent" value="250997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="977" extended-state="0" />
@@ -1108,11 +1118,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28540066" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28508288" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3569061" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3569061" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1123,8 +1133,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1308,7 +1318,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,20 +1371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/survey.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7665">
-          <caret line="511" column="44" lean-forward="false" selection-start-line="511" selection-start-column="44" selection-end-line="511" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/rating.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7605">
-          <caret line="507" column="38" lean-forward="false" selection-start-line="507" selection-start-column="38" selection-end-line="507" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/student_login/select_dept.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -1388,7 +1383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,7 +1398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="4" lean-forward="true" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1412,7 +1405,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-275">
           <caret line="119" column="41" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1420,7 +1412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="261" column="13" lean-forward="true" selection-start-line="256" selection-start-column="8" selection-end-line="261" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1428,13 +1419,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
           <caret line="173" column="21" lean-forward="false" selection-start-line="173" selection-start-column="21" selection-end-line="173" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin_login/staff_name_survey.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="3375">
           <caret line="225" column="21" lean-forward="false" selection-start-line="225" selection-start-column="21" selection-end-line="225" selection-end-column="21" />
           <folding />
         </state>
@@ -1442,7 +1432,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin_login/staff_survey_rating.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
+        <state relative-caret-position="2910">
           <caret line="194" column="21" lean-forward="false" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
           <folding>
             <marker date="1505466868000" expanded="true" signature="12109:12142" ph="..." />
@@ -1456,15 +1446,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin_login/survey_reports.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="142" column="2" lean-forward="true" selection-start-line="142" selection-start-column="2" selection-end-line="175" selection-end-column="13" />
+        <state relative-caret-position="2130">
+          <caret line="142" column="2" lean-forward="false" selection-start-line="142" selection-start-column="2" selection-end-line="175" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin_login/question_post_survey.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
+        <state relative-caret-position="3585">
           <caret line="239" column="13" lean-forward="false" selection-start-line="239" selection-start-column="13" selection-end-line="239" selection-end-column="13" />
           <folding />
         </state>
@@ -1472,7 +1462,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin_login/question_post.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
+        <state relative-caret-position="3555">
           <caret line="237" column="13" lean-forward="false" selection-start-line="237" selection-start-column="13" selection-end-line="237" selection-end-column="13" />
           <folding />
         </state>
@@ -1480,7 +1470,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin_login/staff_name_feedback.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-546">
+        <state relative-caret-position="3375">
           <caret line="225" column="21" lean-forward="false" selection-start-line="225" selection-start-column="21" selection-end-line="225" selection-end-column="21" />
           <folding />
         </state>
@@ -1488,8 +1478,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin_login/staff_feedback_rating.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="393" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="400" selection-end-column="0" />
+        <state relative-caret-position="5895">
+          <caret line="393" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="400" selection-end-column="0" />
           <folding>
             <marker date="1505466868000" expanded="true" signature="12133:12166" ph="..." />
             <marker date="1505466868000" expanded="true" signature="12440:12496" ph="..." />
@@ -1502,7 +1492,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
+        <state relative-caret-position="25320">
           <caret line="1694" column="19" lean-forward="false" selection-start-line="1694" selection-start-column="19" selection-end-line="1694" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1567,7 +1557,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/list/servlet/StudentsList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="240">
           <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
           <folding>
             <element signature="e#311#312#0" expanded="true" />
@@ -1593,8 +1583,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/admin_login/student_list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="-3902">
+          <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
           <folding>
             <marker date="1505467761000" expanded="true" signature="10870:10903" ph="..." />
             <marker date="1505467761000" expanded="true" signature="11177:11233" ph="..." />
@@ -1602,6 +1592,22 @@
             <marker date="1505467761000" expanded="true" signature="11899:11927" ph="..." />
             <marker date="1505467761000" expanded="true" signature="12195:12224" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/rating.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="592" column="53" lean-forward="false" selection-start-line="592" selection-start-column="53" selection-end-line="592" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/survey.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="442" column="4" lean-forward="false" selection-start-line="442" selection-start-column="4" selection-end-line="442" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
