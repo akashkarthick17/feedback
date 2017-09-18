@@ -16,26 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `active_link`
+-- Table structure for table `active_students`
 --
 
-DROP TABLE IF EXISTS `active_link`;
+DROP TABLE IF EXISTS `active_students`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `active_link` (
-  `active_year` int(11) DEFAULT NULL,
-  `active_sem` varchar(45) DEFAULT NULL
+CREATE TABLE `active_students` (
+  `reg_no` varchar(45) NOT NULL,
+  `branch` varchar(45) DEFAULT NULL,
+  `sem` varchar(45) DEFAULT NULL,
+  `sec` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`reg_no`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `active_link`
+-- Dumping data for table `active_students`
 --
 
-LOCK TABLES `active_link` WRITE;
-/*!40000 ALTER TABLE `active_link` DISABLE KEYS */;
-INSERT INTO `active_link` VALUES (2018,'odd');
-/*!40000 ALTER TABLE `active_link` ENABLE KEYS */;
+LOCK TABLES `active_students` WRITE;
+/*!40000 ALTER TABLE `active_students` DISABLE KEYS */;
+INSERT INTO `active_students` VALUES ('111514104005','CSE','7','A');
+/*!40000 ALTER TABLE `active_students` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -47,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-18 14:10:16
+-- Dump completed on 2017-09-18 14:10:17
