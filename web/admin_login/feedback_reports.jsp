@@ -244,7 +244,7 @@
                             </div>
                         </div>
 
-              a      </div>
+                    </div>
 
                     <br><br>
                     <div class="row" style="margin-left: 30px;">
