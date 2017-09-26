@@ -41,10 +41,15 @@ public class UploadFile extends HttpServlet {
 
         ServletFileUpload serFileUpload = new ServletFileUpload(fileFactory); //commons API to handle multipart encoding type
         try {
-            out.print("new upload");
+
+            out.print("new upload 1 ");
+            out.print("<br> ");
             List fileItems = serFileUpload.parseRequest(request);
             Iterator iter = fileItems.iterator();
             while (iter.hasNext()) {
+
+                out.print("new upload while");
+
                 FileItem item = (FileItem) iter.next();
 
                 if (item.isFormField()) {    // identifies the normal fuorm field , false when it identifies the upload field
@@ -61,8 +66,12 @@ public class UploadFile extends HttpServlet {
                    out.print("<br>");
                 }
                 else {
+
+                    out.print("new upload else part");
+
+
                     try {
-                        String fileName= null;
+                        String fileName;
                         if(item.getName() != null )
                         {
 
@@ -97,9 +106,9 @@ public class UploadFile extends HttpServlet {
         out.print("successfully uploaded");
 
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/admin_login/import");
-
-        requestDispatcher.forward(request,response);
+//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/admin_login/import");
+//
+//        requestDispatcher.forward(request,response);
 
 
     }
