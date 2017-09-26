@@ -106,9 +106,9 @@ public class UploadFile extends HttpServlet {
         out.print("successfully uploaded");
 
 
-//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/admin_login/import");
-//
-//        requestDispatcher.forward(request,response);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/admin_login/import");
+
+        requestDispatcher.forward(request,response);
 
 
     }

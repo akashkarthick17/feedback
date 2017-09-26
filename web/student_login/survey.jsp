@@ -593,7 +593,7 @@
 
                             <!-- /.box-body -->
                         </div>
-                        <input type="hidden" name="sCount" value="<% session.getAttribute("staffCountTrack"); %>">
+                        <input type="hidden" name="sCount" value="<%= session.getAttribute("staffCountTrack") %>">
 
                         <%--disabled--%>
                         <input type="submit" disabled name="surveysubmit" class="btn btn-info"  id="buttonform">

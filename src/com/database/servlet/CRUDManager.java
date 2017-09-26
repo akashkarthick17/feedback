@@ -1653,7 +1653,7 @@ public static List<StudentsList> retrieveStudents(){
 
 
 
-        String sql = "SELECT * FROM students_list";
+        String sql = "SELECT * FROM active_students";
         statement = connection.createStatement();
         resultSet = statement.executeQuery(sql);
 
