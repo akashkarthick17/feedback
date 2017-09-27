@@ -266,6 +266,13 @@
                 document.getElementById("buttonform").removeAttribute("disabled");
             }
 
+            setTimeout(function (){
+
+                document.getElementById("click"+(question+1)).click();
+
+
+            }, 500);
+
 
 
         }
@@ -504,7 +511,7 @@
                                 int j=1;
                             %>
                             <c:forEach var="temp" items="${feedbackList}">
-                            <a  onclick="question(<%= j %>)">
+                            <a  onclick="question(<%= j %>)" id="click<%= j %>">
                                 <div class="alert  alert-dismissible hand bggrey <% if(j==1){out.print("shadow");}%>" id="shadow<%= j %>">
 
 

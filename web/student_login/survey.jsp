@@ -237,6 +237,10 @@
 
 
         }
+        .Qgreen{
+            color: green;
+        }
+
 
 
 
@@ -247,6 +251,9 @@
         function myradio(question, value){
 
             // document.getElementById("buttonform").removeAttribute("disabled");
+
+            //marking green
+            document.getElementById("green"+question).className = "icon fa fa-check-circle Qgreen";
 
 
 
@@ -266,6 +273,13 @@
             }
 
 
+
+            setTimeout(function (){
+
+                document.getElementById("click"+(question+1)).click();
+
+
+            }, 500);
 
         }
 
@@ -503,11 +517,11 @@
                                 int j=1;
                             %>
                             <c:forEach var="temp" items="${surveyList}">
-                                <a  onclick="question(<%= j %>)">
+                                <a  onclick="question(<%= j %>)" id="click<%= j %>">
                                     <div class="alert  alert-dismissible hand bggrey <% if(j==1){out.print("shadow");}%>" id="shadow<%= j %>">
 
 
-                                        <h4><i class="icon fa fa-question-circle"></i> Question <%= j %></h4>
+                                        <h4><i class="icon fa fa-question-circle"></i> Question <%= j %> <i class="" id="green<%= j %>" ></i></h4>
 
                                             ${temp.question}
 
