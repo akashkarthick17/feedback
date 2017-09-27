@@ -231,6 +231,9 @@
 
 
         }
+        .Qgreen{
+            color: green;
+        }
 
 
 
@@ -241,6 +244,10 @@
         function myradio(question, value){
 
             // document.getElementById("buttonform").removeAttribute("disabled");
+
+
+            //marking green
+             document.getElementById("green"+question).className = "icon fa fa-check-circle Qgreen";
 
 
 
@@ -487,7 +494,7 @@
                 <div class="col-md-6">
                     <div class="box box-default">
                         <div class="box-header with-border">
-                            <i class="fa fa-question-circle-o"></i>
+                            <i class="fa fa-question-circle-o" ></i>
 
                             <h3 class="box-title">Questions</h3>
                         </div>
@@ -501,7 +508,7 @@
                                 <div class="alert  alert-dismissible hand bggrey <% if(j==1){out.print("shadow");}%>" id="shadow<%= j %>">
 
 
-                                    <h4><i class="icon fa fa-question-circle"></i> Question <%= j %></h4>
+                                    <h4><i class="icon fa fa-question-circle" ></i> Question <%= j %> <i class="" id="green<%= j %>" ></i></h4>
 
                                   ${temp.question}
 
