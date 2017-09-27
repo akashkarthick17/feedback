@@ -42,18 +42,25 @@
 
       var button = document.getElementById("button");
 
-      if(!isNaN(name)){
-          location.href="login.jsp?register="+name;
-      }
+      if(name ==''){
 
-      else{
-        // data-toggle="modal" data-target="#modal-info"
-
-          button.setAttribute("data-toggle", "modal");
-          button.setAttribute("data-target","#modal-info");
+          alert("Please Enter Register Number");
 
       }
 
+      else {
+          if (!isNaN(name)) {
+              location.href = "login.jsp?register=" + name;
+          }
+
+          else {
+              // data-toggle="modal" data-target="#modal-info"
+
+              button.setAttribute("data-toggle", "modal");
+              button.setAttribute("data-target", "#modal-info");
+
+          }
+      }
      // alert("hello "+name);
 
   }

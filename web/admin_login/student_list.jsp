@@ -159,7 +159,7 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <li class="active">
+                <li class="">
                     <a href="feedback_reports.jsp"><i class="fa fa-line-chart"></i>
                         <span>Feedback Reports</span>
                     </a>
@@ -180,7 +180,7 @@
                     </a>
                 </li>
                 </li>
-                <li class="">
+                <li class="active">
                     <a href="student_list.jsp"><i class="fa fa-user"></i>
                         <span>Students List</span>
                     </a>

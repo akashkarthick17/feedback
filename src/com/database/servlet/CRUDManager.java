@@ -715,8 +715,8 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                     sql = "INSERT INTO  fr_" + active_year + "_" + active_sem + "  VALUES(?,?,?,?,?,?) ";
                     preparedStatement = connection.prepareStatement(sql);
                     preparedStatement.setString(1,staffName);
-                    preparedStatement.setString(2,subName);
-                    preparedStatement.setString(3,subCode);
+                    preparedStatement.setString(2,subCode);
+                    preparedStatement.setString(3,subName);
                     preparedStatement.setInt(4,f.getQno());
                     preparedStatement.setString(5,f.getQuestion());
                     preparedStatement.setInt(6,rating.get(temp));
@@ -793,8 +793,8 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 sql = "INSERT INTO  sr_" + active_year + "_" + active_sem + "  VALUES(?,?,?,?,?,?) ";
                 preparedStatement = connection.prepareStatement(sql);
                 preparedStatement.setString(1,staffName);
-                preparedStatement.setString(2,subName);
-                preparedStatement.setString(3,subCode);
+                preparedStatement.setString(2,subCode);
+                preparedStatement.setString(3,subName);
                 preparedStatement.setInt(4,f.getQno());
                 preparedStatement.setString(5,f.getQuestion());
                 preparedStatement.setInt(6,rating.get(temp));

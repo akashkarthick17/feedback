@@ -249,7 +249,7 @@
 
 
             <form action="staff_feedback_rating.jsp" method="post" id="form">
-                <input type="hidden" name="year" id="year">
+                <input type="hidden" name="year" id="year" >
                 <input type="hidden" name="subcode" id="subcode">
                 <input type="hidden" name="subname" id="subname">
                 <input type="hidden" name="staffname" id="staffname">
