@@ -98,20 +98,35 @@ public class ImportExcel extends HttpServlet {
 
             CreateYear createYear = new CreateYear();
 
-            //Create a loop to print cell values in a row
 
-              createYear.setDegree(""+row.getCell(0));
-              createYear.setBranch(""+row.getCell(1));
-              createYear.setSemester((long)Double.parseDouble(""+row.getCell(2)));
-              createYear.setSection(""+row.getCell(3));
-              createYear.setSubjectCode(""+row.getCell(4));
-              createYear.setStaffName(""+row.getCell(5));
-              createYear.setSubjectName(""+row.getCell(6));
-              createYear.setYear(""+year);
-              createYear.setSemtype(""+sem);
+            String ug = ""+row.getCell(0);
+            String branch = ""+row.getCell(1);
+            String semester = ""+row.getCell(2);
+            String section = ""+row.getCell(3);
+            String subCode = ""+row.getCell(4);
+            String staffName = ""+row.getCell(5);
+            String subName = ""+row.getCell(6);
 
 
-              feedbackList.add(createYear);
+            if(!ug.equals("null") && !branch.equals("null") && !semester.equals("null") && !section.equals("null") && !subCode.equals("null")  && !staffName.equals("null") && !subName.equals("null")) {
+
+
+                //Create a loop to print cell values in a row
+
+                createYear.setDegree("" + row.getCell(0));
+                createYear.setBranch("" + row.getCell(1));
+                createYear.setSemester((long) Double.parseDouble("" + row.getCell(2)));
+                createYear.setSection("" + row.getCell(3));
+                createYear.setSubjectCode("" + row.getCell(4));
+                createYear.setStaffName("" + row.getCell(5));
+                createYear.setSubjectName("" + row.getCell(6));
+                createYear.setYear("" + year);
+                createYear.setSemtype("" + sem);
+
+
+                feedbackList.add(createYear);
+
+            }
 
 
 
