@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51dab323-f154-40d1-bca7-8e680bb4fb52" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/feedback_war_exploded/WEB-INF/classes/com/database/servlet/CRUDManager.class" afterPath="$PROJECT_DIR$/out/artifacts/feedback_war_exploded/WEB-INF/classes/com/database/servlet/CRUDManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/feedback_war_exploded/WEB-INF/classes/com/database/servlet/ImportExcel.class" afterPath="$PROJECT_DIR$/out/artifacts/feedback_war_exploded/WEB-INF/classes/com/database/servlet/ImportExcel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/feedback_war_exploded/WEB-INF/classes/com/list/servlet/CreateYear.class" afterPath="$PROJECT_DIR$/out/artifacts/feedback_war_exploded/WEB-INF/classes/com/list/servlet/CreateYear.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/feedback/com/database/servlet/CRUDManager.class" afterPath="$PROJECT_DIR$/out/production/feedback/com/database/servlet/CRUDManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/feedback/com/database/servlet/ImportExcel.class" afterPath="$PROJECT_DIR$/out/production/feedback/com/database/servlet/ImportExcel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/feedback/com/list/servlet/CreateYear.class" afterPath="$PROJECT_DIR$/out/production/feedback/com/list/servlet/CreateYear.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/database/servlet/ImportExcel.java" afterPath="$PROJECT_DIR$/src/com/database/servlet/ImportExcel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java" afterPath="$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,67 +30,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CRUDManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CRUDManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            <state relative-caret-position="391">
+              <caret line="278" column="0" lean-forward="true" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
               <folding>
-                <marker date="1506603361920" expanded="true" signature="695:915" ph="CREATE TABLE... YEAR_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="1072:1107" ph="INSERT INTO TABLE_MAP" />
-                <marker date="1506603361920" expanded="true" signature="2050:2076" ph="SELECT YEAR " />
-                <marker date="1506603361920" expanded="true" signature="3066:3082" ph="DROP TABLE y... " />
-                <marker date="1506603361920" expanded="true" signature="3244:3278" ph="DELETE FROM " />
-                <marker date="1506603361920" expanded="true" signature="4144:4196" ph="INSERT INTO YEAR_missingValue... " />
-                <marker date="1506603361920" expanded="true" signature="5912:6090" ph="CREATE TABLE... IF" />
-                <marker date="1506603361920" expanded="true" signature="6209:6385" ph="CREATE TABLE... IF" />
-                <marker date="1506603361920" expanded="true" signature="6545:6607" ph="INSERT INTO active_link" />
-                <marker date="1506603361920" expanded="true" signature="7024:7066" ph="INSERT INTO reports_meta" />
-                <marker date="1506603361920" expanded="true" signature="8018:8051" ph="SELECT * FRO... active_link" />
-                <marker date="1506603361920" expanded="true" signature="8999:9032" ph="SELECT * FRO... active_link" />
-                <marker date="1506603361920" expanded="true" signature="10023:10056" ph="SELECT * FRO... active_link" />
-                <marker date="1506603361920" expanded="true" signature="10281:10389" ph="SELECT * FRO... year_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="11579:11679" ph="SELECT * FRO... year_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="12911:12943" ph="SELECT * FRO... feedback_questions" />
-                <marker date="1506603361920" expanded="true" signature="14054:14084" ph="SELECT * FRO... survey_questions" />
-                <marker date="1506603361920" expanded="true" signature="15538:15571" ph="SELECT * FRO... active_link" />
-                <marker date="1506603361920" expanded="true" signature="16064:16139" ph="INSERT INTO fr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="17693:17726" ph="SELECT * FRO... active_link" />
-                <marker date="1506603361920" expanded="true" signature="18174:18249" ph="INSERT INTO sr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="19888:20068" ph="SELECT quest... fr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="20362:20550" ph="SELECT COUNT... fr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="20828:21016" ph="SELECT COUNT... fr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="21296:21484" ph="SELECT COUNT... fr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="21764:21952" ph="SELECT COUNT... fr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="22242:22430" ph="SELECT COUNT... fr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="24289:24469" ph="SELECT quest... sr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="24763:24951" ph="SELECT COUNT... sr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="25229:25417" ph="SELECT COUNT... sr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="25697:25885" ph="SELECT COUNT... sr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="26165:26353" ph="SELECT COUNT... sr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="26643:26831" ph="SELECT COUNT... sr_missingValue_missingValue" />
-                <marker date="1506603361920" expanded="true" signature="28272:28343" ph="SELECT feedb... reports_meta" />
-                <marker date="1506603361920" expanded="true" signature="29302:29371" ph="SELECT surve... reports_meta" />
-                <marker date="1506603361920" expanded="true" signature="30369:30438" ph="UPDATE surve... " />
-                <marker date="1506603361920" expanded="true" signature="31337:31385" ph="INSERT INTO survey_questions... " />
-                <marker date="1506603361920" expanded="true" signature="32271:32310" ph="DELETE FROM " />
-                <marker date="1506603361920" expanded="true" signature="33178:33249" ph="UPDATE feedb... " />
-                <marker date="1506603361920" expanded="true" signature="34150:34200" ph="INSERT INTO feedback_questions... " />
-                <marker date="1506603361920" expanded="true" signature="35082:35123" ph="DELETE FROM " />
-                <marker date="1506603361920" expanded="true" signature="35926:35982" ph="INSERT INTO active_students... " />
-                <marker date="1506603361920" expanded="true" signature="36901:37001" ph="UPDATE activ... " />
-                <marker date="1506603361920" expanded="true" signature="37822:37851" ph="SELECT * FRO... active_students" />
+                <marker date="1506607066947" expanded="true" signature="695:915" ph="CREATE TABLE... YEAR_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="1072:1107" ph="INSERT INTO TABLE_MAP" />
+                <marker date="1506607066947" expanded="true" signature="2050:2076" ph="SELECT YEAR " />
+                <marker date="1506607066947" expanded="true" signature="3066:3082" ph="DROP TABLE y... " />
+                <marker date="1506607066947" expanded="true" signature="3206:3230" ph="DROP TABLE f... " />
+                <marker date="1506607066947" expanded="true" signature="3206:3242" ph="DROP TABLE I... " />
+                <marker date="1506607066947" expanded="true" signature="3361:3398" ph="DROP TABLE I... " />
+                <marker date="1506607066947" expanded="true" signature="3517:3553" ph="DROP TABLE I... " />
+                <marker date="1506607066947" expanded="true" signature="3672:3709" ph="DROP TABLE I... " />
+                <marker date="1506607066947" expanded="true" signature="3871:3905" ph="DELETE FROM " />
+                <marker date="1506607066947" expanded="true" signature="4771:4823" ph="INSERT INTO YEAR_missingValue... " />
+                <marker date="1506607066947" expanded="true" signature="6539:6717" ph="CREATE TABLE... IF" />
+                <marker date="1506607066947" expanded="true" signature="6836:7012" ph="CREATE TABLE... IF" />
+                <marker date="1506607066947" expanded="true" signature="7172:7234" ph="INSERT INTO active_link" />
+                <marker date="1506607066947" expanded="true" signature="7651:7693" ph="INSERT INTO reports_meta" />
+                <marker date="1506607066947" expanded="true" signature="8645:8678" ph="SELECT * FRO... active_link" />
+                <marker date="1506607066947" expanded="true" signature="9626:9659" ph="SELECT * FRO... active_link" />
+                <marker date="1506607066947" expanded="true" signature="10650:10683" ph="SELECT * FRO... active_link" />
+                <marker date="1506607066947" expanded="true" signature="10908:11016" ph="SELECT * FRO... year_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="12206:12306" ph="SELECT * FRO... year_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="13538:13570" ph="SELECT * FRO... feedback_questions" />
+                <marker date="1506607066947" expanded="true" signature="14681:14711" ph="SELECT * FRO... survey_questions" />
+                <marker date="1506607066947" expanded="true" signature="16165:16198" ph="SELECT * FRO... active_link" />
+                <marker date="1506607066947" expanded="true" signature="16691:16766" ph="INSERT INTO fr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="18320:18353" ph="SELECT * FRO... active_link" />
+                <marker date="1506607066947" expanded="true" signature="18801:18876" ph="INSERT INTO sr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="20515:20695" ph="SELECT quest... fr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="20989:21177" ph="SELECT COUNT... fr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="21455:21643" ph="SELECT COUNT... fr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="21923:22111" ph="SELECT COUNT... fr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="22391:22579" ph="SELECT COUNT... fr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="22869:23057" ph="SELECT COUNT... fr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="24916:25096" ph="SELECT quest... sr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="25390:25578" ph="SELECT COUNT... sr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="25856:26044" ph="SELECT COUNT... sr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="26324:26512" ph="SELECT COUNT... sr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="26792:26980" ph="SELECT COUNT... sr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="27270:27458" ph="SELECT COUNT... sr_missingValue_missingValue" />
+                <marker date="1506607066947" expanded="true" signature="28899:28970" ph="SELECT feedb... reports_meta" />
+                <marker date="1506607066947" expanded="true" signature="29929:29998" ph="SELECT surve... reports_meta" />
+                <marker date="1506607066947" expanded="true" signature="30996:31065" ph="UPDATE surve... " />
+                <marker date="1506607066947" expanded="true" signature="31964:32012" ph="INSERT INTO survey_questions... " />
+                <marker date="1506607066947" expanded="true" signature="32898:32937" ph="DELETE FROM " />
+                <marker date="1506607066947" expanded="true" signature="33805:33876" ph="UPDATE feedb... " />
+                <marker date="1506607066947" expanded="true" signature="34777:34827" ph="INSERT INTO feedback_questions... " />
+                <marker date="1506607066947" expanded="true" signature="35709:35750" ph="DELETE FROM " />
+                <marker date="1506607066947" expanded="true" signature="36553:36609" ph="INSERT INTO active_students... " />
+                <marker date="1506607066947" expanded="true" signature="37528:37628" ph="UPDATE activ... " />
+                <marker date="1506607066947" expanded="true" signature="38449:38478" ph="SELECT * FRO... active_students" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rating.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/student_login/rating.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14877">
-              <caret line="513" column="61" lean-forward="false" selection-start-line="513" selection-start-column="61" selection-end-line="513" selection-end-column="79" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -105,28 +93,8 @@
       <file leaf-file-name="survey.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/student_login/survey.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1885">
+            <state relative-caret-position="29">
               <caret line="65" column="29" lean-forward="false" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logout.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/logout.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="27" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="end.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/student_login/end.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImportExcel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImportExcel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/database/servlet/ImportExcel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
+            <state relative-caret-position="1276">
               <caret line="115" column="58" lean-forward="true" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
               <folding />
             </state>
@@ -165,18 +133,28 @@
       <file leaf-file-name="dashboard.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/student_login/dashboard.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2842">
+            <state relative-caret-position="29">
               <caret line="98" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <file leaf-file-name="dashboard.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/admin_login/dashboard.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1334">
-              <caret line="46" column="48" lean-forward="false" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+            <state relative-caret-position="-131">
+              <caret line="141" column="25" lean-forward="false" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DashboardServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/database/servlet/DashboardServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -196,11 +174,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rating</find>
       <find>question</find>
       <find>10</find>
       <find>fbSize</find>
-      <find>publishlink()</find>
       <find>publish</find>
       <find>method</find>
       <find>sub_code</find>
@@ -226,6 +202,8 @@
       <find>feedbackLog</find>
       <find>double</find>
       <find>INSERT INTO</find>
+      <find>DELETE</find>
+      <find>publishlink()</find>
     </findStrings>
     <replaceStrings>
       <replace>../</replace>
@@ -309,9 +287,9 @@
         <option value="$PROJECT_DIR$/web/student_login/rating.jsp" />
         <option value="$PROJECT_DIR$/web/student_login/survey.jsp" />
         <option value="$PROJECT_DIR$/web/student_login/end.jsp" />
-        <option value="$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java" />
         <option value="$PROJECT_DIR$/src/com/list/servlet/CreateYear.java" />
         <option value="$PROJECT_DIR$/src/com/database/servlet/ImportExcel.java" />
+        <option value="$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java" />
       </list>
     </option>
   </component>
@@ -391,6 +369,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="student_login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feedback" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="feedback" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin_login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -729,12 +725,12 @@
       <workItem from="1506494751755" duration="3612000" />
       <workItem from="1506502116483" duration="750000" />
       <workItem from="1506531825615" duration="2283000" />
-      <workItem from="1506601606367" duration="2488000" />
+      <workItem from="1506601606367" duration="3155000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270191000" />
+    <option name="totallyTimeSpent" value="270858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -987,13 +983,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin_login/dashboard.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4110">
-          <caret line="274" column="17" lean-forward="false" selection-start-line="274" selection-start-column="17" selection-end-line="274" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/admin_login/survey_reports.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
@@ -1036,13 +1025,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/database/servlet/DashboardServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/database/servlet/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1073,22 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/dashboard.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2842">
-          <caret line="98" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/student_login/survey.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1885">
-          <caret line="65" column="29" lean-forward="false" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/logout.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1113,59 +1079,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="35" column="29" lean-forward="false" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-          <folding>
-            <marker date="1506603361920" expanded="true" signature="695:915" ph="CREATE TABLE... YEAR_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="1072:1107" ph="INSERT INTO TABLE_MAP" />
-            <marker date="1506603361920" expanded="true" signature="2050:2076" ph="SELECT YEAR " />
-            <marker date="1506603361920" expanded="true" signature="3066:3082" ph="DROP TABLE y... " />
-            <marker date="1506603361920" expanded="true" signature="3244:3278" ph="DELETE FROM " />
-            <marker date="1506603361920" expanded="true" signature="4144:4196" ph="INSERT INTO YEAR_missingValue... " />
-            <marker date="1506603361920" expanded="true" signature="5912:6090" ph="CREATE TABLE... IF" />
-            <marker date="1506603361920" expanded="true" signature="6209:6385" ph="CREATE TABLE... IF" />
-            <marker date="1506603361920" expanded="true" signature="6545:6607" ph="INSERT INTO active_link" />
-            <marker date="1506603361920" expanded="true" signature="7024:7066" ph="INSERT INTO reports_meta" />
-            <marker date="1506603361920" expanded="true" signature="8018:8051" ph="SELECT * FRO... active_link" />
-            <marker date="1506603361920" expanded="true" signature="8999:9032" ph="SELECT * FRO... active_link" />
-            <marker date="1506603361920" expanded="true" signature="10023:10056" ph="SELECT * FRO... active_link" />
-            <marker date="1506603361920" expanded="true" signature="10281:10389" ph="SELECT * FRO... year_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="11579:11679" ph="SELECT * FRO... year_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="12911:12943" ph="SELECT * FRO... feedback_questions" />
-            <marker date="1506603361920" expanded="true" signature="14054:14084" ph="SELECT * FRO... survey_questions" />
-            <marker date="1506603361920" expanded="true" signature="15538:15571" ph="SELECT * FRO... active_link" />
-            <marker date="1506603361920" expanded="true" signature="16064:16139" ph="INSERT INTO fr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="17693:17726" ph="SELECT * FRO... active_link" />
-            <marker date="1506603361920" expanded="true" signature="18174:18249" ph="INSERT INTO sr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="19888:20068" ph="SELECT quest... fr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="20362:20550" ph="SELECT COUNT... fr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="20828:21016" ph="SELECT COUNT... fr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="21296:21484" ph="SELECT COUNT... fr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="21764:21952" ph="SELECT COUNT... fr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="22242:22430" ph="SELECT COUNT... fr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="24289:24469" ph="SELECT quest... sr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="24763:24951" ph="SELECT COUNT... sr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="25229:25417" ph="SELECT COUNT... sr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="25697:25885" ph="SELECT COUNT... sr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="26165:26353" ph="SELECT COUNT... sr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="26643:26831" ph="SELECT COUNT... sr_missingValue_missingValue" />
-            <marker date="1506603361920" expanded="true" signature="28272:28343" ph="SELECT feedb... reports_meta" />
-            <marker date="1506603361920" expanded="true" signature="29302:29371" ph="SELECT surve... reports_meta" />
-            <marker date="1506603361920" expanded="true" signature="30369:30438" ph="UPDATE surve... " />
-            <marker date="1506603361920" expanded="true" signature="31337:31385" ph="INSERT INTO survey_questions... " />
-            <marker date="1506603361920" expanded="true" signature="32271:32310" ph="DELETE FROM " />
-            <marker date="1506603361920" expanded="true" signature="33178:33249" ph="UPDATE feedb... " />
-            <marker date="1506603361920" expanded="true" signature="34150:34200" ph="INSERT INTO feedback_questions... " />
-            <marker date="1506603361920" expanded="true" signature="35082:35123" ph="DELETE FROM " />
-            <marker date="1506603361920" expanded="true" signature="35926:35982" ph="INSERT INTO active_students... " />
-            <marker date="1506603361920" expanded="true" signature="36901:37001" ph="UPDATE activ... " />
-            <marker date="1506603361920" expanded="true" signature="37822:37851" ph="SELECT * FRO... active_students" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/list/servlet/CreateYear.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -1176,9 +1089,99 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/database/servlet/ImportExcel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
+        <state relative-caret-position="1276">
           <caret line="115" column="58" lean-forward="true" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/dashboard.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="98" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="199" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login/dashboard.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-131">
+          <caret line="141" column="25" lean-forward="false" selection-start-line="141" selection-start-column="12" selection-end-line="141" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/database/servlet/DashboardServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/student_login/survey.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="65" column="29" lean-forward="false" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/database/servlet/CRUDManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="278" column="0" lean-forward="true" selection-start-line="278" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
+          <folding>
+            <marker date="1506607066947" expanded="true" signature="695:915" ph="CREATE TABLE... YEAR_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="1072:1107" ph="INSERT INTO TABLE_MAP" />
+            <marker date="1506607066947" expanded="true" signature="2050:2076" ph="SELECT YEAR " />
+            <marker date="1506607066947" expanded="true" signature="3066:3082" ph="DROP TABLE y... " />
+            <marker date="1506607066947" expanded="true" signature="3206:3230" ph="DROP TABLE f... " />
+            <marker date="1506607066947" expanded="true" signature="3206:3242" ph="DROP TABLE I... " />
+            <marker date="1506607066947" expanded="true" signature="3361:3398" ph="DROP TABLE I... " />
+            <marker date="1506607066947" expanded="true" signature="3517:3553" ph="DROP TABLE I... " />
+            <marker date="1506607066947" expanded="true" signature="3672:3709" ph="DROP TABLE I... " />
+            <marker date="1506607066947" expanded="true" signature="3871:3905" ph="DELETE FROM " />
+            <marker date="1506607066947" expanded="true" signature="4771:4823" ph="INSERT INTO YEAR_missingValue... " />
+            <marker date="1506607066947" expanded="true" signature="6539:6717" ph="CREATE TABLE... IF" />
+            <marker date="1506607066947" expanded="true" signature="6836:7012" ph="CREATE TABLE... IF" />
+            <marker date="1506607066947" expanded="true" signature="7172:7234" ph="INSERT INTO active_link" />
+            <marker date="1506607066947" expanded="true" signature="7651:7693" ph="INSERT INTO reports_meta" />
+            <marker date="1506607066947" expanded="true" signature="8645:8678" ph="SELECT * FRO... active_link" />
+            <marker date="1506607066947" expanded="true" signature="9626:9659" ph="SELECT * FRO... active_link" />
+            <marker date="1506607066947" expanded="true" signature="10650:10683" ph="SELECT * FRO... active_link" />
+            <marker date="1506607066947" expanded="true" signature="10908:11016" ph="SELECT * FRO... year_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="12206:12306" ph="SELECT * FRO... year_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="13538:13570" ph="SELECT * FRO... feedback_questions" />
+            <marker date="1506607066947" expanded="true" signature="14681:14711" ph="SELECT * FRO... survey_questions" />
+            <marker date="1506607066947" expanded="true" signature="16165:16198" ph="SELECT * FRO... active_link" />
+            <marker date="1506607066947" expanded="true" signature="16691:16766" ph="INSERT INTO fr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="18320:18353" ph="SELECT * FRO... active_link" />
+            <marker date="1506607066947" expanded="true" signature="18801:18876" ph="INSERT INTO sr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="20515:20695" ph="SELECT quest... fr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="20989:21177" ph="SELECT COUNT... fr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="21455:21643" ph="SELECT COUNT... fr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="21923:22111" ph="SELECT COUNT... fr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="22391:22579" ph="SELECT COUNT... fr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="22869:23057" ph="SELECT COUNT... fr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="24916:25096" ph="SELECT quest... sr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="25390:25578" ph="SELECT COUNT... sr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="25856:26044" ph="SELECT COUNT... sr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="26324:26512" ph="SELECT COUNT... sr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="26792:26980" ph="SELECT COUNT... sr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="27270:27458" ph="SELECT COUNT... sr_missingValue_missingValue" />
+            <marker date="1506607066947" expanded="true" signature="28899:28970" ph="SELECT feedb... reports_meta" />
+            <marker date="1506607066947" expanded="true" signature="29929:29998" ph="SELECT surve... reports_meta" />
+            <marker date="1506607066947" expanded="true" signature="30996:31065" ph="UPDATE surve... " />
+            <marker date="1506607066947" expanded="true" signature="31964:32012" ph="INSERT INTO survey_questions... " />
+            <marker date="1506607066947" expanded="true" signature="32898:32937" ph="DELETE FROM " />
+            <marker date="1506607066947" expanded="true" signature="33805:33876" ph="UPDATE feedb... " />
+            <marker date="1506607066947" expanded="true" signature="34777:34827" ph="INSERT INTO feedback_questions... " />
+            <marker date="1506607066947" expanded="true" signature="35709:35750" ph="DELETE FROM " />
+            <marker date="1506607066947" expanded="true" signature="36553:36609" ph="INSERT INTO active_students... " />
+            <marker date="1506607066947" expanded="true" signature="37528:37628" ph="UPDATE activ... " />
+            <marker date="1506607066947" expanded="true" signature="38449:38478" ph="SELECT * FRO... active_students" />
+          </folding>
         </state>
       </provider>
     </entry>

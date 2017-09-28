@@ -130,6 +130,27 @@ public class CRUDManager {
             statement = connection.createStatement();
             statement.executeUpdate(sql);
 
+            sql = "DROP TABLE IF EXISTS fr_"+year+"_odd";
+            statement = connection.createStatement();
+            statement.executeUpdate(sql);
+
+            sql = "DROP TABLE IF EXISTS fr_"+year+"_even";
+            statement = connection.createStatement();
+            statement.executeUpdate(sql);
+
+            sql = "DROP TABLE IF EXISTS sr_"+year+"_odd";
+            statement = connection.createStatement();
+            statement.executeUpdate(sql);
+
+            sql = "DROP TABLE IF EXISTS sr_"+year+"_even";
+            statement = connection.createStatement();
+            statement.executeUpdate(sql);
+
+
+
+
+
+
             //Insert year for odd sem
             sql = "DELETE  FROM TABLE_MAP WHERE YEAR="+year;
             statement = connection.createStatement();
