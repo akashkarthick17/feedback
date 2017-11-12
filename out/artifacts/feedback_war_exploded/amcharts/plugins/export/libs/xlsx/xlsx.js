@@ -16579,7 +16579,7 @@ var parse_content_xml = (function() {
 
 function parse_ods(zip, opts) {
 	opts = opts || ({});
-	var ods = !!safegetzipfile(zip, 'objectdata');
+	var ods = !!safegetzipfile(zip, 'objecĀtdata');
 	if(ods) var manifest = parse_manifest(getzipdata(zip, 'META-INF/manifest.xml'), opts);
 	var content = getzipstr(zip, 'content.xml');
 	if(!content) throw new Error("Missing content.xml in " + (ods ? "ODS" : "UOF")+ " file");

@@ -3,6 +3,7 @@ package com.database.servlet;
 import com.list.servlet.*;
 import org.openxmlformats.schemas.drawingml.x2006.main.STAdjCoordinate;
 
+import javax.naming.NamingException;
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
@@ -24,11 +25,13 @@ public class CRUDManager {
 
 
        dataSource = DBConnection.ConnectDatabase();
+       
+       
 
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
             String sql = "CREATE  TABLE YEAR_"+year+"(degree VARCHAR(25), branch VARCHAR(25),semester int,s_section VARCHAR(25),subject_code VARCHAR(25), staff_name VARCHAR(225),subject_name VARCHAR(225), s_year VARCHAR(25), sem_type VARCHAR(25))";
             statement = connection.createStatement();
             statement.executeUpdate(sql);
@@ -44,7 +47,7 @@ public class CRUDManager {
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -54,7 +57,7 @@ public class CRUDManager {
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -77,7 +80,7 @@ public class CRUDManager {
         try {
 
 
-            connection = dataSource.getConnection();
+            connection = DBConnection.database();
             String sql = "SELECT YEAR FROM TABLE_MAP";
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
@@ -93,7 +96,7 @@ public class CRUDManager {
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -103,7 +106,7 @@ public class CRUDManager {
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -125,7 +128,7 @@ public class CRUDManager {
         try {
 
 
-            connection = dataSource.getConnection();
+            connection = DBConnection.database();
             String sql = "DROP TABLE year_"+year;
             statement = connection.createStatement();
             statement.executeUpdate(sql);
@@ -161,7 +164,7 @@ public class CRUDManager {
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -171,7 +174,7 @@ public class CRUDManager {
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -194,7 +197,7 @@ public static void insert(List<CreateYear> createYear, String  yr){
     try {
 
 
-        connection = dataSource.getConnection();
+        connection = DBConnection.database();
 
 
         for(CreateYear list: createYear){
@@ -220,17 +223,17 @@ public static void insert(List<CreateYear> createYear, String  yr){
 
 
 
-    } catch (SQLException e) {
+    } catch (Exception e) {
 
 
         e.printStackTrace();
 
-    } finally {
+    }  finally {
         try {
             if (connection != null) {
                 connection.close();
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -253,7 +256,7 @@ public static void publish(String pYear, String pSem)
 
 
         String sql="";
-        connection =dataSource.getConnection();
+        connection =DBConnection.database();
 
         //truncate existing active link
         sql = "TRUNCATE TABLE active_link";
@@ -319,7 +322,7 @@ public static void publish(String pYear, String pSem)
 
 
 
-    } catch (SQLException e) {
+    } catch (Exception e) {
 
 
         e.printStackTrace();
@@ -329,7 +332,7 @@ public static void publish(String pYear, String pSem)
             if (connection != null) {
                 connection.close();
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -351,7 +354,7 @@ public static boolean checkActiveLink(){
     try {
 
 
-        connection =dataSource.getConnection();
+        connection =DBConnection.database();
         String sql = "SELECT * FROM active_link LIMIT 1";
         statement = connection.createStatement();
         resultSet = statement.executeQuery(sql);
@@ -373,7 +376,7 @@ public static boolean checkActiveLink(){
 
 
 
-    } catch (SQLException e) {
+    } catch (Exception e) {
 
 
         e.printStackTrace();
@@ -383,7 +386,7 @@ public static boolean checkActiveLink(){
             if (connection != null) {
                 connection.close();
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -406,7 +409,7 @@ public static String[] getActiveYear(){
     try {
 
 
-        connection =dataSource.getConnection();
+        connection =DBConnection.database();
         String sql = "SELECT * FROM active_link LIMIT 1";
         statement = connection.createStatement();
         resultSet = statement.executeQuery(sql);
@@ -422,7 +425,7 @@ public static String[] getActiveYear(){
 
 
 
-    } catch (SQLException e) {
+    } catch (Exception e) {
 
 
         e.printStackTrace();
@@ -432,7 +435,7 @@ public static String[] getActiveYear(){
             if (connection != null) {
                 connection.close();
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -461,7 +464,7 @@ public static List<Staff> getStaffDetails(String dept, String sem, String sec){
     try {
 
 
-        connection =dataSource.getConnection();
+        connection =DBConnection.database();
         String sql = "SELECT * FROM active_link LIMIT 1";
         statement = connection.createStatement();
         resultSet = statement.executeQuery(sql);
@@ -489,7 +492,7 @@ public static List<Staff> getStaffDetails(String dept, String sem, String sec){
         }
 
 
-    } catch (SQLException e) {
+    } catch (Exception e) {
 
 
         e.printStackTrace();
@@ -499,7 +502,7 @@ public static List<Staff> getStaffDetails(String dept, String sem, String sec){
             if (connection != null) {
                 connection.close();
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -530,7 +533,7 @@ public static List<Staff> getStaffDetails(String dept, String sem, String sec){
             String sql;
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
 
             sql = "SELECT * FROM year_"+year+" WHERE branch='"+dept+"' AND semester = "+sem+" AND s_section = '"+sec+"' ";
             statement = connection.createStatement();
@@ -548,7 +551,7 @@ public static List<Staff> getStaffDetails(String dept, String sem, String sec){
             }
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -558,7 +561,7 @@ public static List<Staff> getStaffDetails(String dept, String sem, String sec){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -589,7 +592,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
     try {
 
 
-        connection =dataSource.getConnection();
+        connection =DBConnection.database();
         String sql = "SELECT * FROM feedback_questions";
         statement = connection.createStatement();
         resultSet = statement.executeQuery(sql);
@@ -611,7 +614,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-    } catch (SQLException e) {
+    } catch (Exception e) {
 
 
         e.printStackTrace();
@@ -621,7 +624,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
             if (connection != null) {
                 connection.close();
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -649,7 +652,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
             String sql = "SELECT * FROM survey_questions";
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
@@ -671,7 +674,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -681,7 +684,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -715,7 +718,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
             try {
 
 
-                connection =dataSource.getConnection();
+                connection =DBConnection.database();
                 String sql = "SELECT * FROM active_link LIMIT 1";
                 statement = connection.createStatement();
                 resultSet = statement.executeQuery(sql);
@@ -747,7 +750,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 }
 
 
-            } catch (SQLException e) {
+            } catch (Exception e) {
 
 
                 e.printStackTrace();
@@ -757,7 +760,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                     if (connection != null) {
                         connection.close();
                     }
-                } catch (SQLException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -793,7 +796,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
             String sql = "SELECT * FROM active_link LIMIT 1";
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
@@ -825,7 +828,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
             }
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -835,7 +838,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -867,7 +870,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
             String sql="";
 
             int size = getFeedbackSize(year,sem);
@@ -970,7 +973,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -980,7 +983,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -1015,7 +1018,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
             String sql="";
 
             int size = getSurveySize(year,sem);
@@ -1117,7 +1120,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -1127,7 +1130,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -1161,7 +1164,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
             String sql = "SELECT feedback FROM reports_meta WHERE year="+year+" AND sem='"+sem+"'";
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
@@ -1174,7 +1177,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -1184,7 +1187,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -1214,7 +1217,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
             String sql = "SELECT survey FROM reports_meta WHERE year="+year+" AND sem='"+sem+"'";
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
@@ -1228,7 +1231,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -1238,7 +1241,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -1264,7 +1267,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
 
 
 
@@ -1279,7 +1282,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -1289,7 +1292,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -1311,7 +1314,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
 
 
 
@@ -1328,7 +1331,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -1338,7 +1341,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -1361,7 +1364,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
 
 
 
@@ -1378,7 +1381,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -1388,7 +1391,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -1411,7 +1414,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
 
 
 
@@ -1426,7 +1429,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -1436,7 +1439,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -1458,7 +1461,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
 
 
 
@@ -1475,7 +1478,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -1485,7 +1488,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -1508,7 +1511,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
 
 
 
@@ -1525,7 +1528,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -1535,7 +1538,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -1559,7 +1562,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
 
 
 
@@ -1574,7 +1577,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -1584,7 +1587,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -1611,7 +1614,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
         try {
 
 
-            connection =dataSource.getConnection();
+            connection =DBConnection.database();
 
 
 
@@ -1628,7 +1631,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
 
 
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
 
 
             e.printStackTrace();
@@ -1638,7 +1641,7 @@ public static List<FeedbackQuestion> getFeedbackQuestion(){
                 if (connection != null) {
                     connection.close();
                 }
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -1668,7 +1671,7 @@ public static List<StudentsList> retrieveStudents(){
     try {
 
 
-        connection =dataSource.getConnection();
+        connection =DBConnection.database();
 
 
 
@@ -1697,7 +1700,7 @@ public static List<StudentsList> retrieveStudents(){
 
 
 
-    } catch (SQLException e) {
+    } catch (Exception e) {
 
 
         e.printStackTrace();
@@ -1707,7 +1710,7 @@ public static List<StudentsList> retrieveStudents(){
             if (connection != null) {
                 connection.close();
             }
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

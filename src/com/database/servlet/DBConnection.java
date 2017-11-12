@@ -6,8 +6,9 @@ import com.mchange.v2.c3p0.ConnectionCustomizer;
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
+import javax.naming.*;
+
 
 /**
  * Created by Akash on 03-09-2017.
@@ -16,6 +17,29 @@ public  class DBConnection {
 
 
     private static DataSource dataSource;
+
+
+    public static Connection database() throws NamingException, SQLException {
+
+        Connection connection=null;
+        try {
+            InitialContext initialContext = new InitialContext();
+            Context context = (Context) initialContext.lookup("java:comp/env");
+            //The JDBC Data source that we just created
+            DataSource ds = (DataSource) context.lookup("connpool");
+            connection = ds.getConnection();
+
+
+        }
+
+        catch(Exception e){
+
+            e.printStackTrace();
+        }
+
+     return connection;
+    }
+
 
     public static DataSource ConnectDatabase(){
 
