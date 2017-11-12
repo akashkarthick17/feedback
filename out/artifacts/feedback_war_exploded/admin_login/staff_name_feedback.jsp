@@ -2,6 +2,7 @@
 <%@ page import="com.list.servlet.Staff" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.database.servlet.CRUDManager" %>
+<%@ page import="com.list.servlet.Rating" %>
 
 <%
 
@@ -28,7 +29,7 @@
 <%
 
 
-  int year = Integer.parseInt(request.getParameter("year"));
+    int year = Integer.parseInt(request.getParameter("year"));
     int sem = Integer.parseInt(request.getParameter("sem"));
     String dept = request.getParameter("dept");
     String section = request.getParameter("section");
@@ -267,6 +268,8 @@
                         <tr>
                             <th style="width: 10px">#</th>
                             <th>Staff Name</th>
+                            <th>test</th>
+
                             <th>Subject Code</th>
                             <th>Subject Name</th>
                             <th>Overall Rating in Percentage</th>
@@ -274,18 +277,45 @@
                         </tr>
                         <% int i=1; %>
                         <C:forEach var="temp" items="${staffDetails}" >
-                        <tr>
-                            <td><%= i %>.</td>
-                            <td><a href="#" onclick="fRating('<%= request.getAttribute("sYear")%>','<%= semester %>','${temp.staffName}','${temp.subjectCode}','${temp.subjectName}')">${temp.staffName}</a></td>
-                            <td>${temp.subjectCode}</td>
-                            <td>${temp.subjectName}</td>
-                            <td>
-                                <div class="progress progress-xs progress-striped active">
-                                    <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                                </div>
-                            </td>
-                            <td><span class="badge bg-green">90%</span></td>
-                        </tr>
+                            <tr>
+
+                                <%
+                                    List<Rating> ratingList = CRUDManager.getFeedbackRating(year,""+sem,staff.get(i-1).getStaffName(),staff.get(i-1).getSubjectCode(),staff.get(i-1).getSubjectCode());
+
+                                    double ii=0.0;
+
+                                    for(Rating r : ratingList){
+
+                                        ii = ii + r.getRating();
+
+
+                                    }
+
+                                    double res = ii;
+
+
+
+
+
+                                %>
+
+
+
+
+
+
+                                <td><%= i %>.</td>
+                                <td><a href="#" onclick="fRating('<%= request.getAttribute("sYear")%>','<%= semester %>','${temp.staffName}','${temp.subjectCode}','${temp.subjectName}')">${temp.staffName}</a></td>
+                                <td><%= res %></td>
+                                <td>${temp.subjectCode}</td>
+                                <td>${temp.subjectName}</td>
+                                <td>
+                                    <div class="progress progress-xs progress-striped active">
+                                        <div class="progress-bar progress-bar-success" style="width: <%= res*10 %>%"></div>
+                                    </div>
+                                </td>
+                                <td><span class="badge bg-green"><%= res*10 %></span></td>
+                            </tr>
 
                             <%
                                 ++i;
